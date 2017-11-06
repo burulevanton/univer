@@ -20,24 +20,24 @@ INSERT INTO detail (name, price, color, weight) VALUES ('Вагонка 19м',18
 INSERT INTO detail (name, price, color, weight) VALUES ('Вагонка 20м',1900, 'синий',790);
 
 
-INSERT INTO provider(name, city, address, rating) VALUES ('Стройкомлект1', 'Челябинск', 'пр. Ленина, 3', 1);
-INSERT INTO provider(name, city, address, rating) VALUES ('Стройкомлект1' , 'Магнитогорск', 'ул. Суворова, 1', 2);
+INSERT INTO provider(name, city, address, rating) VALUES ('Стройкомплект1', 'Челябинск', 'пр. Ленина, 3', 1);
+INSERT INTO provider(name, city, address, rating) VALUES ('Стройкомплект1' , 'Магнитогорск', 'ул. Суворова, 1', 2);
 INSERT INTO provider(name, city, address, rating) VALUES ('РемСнабСбыт1', 'Челябинск', 'ул. Энтузиастов, 4', 3);
 INSERT INTO provider(name, city, address, rating) VALUES ('РемСнабСбыт1', 'Магнитогорск', 'ул. Доменщиков, 5', 4);
-INSERT INTO provider(name, city, address, rating) VALUES ('Стройкомлект2', 'Челябинск', 'пр. Ленина, 4', 5);
-INSERT INTO provider(name, city, address, rating) VALUES ('Стройкомлект2', 'Магнитогорск', 'ул. Суворова, 2', 6);
+INSERT INTO provider(name, city, address, rating) VALUES ('Стройкомплект2', 'Челябинск', 'пр. Ленина, 4', 5);
+INSERT INTO provider(name, city, address, rating) VALUES ('Стройкомплект2', 'Магнитогорск', 'ул. Суворова, 2', 6);
 INSERT INTO provider(name, city, address, rating) VALUES ('РемСнабСбыт2', 'Челябинск', 'ул. Энтузиастов, 5', 7);
 INSERT INTO provider(name, city, address, rating) VALUES ('РемСнабСбыт2', 'Магнитогорск', 'ул. Доменщиков, 6', 8);
-INSERT INTO provider(name, city, address, rating) VALUES ('Стройкомлект3', 'Челябинск', 'пр. Ленина, 5', 9);
-INSERT INTO provider(name, city, address, rating) VALUES ('Стройкомлект3', 'Магнитогорск', 'ул. Суворова, 3', 10);
+INSERT INTO provider(name, city, address, rating) VALUES ('Стройкомплект3', 'Челябинск', 'пр. Ленина, 5', 9);
+INSERT INTO provider(name, city, address, rating) VALUES ('Стройкомплект3', 'Магнитогорск', 'ул. Суворова, 3', 10);
 INSERT INTO provider(name, city, address, rating) VALUES ('РемСнабСбыт3', 'Челябинск', 'ул. Энтузиастов, 6', 1);
 INSERT INTO provider(name, city, address, rating) VALUES ('РемСнабСбыт3', 'Магнитогорск', 'ул. Доменщиков, 7', 2);
-INSERT INTO provider(name, city, address, rating) VALUES ('Стройкомлект4', 'Челябинск', 'пр. Ленина, 6', 3);
-INSERT INTO provider(name, city, address, rating) VALUES ('Стройкомлект4', 'Магнитогорск', 'ул. Суворова, 4', 4);
+INSERT INTO provider(name, city, address, rating) VALUES ('Стройкомплект4', 'Челябинск', 'пр. Ленина, 6', 3);
+INSERT INTO provider(name, city, address, rating) VALUES ('Стройкомплект4', 'Магнитогорск', 'ул. Суворова, 4', 4);
 INSERT INTO provider(name, city, address, rating) VALUES ('РемСнабСбыт4', 'Челябинск', 'ул. Энтузиастов, 7', 5);
 INSERT INTO provider(name, city, address, rating) VALUES ('РемСнабСбыт4', 'Магнитогорск', 'ул. Доменщиков, 8', 6);
-INSERT INTO provider(name, city, address, rating) VALUES ('Стройкомлект5', 'Челябинск', 'пр. Ленина, 7', 7);
-INSERT INTO provider(name, city, address, rating) VALUES ('Стройкомлект5', 'Магнитогорск', 'ул. Суворова, 5', 8);
+INSERT INTO provider(name, city, address, rating) VALUES ('Стройкомплект5', 'Челябинск', 'пр. Ленина, 7', 7);
+INSERT INTO provider(name, city, address, rating) VALUES ('Стройкомплект5', 'Магнитогорск', 'ул. Суворова, 5', 8);
 INSERT INTO provider(name, city, address, rating) VALUES ('РемСнабСбыт5', 'Челябинск', 'ул. Энтузиастов, 8', 9);
 INSERT INTO provider(name, city, address, rating) VALUES ('РемСнабСбыт5', 'Магнитогорск', 'ул. Доменщиков, 9', 10);
 
@@ -83,3 +83,4 @@ INSERT INTO supply(id_detail, id_provider, id_project, number_of_details) VALUES
 INSERT INTO supply(id_detail, id_provider, id_project, number_of_details) VALUES (18,18,18,180);
 INSERT INTO supply(id_detail, id_provider, id_project, number_of_details) VALUES (19,19,19,190);
 INSERT INTO supply(id_detail, id_provider, id_project, number_of_details) VALUES (20,20,20,200);
+INSERT INTO supply(id_detail, id_provider, id_project, number_of_details) VALUES (1,1,2,10);
