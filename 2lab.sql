@@ -35,6 +35,7 @@ CREATE TABLE Project( --таблица проектов
 );
 
 CREATE TABLE Supply( --таблица поставок
+  id SERIAL PRIMARY KEY , --уникальный идентификатор поставки, первичный ключ
   id_detail INTEGER REFERENCES Detail(id) ON UPDATE CASCADE ON DELETE CASCADE , --уникальный идентификатор детали, внешний ключ
   id_provider INTEGER REFERENCES Provider(id) ON UPDATE CASCADE  ON DELETE CASCADE , --уникальный идентификатор поставщика, внешний ключ
   id_project INTEGER REFERENCES Project(id) ON UPDATE CASCADE ON DELETE CASCADE , --уникальный идентификатор проекта, внешний ключ
