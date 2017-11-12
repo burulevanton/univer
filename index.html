@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+    <div id="login_block">
+        <input id="tabInput" type="radio" name="tab" class="sign-up" @click="showForm(1)" checked>
+        <label for="tabInput" class="tab" @click="showForm(1)" v-bind:class="{active : showSignUp}" >Регистрация</label>
+
+        <input id="tabRegistration" type="radio" name="tab" class="sign-in">
+        <label for="tabRegistration" class="tab" @click="showForm(2)" v-bind:class="{active : showSignIn}">Вход</label>
+
+        <div class="sign_up" v-show="showSignUp">
+            <h1>Регистрация</h1>
+            <form class="test-form">
+                <div class="top-row">
+                    <div class="field_wrap">
+                        <input v-bind:class="{invalid : !isNameValid}" class="input" required autocomplete="off" placeholder="Имя пользователя" type="text" v-on:focus="nameOnFocus=true" v-model="name"/>
+                        <div class="error" v-show="!isNameValid">
+                            <span>Поле не должно быть пустым</span>
+                        </div>
+                    </div>
+
+                    <div class="field_wrap">
+                        <input v-bind:class="{invalid : !isPasswordValid}" class="input"  required autocomplete="off" type="password" placeholder="Пароль" v-model="password">
+                        <div class="error" v-show="password && !isPasswordValid">
+                            <span>Пароль должен содержать 8-16 символов</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="field_wrap">
+                    <input class="input" v-bind:class="{invalid : !isPhoneValid}" required autocomplete="off" type="text" placeholder="Телефон" v-model="phone">
+                    <div class="error" v-show="phone && !isPhoneValid">
+                        <span>Неправильный номер телефона</span>
+                    </div>
+                </div>
+
+                <div class="field_wrap">
+                    <input class="input" v-bind:class="{invalid : !isEmailValid}" type="email" placeholder="e-mail" required autocomplete="off" v-model="email"/>
+                    <div class = "error" v-show="email && !isEmailValid">
+                        <span>Неправильный email</span>
+                    </div>
+                </div>
+
+                <button :disabled="!isEmailValid || !isPhoneValid || !isPasswordValid">Зарегестрироваться</button>
+            </form>
+        </div>
+        <div class="sign_in" v-show="showSignIn">
+            <h1>Вход</h1>
+            <div class="field_wrap">
+                <input class="input" required autocomplete="off" placeholder="Имя пользователя" type="text"/>
+            </div>
+
+            <div class="field_wrap">
+                <input class="input" required autocomplete="off" type="password" placeholder="Пароль">
+            </div>
+
+            <button>Войти</button>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
+
+
+<!-- v-bind == : -->
+<!-- v-on == @ -->
+<script src="js/auth.js"></script>
