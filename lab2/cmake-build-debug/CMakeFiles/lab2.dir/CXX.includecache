@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Anton/CLionProjects/lab2/BigInt.cpp
+cstring
+-
+iomanip
+-
+BigInt.h
+C:/Users/Anton/CLionProjects/lab2/BigInt.h
+
+C:/Users/Anton/CLionProjects/lab2/BigInt.h
+iostream
+-
+vector
+-
+
+C:/Users/Anton/CLionProjects/lab2/main.cpp
+iostream
+-
+matrix.h
+C:/Users/Anton/CLionProjects/lab2/matrix.h
+BigInt.h
+C:/Users/Anton/CLionProjects/lab2/BigInt.h
+
+C:/Users/Anton/CLionProjects/lab2/matrix.cpp
+iomanip
+-
+matrix.h
+C:/Users/Anton/CLionProjects/lab2/matrix.h
+
+C:/Users/Anton/CLionProjects/lab2/matrix.h
+iostream
+-
+
