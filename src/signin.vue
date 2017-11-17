@@ -1,18 +1,23 @@
 <<template>
 <div class="sign_in" v-show="showSignIn">
             <h1>Вход</h1>
+            <form action="/signin" method = "POST">
+            <div class="error error_signIn" v-show="isUserRegistrate">
+                    <span>{{errorMessage}}</span>
+            </div>
             <div class="field_wrap">
-                <input class="input" required autocomplete="off" placeholder="Имя пользователя" type="text" v-model="name"/>
+                <input name = "name" class="input" required autocomplete="off" placeholder="Имя пользователя" type="text" v-model="name"/>
             </div>
 
             <div class="field_wrap">
-                <input class="input" v-bind:class="{invalid : !isPasswordValid}" required autocomplete="off" type="password" placeholder="Пароль" v-model="password">
+                <input name = "password" class="input" v-bind:class="{invalid : !isPasswordValid}" required autocomplete="off" type="password" placeholder="Пароль" v-model="password">
                 <div class="error" v-show="password && !isPasswordValid">
                     <span>Пароль должен содержать 8-16 символов</span>
                 </div>
             </div>
 
-            <button>Войти</button>
+            <button :disabled="!isNameValid && !isPasswordValid">Войти</button>
+            </form>
 </div>
 </template>
 
@@ -20,6 +25,7 @@
 import {nameValidate, passwordValidate} from './validate.js'
 export default {
   name: 'sign-in',
+  props : ['isUserRegistrate','errorMessage'],
   data () {
     return {
       name : '',
@@ -88,7 +94,7 @@ button:disabled{
     font-size: 22px;
     display: block;
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     padding: 5px 10px;
     background: none;
     border: 1px solid #a0b3b0;
@@ -139,5 +145,12 @@ h1{
 }
 .error{
     color: #EE2C2C;
+}
+</style>
+
+</<style scoped>
+.error_signIn{
+    margin-bottom : 10px;
+    text-align : center;
 }
 </style>

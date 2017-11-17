@@ -4,34 +4,27 @@
     <div class="profile_form">
     <div class="image">
         <img src="../src/assets/image.jpg">
-        <button v-on:click="setEdit()" v-show="!isEdit">Редактировать профиль</button>
     </div>
     <div class="profile_info">
         <ul class="profile_data">
             <li>
                 <span class="profile_categories">Имя</span>
-                <input type="text" id="name" v-bind:readonly="!isEdit" v-bind:class="{active : isEdit}" class="profile_info_text" v-model="name">
-                    <span class="error" v-show="!isNameValid">Ошибка</span>
+                <input type="text" id="name" class="profile_info_text" v-model="name">
             </li>
             <li>
                 <span class="profile_categories">Пароль</span>
-                <input type="password" id="password" v-bind:readonly="!isEdit" v-bind:class="{active : isEdit}" class="profile_info_text" v-model="password">
-                <span class="error" v-show="!isPasswordValid">Ошибка</span>
+                <input type="password" id="password" class="profile_info_text" v-model="password">
             </li>
             <li>
                 <span class="profile_categories">Телефон</span>
-                <input type="text" id ="phone" v-bind:readonly="!isEdit" v-bind:class="{active : isEdit}" class="profile_info_text" v-model="phone">
-                <span class="error" v-show="!isPhoneValid">Ошибка</span>
+                <input type="text" id ="phone" class="profile_info_text" v-model="phone">
             </li>
             <li>
                 <span class="profile_categories">E-mail</span>
-                <input type="text" id = "email" v-bind:readonly="!isEdit" v-bind:class="{active : isEdit}" class="profile_info_text" v-model="email">
-                <span class="error" v-show="!isEmailValid">Ошибка</span>
+                <input type="text" id = "email"  class="profile_info_text" v-model="email">
             </li>
         </ul>
-        <div class="edit_buttons">
-        <button class="save_edit" v-show="isEdit">Сохранить</button>
-        <button class="save_edit" v-on:click="setEdit()" v-show="isEdit">Отмена</button>
+        <button onclick="javascript:window.location='/signout'">Выйти</button>
         </div>
     </div>
     </div>
@@ -43,7 +36,6 @@ import {nameValidate, emailValidate, phoneValidate, passwordValidate} from './va
 export default {
     name : 'profile',
     data() {
-        vm['isEdit'] = false
         return vm
     },
     computed:{
@@ -58,11 +50,6 @@ export default {
         },
         isPasswordValid(){
             return passwordValidate(this.password);
-        }
-    },
-    methods:{
-        setEdit(){
-            this.isEdit = !this.isEdit;
         }
     }
 }
@@ -128,25 +115,12 @@ body{
             font-size: 22px;
             padding: 5px 10px;
         }
-        .profile_info_text.active{
-            border-bottom: 1px solid #a0b3b0;
-        }
-        .profile_info_text:focus{
-            outline:none;
-        }
         button{
             background:#CD5555;
             color: white;
             font-size: 14px;
             border: 0;
-        }
-        .edit_buttons{
-            margin-left: 50px;
-        }
-        .save_edit{
-            display: inline-block;
-            padding: 10px;
-            margin-right: 15px;
+            padding : 15px;
         }
         .profile_data .error{
             display: block;

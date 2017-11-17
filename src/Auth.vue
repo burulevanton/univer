@@ -1,15 +1,15 @@
 <template>
 <div id="app">
     <div id="login_block">
-        <input id="tabInput" type="radio" name="tab" class="sign-up" @click="showForm(1)" checked>
+        <input id="tabInput" type="radio" name="tab" class="sign-up" @click="showForm(1)" v-bind:checked = "showSignUp">
         <label for="tabInput" class="tab" @click="showForm(1)" v-bind:class="{active : showSignUp}" >Регистрация</label>
 
         <input id="tabRegistration" type="radio" name="tab" class="sign-in">
-        <label for="tabRegistration" class="tab" @click="showForm(2)" v-bind:class="{active : showSignIn}">Вход</label>
+        <label for="tabRegistration" class="tab" @click="showForm(2)" v-bind:class="{active : showSignIn}" v-bind:checked="showSignIn">Вход</label>
 
         <sign_up v-show="showSignUp"></sign_up>
 
-        <sign_in v-show="showSignIn"></sign_in>
+        <sign_in v-show="showSignIn" :isUserRegistrate="isUserRegistrate" :errorMessage="errorMessage"></sign_in>
     </div>
 
 </div>
@@ -22,10 +22,16 @@ import sign_up from "./signup.vue"
 export default {
   name: 'app',
   data () {
-    return {
-      showSignUp : true,
-      showSignIn : false
-    }
+    if(typeof vm == 'undefined')
+        return {
+        showSignUp : true,
+        showSignIn : false,
+        isUserRegistrate : false
+        }
+    else{
+        vm['isUserRegistrate'] = true
+        return vm
+    } 
   },
   methods:{
         showForm(num){
