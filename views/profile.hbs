@@ -1,0 +1,18 @@
+
+<head>
+    <meta charset="utf-8">
+    <title>web</title>
+</head>
+
+<body>
+    <div id="profile"></div>
+    <script>
+        var vm = {
+            name : "{{vue_data.name}}",
+            password : "{{vue_data.password}}",
+            phone : "{{vue_data.phone}}",
+            email : "{{vue_data.email}}"
+        }
+    </script>
+    <script src="/dist/build.js"></script>
+</body>

@@ -1,0 +1,143 @@
+<<template>
+<div class="sign_in" v-show="showSignIn">
+            <h1>Вход</h1>
+            <div class="field_wrap">
+                <input class="input" required autocomplete="off" placeholder="Имя пользователя" type="text" v-model="name"/>
+            </div>
+
+            <div class="field_wrap">
+                <input class="input" v-bind:class="{invalid : !isPasswordValid}" required autocomplete="off" type="password" placeholder="Пароль" v-model="password">
+                <div class="error" v-show="password && !isPasswordValid">
+                    <span>Пароль должен содержать 8-16 символов</span>
+                </div>
+            </div>
+
+            <button>Войти</button>
+</div>
+</template>
+
+<<script>
+import {nameValidate, passwordValidate} from './validate.js'
+export default {
+  name: 'sign-in',
+  data () {
+    return {
+      name : '',
+      password : ''
+    }
+  },
+  computed: {
+    isNameValid(){
+          return nameValidate(this.name);
+        },
+    isPasswordValid(){
+          return passwordValidate(this.password);
+      }
+    }
+}
+</script>
+
+<<style>
+*{
+    box-sizing: border-box;
+}
+.sign_up, .sign_in{
+    margin-top : 60px;
+    position:relative;
+}
+.sign_up{
+    min-height:345px;
+}
+
+button{
+    display: block;
+    margin: auto;
+    border:none;
+    padding:15px;
+    border:0;
+    background:#CD5555;
+    width: 60%;
+    color: white;
+    font-size: 14px;
+}
+button:disabled{
+    opacity: 0.3;
+}
+
+.field_wrap{
+    margin-bottom:40px;
+}
+
+.top-row .field_wrap{
+    float: left;
+    width: 48%;
+    margin-right: 4%;
+}
+.top-row .field_wrap:last-child{
+    margin: 0;
+}
+
+.field_wrap label,
+.field_wrap input,
+.field_wrap button{
+    width: 100%;
+    display: block;
+}
+
+.field_wrap input{
+    font-size: 22px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 5px 10px;
+    background: none;
+    border: 1px solid #a0b3b0;
+    color: #ffffff;
+    border-radius: 0;
+    -webkit-transition: border-color .25s ease, box-shadow .25s ease;
+    transition: border-color .25s ease, box-shadow .25s ease;
+}
+.field_wrap input:focus,
+.field_wrap input:hover{
+    border-color: #008B45;
+    outline: 0;
+}
+.field_wrap input.invalid:focus,
+.field_wrap input.invalid:hover{
+    border-color: #FF3030;
+    outline: 0;
+
+}
+input[type='radio']{
+    display: none;
+}
+.tab{
+    display: block;
+    text-decoration: none;
+    padding: 15px;
+    background: rgba(160, 179, 176, 0.25);
+    color: #a0b3b0;
+    font-size: 20px;
+    float: left;
+    width: 50%;
+    text-align: center;
+    cursor: pointer;
+    -webkit-transition: .5s ease;
+    transition: .5s ease;
+}
+.tab:hover{
+    background: #EE6363;
+    color: #ffffff;
+}
+.active{
+    background: #CD5555;
+    color: #ffffff;
+}
+h1{
+    color: white;
+    text-align: center;
+}
+.error{
+    color: #EE2C2C;
+}
+</style>

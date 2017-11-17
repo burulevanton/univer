@@ -43,13 +43,8 @@ import {nameValidate, emailValidate, phoneValidate, passwordValidate} from './va
 export default {
     name : 'profile',
     data() {
-        return{
-            name : "Антон",
-            password : "1234567890",
-            phone:"89320141085",
-            email : "aburule84@gmail.com",
-            isEdit : false
-        }
+        vm['isEdit'] = false
+        return vm
     },
     computed:{
         isNameValid(){
