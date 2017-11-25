@@ -24,51 +24,49 @@
                 <input type="text" id = "email"  class="profile_info_text" v-model="email">
             </li>
         </ul>
-        <button onclick="javascript:window.location='/signout'">Выйти</button>
+        <button v-on:click="logout()">Выйти</button>
         </div>
     </div>
-    </div>
-</div> 
+</div>
 </template>
 
 <script>
-import {nameValidate, emailValidate, phoneValidate, passwordValidate} from './validate.js'
+import axios from 'axios'
 export default {
     name : 'profile',
     data() {
-        return vm
+      return{
+        name : '',
+        password : '',
+        phone : '',
+        email : ''
+      }
     },
-    computed:{
-        isNameValid(){
-            return nameValidate(this.name);
-        },
-        isEmailValid() {
-            return emailValidate(this.email);
-        },
-        isPhoneValid(){
-            return phoneValidate(this.phone);
-        },
-        isPasswordValid(){
-            return passwordValidate(this.password);
-        }
+    methods : {
+      logout(){
+        axios.get('/signout').then((response) =>{
+          this.$store.commit('logout')
+          this.$router.push('/signin')
+        })
+      }
+    },
+    created() {
+      axios.get('/user').then(response => {
+          this.name = response.data.name
+          this.password = response.data.password
+          this.phone = response.data.phone
+          this.email = response.data.email
+      })
+        .catch(()=>{
+        this.$router.push('signup')
+        })
     }
 }
 </script>
 
-<<style scoped>
-body{
-            margin: 0;
-        }
+<style scoped>
         *{
             box-sizing: border-box;
-        }
-        #profile{
-            background: rgba(19, 35, 47, 0.9);
-            padding: 40px;
-            max-width: 700px;
-            margin: 40px auto;
-            border-radius: 4px;
-            box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
         }
         h1{
             color: white;

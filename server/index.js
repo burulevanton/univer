@@ -4,7 +4,7 @@ import path from 'path'
 import morgan from 'morgan'
 import pg from 'pg'
 import session from 'cookie-session'
-import uuid from 'uuid/v1'
+import history from 'connect-history-api-fallback'
 
 const port = process.env.PORT || 5000
 const app = express()
@@ -17,9 +17,12 @@ const db = pg.Pool({
 })
 
 exports.db = db
+const staticFileMiddleware = express.static(path.join(__dirname))
 
-app.set('view engine', 'hbs')
-
+app.use(staticFileMiddleware)
+app.use(history())
+app.use(staticFileMiddleware)
+app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use('/dist', express.static('dist'))
 app.use(morgan('tiny'))
@@ -85,12 +88,13 @@ if (process.env.NODE_ENV === 'development') {
 //     })
 // })
 
-app.use(require('./middleware/auth_user'))
-
-app.use('/', require('../server/routes/root'))
-app.use('/signup', require('../server/routes/signup'))
-app.use('/profile', require('../server/routes/profile'))
-app.use('/signout', require('./routes/signout'))
-app.use('/signin', require('./routes/signin'))
+// app.use(require('./middleware/auth_user'))
+//
+// app.use('/', require('../server/routes/root'))
+// app.use('/signup', require('../server/routes/signup'))
+// app.use('/profile', require('../server/routes/profile'))
+// app.use('/signout', require('./routes/signout'))
+// app.use('/signin', require('./routes/signin'))
+app.use('/',require('./routes/index'))
 
 app.listen(port, () => console.log('Server listen on port =', port))

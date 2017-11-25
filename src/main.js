@@ -1,13 +1,12 @@
 import Vue from 'vue'
-import Auth from './Auth.vue'
-import Profile from './Profile.vue'
+import App from './App.vue'
+import router from './router/index'
+import store from './store/index'
+
 
 new Vue({
-    el: '#app',
-    render: h => h(Auth)
-})
+  router,
+  store,
+  render: h => h(App)
+}).$mount('#app')
 
-new Vue({
-    el: '#profile',
-    render: h => h(Profile)
-})

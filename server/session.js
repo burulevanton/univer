@@ -3,6 +3,11 @@ import uuid from 'uuid/v1'
 
 
 export async function save(req, id) {
+    if(req.session.id){
+      await project.db.query(
+        'DELETE FROM sessions WHERE user_id=$1', [id]
+      )
+    }
     req.session.id = uuid()
 
     await project.db.query(

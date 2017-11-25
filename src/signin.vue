@@ -1,8 +1,8 @@
-<<template>
-<div class="sign_in" v-show="showSignIn">
+<template>
+<div class="sign_in">
+            <form_header :signIn="true"></form_header>
             <h1>Вход</h1>
-            <form action="/signin" method = "POST">
-            <div class="error error_signIn" v-show="isUserRegistrate">
+            <div class="error error_signIn" v-show="errorMessage">
                     <span>{{errorMessage}}</span>
             </div>
             <div class="field_wrap">
@@ -15,21 +15,22 @@
                     <span>Пароль должен содержать 8-16 символов</span>
                 </div>
             </div>
-
-            <button :disabled="!isNameValid && !isPasswordValid">Войти</button>
-            </form>
+            <button :disabled="!isNameValid && !isPasswordValid" v-on:click="post_data()">Войти</button>
 </div>
 </template>
 
-<<script>
+<script>
 import {nameValidate, passwordValidate} from './validate.js'
+import form_header from './form_header.vue'
+import axios from 'axios'
+
 export default {
   name: 'sign-in',
-  props : ['isUserRegistrate','errorMessage'],
   data () {
     return {
       name : '',
-      password : ''
+      password : '',
+      errorMessage : ''
     }
   },
   computed: {
@@ -39,118 +40,28 @@ export default {
     isPasswordValid(){
           return passwordValidate(this.password);
       }
+    },
+  components : {
+    form_header
+  },
+  methods : {
+    post_data(){
+      axios.post('/signin',{
+        name : this.name,
+        password : this.password
+      }).then(response=> {
+        this.errorMessage = ''
+        this.$store.commit('login',response.data)
+        this.$router.push('/profile')
+      })
+        .catch(() => {
+          this.errorMessage = 'Данные введены неверно'
+        })
     }
+  }
 }
 </script>
 
-<<style>
-*{
-    box-sizing: border-box;
-}
-.sign_up, .sign_in{
-    margin-top : 60px;
-    position:relative;
-}
-.sign_up{
-    min-height:345px;
-}
+<style scoped src="./assets/auth_form.css">
 
-button{
-    display: block;
-    margin: auto;
-    border:none;
-    padding:15px;
-    border:0;
-    background:#CD5555;
-    width: 60%;
-    color: white;
-    font-size: 14px;
-}
-button:disabled{
-    opacity: 0.3;
-}
-
-.field_wrap{
-    margin-bottom:40px;
-}
-
-.top-row .field_wrap{
-    float: left;
-    width: 48%;
-    margin-right: 4%;
-}
-.top-row .field_wrap:last-child{
-    margin: 0;
-}
-
-.field_wrap label,
-.field_wrap input,
-.field_wrap button{
-    width: 100%;
-    display: block;
-}
-
-.field_wrap input{
-    font-size: 22px;
-    display: block;
-    width: 100%;
-    /* height: 100%; */
-    padding: 5px 10px;
-    background: none;
-    border: 1px solid #a0b3b0;
-    color: #ffffff;
-    border-radius: 0;
-    -webkit-transition: border-color .25s ease, box-shadow .25s ease;
-    transition: border-color .25s ease, box-shadow .25s ease;
-}
-.field_wrap input:focus,
-.field_wrap input:hover{
-    border-color: #008B45;
-    outline: 0;
-}
-.field_wrap input.invalid:focus,
-.field_wrap input.invalid:hover{
-    border-color: #FF3030;
-    outline: 0;
-
-}
-input[type='radio']{
-    display: none;
-}
-.tab{
-    display: block;
-    text-decoration: none;
-    padding: 15px;
-    background: rgba(160, 179, 176, 0.25);
-    color: #a0b3b0;
-    font-size: 20px;
-    float: left;
-    width: 50%;
-    text-align: center;
-    cursor: pointer;
-    -webkit-transition: .5s ease;
-    transition: .5s ease;
-}
-.tab:hover{
-    background: #EE6363;
-    color: #ffffff;
-}
-.active{
-    background: #CD5555;
-    color: #ffffff;
-}
-h1{
-    color: white;
-    text-align: center;
-}
-.error{
-    color: #EE2C2C;
-}
-</style>
-
-</<style scoped>
-.error_signIn{
-    margin-bottom : 10px;
-    text-align : center;
-}
 </style>
