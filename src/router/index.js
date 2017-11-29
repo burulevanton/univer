@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import store from '../store/index'
-import Profile from '../Profile.vue'
-import signin from '../signin.vue'
-import signup from '../signup.vue'
+import Profile from '../views/Profile.vue'
+import signin from '../views/signin.vue'
+import signup from '../views/signup.vue'
 
 import Router from 'vue-router'
 import axios from 'axios'

@@ -3,7 +3,7 @@
 <h1>Профиль</h1>
     <div class="profile_form">
     <div class="image">
-        <img src="../src/assets/image.jpg">
+        <img src="../assets/image.jpg">
     </div>
     <div class="profile_info">
         <ul class="profile_data">

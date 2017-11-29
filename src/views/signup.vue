@@ -38,7 +38,7 @@
 </template>
 
 <<script>
-import {nameValidate, emailValidate, phoneValidate, passwordValidate} from './validate.js'
+import {nameValidate, emailValidate, phoneValidate, passwordValidate} from '../validate.js'
 import form_header from './form_header.vue'
 import axios from 'axios'
 export default {
@@ -89,6 +89,6 @@ export default {
 }
 </script>
 
-<style scoped src="./assets/auth_form.css">
+<style scoped src="../assets/auth_form.css">
 
 </style>
