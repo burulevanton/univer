@@ -47,10 +47,10 @@ RM = "C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E remo
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Anton\CLionProjects\lab3
+CMAKE_SOURCE_DIR = D:\oop\lab3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Anton\CLionProjects\lab3\cmake-build-debug
+CMAKE_BINARY_DIR = D:\oop\lab3\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,9 +79,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Anton\CLionProjects\lab3\cmake-build-debug\CMakeFiles C:\Users\Anton\CLionProjects\lab3\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\oop\lab3\cmake-build-debug\CMakeFiles D:\oop\lab3\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Anton\CLionProjects\lab3\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\oop\lab3\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -122,6 +122,249 @@ lab3/fast:
 	$(MAKE) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/build
 .PHONY : lab3/fast
 
+Board.obj: Board.cpp.obj
+
+.PHONY : Board.obj
+
+# target to build an object file
+Board.cpp.obj:
+	$(MAKE) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/Board.cpp.obj
+.PHONY : Board.cpp.obj
+
+Board.i: Board.cpp.i
+
+.PHONY : Board.i
+
+# target to preprocess a source file
+Board.cpp.i:
+	$(MAKE) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/Board.cpp.i
+.PHONY : Board.cpp.i
+
+Board.s: Board.cpp.s
+
+.PHONY : Board.s
+
+# target to generate assembly for a file
+Board.cpp.s:
+	$(MAKE) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/Board.cpp.s
+.PHONY : Board.cpp.s
+
+BoardPosition.obj: BoardPosition.cpp.obj
+
+.PHONY : BoardPosition.obj
+
+# target to build an object file
+BoardPosition.cpp.obj:
+	$(MAKE) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/BoardPosition.cpp.obj
+.PHONY : BoardPosition.cpp.obj
+
+BoardPosition.i: BoardPosition.cpp.i
+
+.PHONY : BoardPosition.i
+
+# target to preprocess a source file
+BoardPosition.cpp.i:
+	$(MAKE) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/BoardPosition.cpp.i
+.PHONY : BoardPosition.cpp.i
+
+BoardPosition.s: BoardPosition.cpp.s
+
+.PHONY : BoardPosition.s
+
+# target to generate assembly for a file
+BoardPosition.cpp.s:
+	$(MAKE) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/BoardPosition.cpp.s
+.PHONY : BoardPosition.cpp.s
+
+Figure.obj: Figure.cpp.obj
+
+.PHONY : Figure.obj
+
+# target to build an object file
+Figure.cpp.obj:
+	$(MAKE) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/Figure.cpp.obj
+.PHONY : Figure.cpp.obj
+
+Figure.i: Figure.cpp.i
+
+.PHONY : Figure.i
+
+# target to preprocess a source file
+Figure.cpp.i:
+	$(MAKE) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/Figure.cpp.i
+.PHONY : Figure.cpp.i
+
+Figure.s: Figure.cpp.s
+
+.PHONY : Figure.s
+
+# target to generate assembly for a file
+Figure.cpp.s:
+	$(MAKE) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/Figure.cpp.s
+.PHONY : Figure.cpp.s
+
+FigureBishop.obj: FigureBishop.cpp.obj
+
+.PHONY : FigureBishop.obj
+
+# target to build an object file
+FigureBishop.cpp.obj:
+	$(MAKE) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/FigureBishop.cpp.obj
+.PHONY : FigureBishop.cpp.obj
+
+FigureBishop.i: FigureBishop.cpp.i
+
+.PHONY : FigureBishop.i
+
+# target to preprocess a source file
+FigureBishop.cpp.i:
+	$(MAKE) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/FigureBishop.cpp.i
+.PHONY : FigureBishop.cpp.i
+
+FigureBishop.s: FigureBishop.cpp.s
+
+.PHONY : FigureBishop.s
+
+# target to generate assembly for a file
+FigureBishop.cpp.s:
+	$(MAKE) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/FigureBishop.cpp.s
+.PHONY : FigureBishop.cpp.s
+
+FigureKing.obj: FigureKing.cpp.obj
+
+.PHONY : FigureKing.obj
+
+# target to build an object file
+FigureKing.cpp.obj:
+	$(MAKE) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/FigureKing.cpp.obj
+.PHONY : FigureKing.cpp.obj
+
+FigureKing.i: FigureKing.cpp.i
+
+.PHONY : FigureKing.i
+
+# target to preprocess a source file
+FigureKing.cpp.i:
+	$(MAKE) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/FigureKing.cpp.i
+.PHONY : FigureKing.cpp.i
+
+FigureKing.s: FigureKing.cpp.s
+
+.PHONY : FigureKing.s
+
+# target to generate assembly for a file
+FigureKing.cpp.s:
+	$(MAKE) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/FigureKing.cpp.s
+.PHONY : FigureKing.cpp.s
+
+FigureKnight.obj: FigureKnight.cpp.obj
+
+.PHONY : FigureKnight.obj
+
+# target to build an object file
+FigureKnight.cpp.obj:
+	$(MAKE) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/FigureKnight.cpp.obj
+.PHONY : FigureKnight.cpp.obj
+
+FigureKnight.i: FigureKnight.cpp.i
+
+.PHONY : FigureKnight.i
+
+# target to preprocess a source file
+FigureKnight.cpp.i:
+	$(MAKE) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/FigureKnight.cpp.i
+.PHONY : FigureKnight.cpp.i
+
+FigureKnight.s: FigureKnight.cpp.s
+
+.PHONY : FigureKnight.s
+
+# target to generate assembly for a file
+FigureKnight.cpp.s:
+	$(MAKE) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/FigureKnight.cpp.s
+.PHONY : FigureKnight.cpp.s
+
+FigurePawn.obj: FigurePawn.cpp.obj
+
+.PHONY : FigurePawn.obj
+
+# target to build an object file
+FigurePawn.cpp.obj:
+	$(MAKE) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/FigurePawn.cpp.obj
+.PHONY : FigurePawn.cpp.obj
+
+FigurePawn.i: FigurePawn.cpp.i
+
+.PHONY : FigurePawn.i
+
+# target to preprocess a source file
+FigurePawn.cpp.i:
+	$(MAKE) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/FigurePawn.cpp.i
+.PHONY : FigurePawn.cpp.i
+
+FigurePawn.s: FigurePawn.cpp.s
+
+.PHONY : FigurePawn.s
+
+# target to generate assembly for a file
+FigurePawn.cpp.s:
+	$(MAKE) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/FigurePawn.cpp.s
+.PHONY : FigurePawn.cpp.s
+
+FigureQueen.obj: FigureQueen.cpp.obj
+
+.PHONY : FigureQueen.obj
+
+# target to build an object file
+FigureQueen.cpp.obj:
+	$(MAKE) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/FigureQueen.cpp.obj
+.PHONY : FigureQueen.cpp.obj
+
+FigureQueen.i: FigureQueen.cpp.i
+
+.PHONY : FigureQueen.i
+
+# target to preprocess a source file
+FigureQueen.cpp.i:
+	$(MAKE) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/FigureQueen.cpp.i
+.PHONY : FigureQueen.cpp.i
+
+FigureQueen.s: FigureQueen.cpp.s
+
+.PHONY : FigureQueen.s
+
+# target to generate assembly for a file
+FigureQueen.cpp.s:
+	$(MAKE) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/FigureQueen.cpp.s
+.PHONY : FigureQueen.cpp.s
+
+FigureRook.obj: FigureRook.cpp.obj
+
+.PHONY : FigureRook.obj
+
+# target to build an object file
+FigureRook.cpp.obj:
+	$(MAKE) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/FigureRook.cpp.obj
+.PHONY : FigureRook.cpp.obj
+
+FigureRook.i: FigureRook.cpp.i
+
+.PHONY : FigureRook.i
+
+# target to preprocess a source file
+FigureRook.cpp.i:
+	$(MAKE) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/FigureRook.cpp.i
+.PHONY : FigureRook.cpp.i
+
+FigureRook.s: FigureRook.cpp.s
+
+.PHONY : FigureRook.s
+
+# target to generate assembly for a file
+FigureRook.cpp.s:
+	$(MAKE) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/FigureRook.cpp.s
+.PHONY : FigureRook.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -158,6 +401,33 @@ help:
 	@echo ... rebuild_cache
 	@echo ... lab3
 	@echo ... edit_cache
+	@echo ... Board.obj
+	@echo ... Board.i
+	@echo ... Board.s
+	@echo ... BoardPosition.obj
+	@echo ... BoardPosition.i
+	@echo ... BoardPosition.s
+	@echo ... Figure.obj
+	@echo ... Figure.i
+	@echo ... Figure.s
+	@echo ... FigureBishop.obj
+	@echo ... FigureBishop.i
+	@echo ... FigureBishop.s
+	@echo ... FigureKing.obj
+	@echo ... FigureKing.i
+	@echo ... FigureKing.s
+	@echo ... FigureKnight.obj
+	@echo ... FigureKnight.i
+	@echo ... FigureKnight.s
+	@echo ... FigurePawn.obj
+	@echo ... FigurePawn.i
+	@echo ... FigurePawn.s
+	@echo ... FigureQueen.obj
+	@echo ... FigureQueen.i
+	@echo ... FigureQueen.s
+	@echo ... FigureRook.obj
+	@echo ... FigureRook.i
+	@echo ... FigureRook.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

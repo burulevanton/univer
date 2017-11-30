@@ -42,10 +42,10 @@ RM = "C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E remo
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Anton\CLionProjects\lab3
+CMAKE_SOURCE_DIR = D:\oop\lab3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Anton\CLionProjects\lab3\cmake-build-debug
+CMAKE_BINARY_DIR = D:\oop\lab3\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/lab3.dir/depend.make
@@ -58,16 +58,16 @@ include CMakeFiles/lab3.dir/flags.make
 
 CMakeFiles/lab3.dir/main.cpp.obj: CMakeFiles/lab3.dir/flags.make
 CMakeFiles/lab3.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Anton\CLionProjects\lab3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lab3.dir/main.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\lab3.dir\main.cpp.obj -c C:\Users\Anton\CLionProjects\lab3\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\oop\lab3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lab3.dir/main.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\lab3.dir\main.cpp.obj -c D:\oop\lab3\main.cpp
 
 CMakeFiles/lab3.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab3.dir/main.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Anton\CLionProjects\lab3\main.cpp > CMakeFiles\lab3.dir\main.cpp.i
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\oop\lab3\main.cpp > CMakeFiles\lab3.dir\main.cpp.i
 
 CMakeFiles/lab3.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab3.dir/main.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Anton\CLionProjects\lab3\main.cpp -o CMakeFiles\lab3.dir\main.cpp.s
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\oop\lab3\main.cpp -o CMakeFiles\lab3.dir\main.cpp.s
 
 CMakeFiles/lab3.dir/main.cpp.obj.requires:
 
@@ -80,19 +80,253 @@ CMakeFiles/lab3.dir/main.cpp.obj.provides: CMakeFiles/lab3.dir/main.cpp.obj.requ
 CMakeFiles/lab3.dir/main.cpp.obj.provides.build: CMakeFiles/lab3.dir/main.cpp.obj
 
 
+CMakeFiles/lab3.dir/BoardPosition.cpp.obj: CMakeFiles/lab3.dir/flags.make
+CMakeFiles/lab3.dir/BoardPosition.cpp.obj: ../BoardPosition.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\oop\lab3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/lab3.dir/BoardPosition.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\lab3.dir\BoardPosition.cpp.obj -c D:\oop\lab3\BoardPosition.cpp
+
+CMakeFiles/lab3.dir/BoardPosition.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab3.dir/BoardPosition.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\oop\lab3\BoardPosition.cpp > CMakeFiles\lab3.dir\BoardPosition.cpp.i
+
+CMakeFiles/lab3.dir/BoardPosition.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab3.dir/BoardPosition.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\oop\lab3\BoardPosition.cpp -o CMakeFiles\lab3.dir\BoardPosition.cpp.s
+
+CMakeFiles/lab3.dir/BoardPosition.cpp.obj.requires:
+
+.PHONY : CMakeFiles/lab3.dir/BoardPosition.cpp.obj.requires
+
+CMakeFiles/lab3.dir/BoardPosition.cpp.obj.provides: CMakeFiles/lab3.dir/BoardPosition.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/BoardPosition.cpp.obj.provides.build
+.PHONY : CMakeFiles/lab3.dir/BoardPosition.cpp.obj.provides
+
+CMakeFiles/lab3.dir/BoardPosition.cpp.obj.provides.build: CMakeFiles/lab3.dir/BoardPosition.cpp.obj
+
+
+CMakeFiles/lab3.dir/Board.cpp.obj: CMakeFiles/lab3.dir/flags.make
+CMakeFiles/lab3.dir/Board.cpp.obj: ../Board.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\oop\lab3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/lab3.dir/Board.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\lab3.dir\Board.cpp.obj -c D:\oop\lab3\Board.cpp
+
+CMakeFiles/lab3.dir/Board.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab3.dir/Board.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\oop\lab3\Board.cpp > CMakeFiles\lab3.dir\Board.cpp.i
+
+CMakeFiles/lab3.dir/Board.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab3.dir/Board.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\oop\lab3\Board.cpp -o CMakeFiles\lab3.dir\Board.cpp.s
+
+CMakeFiles/lab3.dir/Board.cpp.obj.requires:
+
+.PHONY : CMakeFiles/lab3.dir/Board.cpp.obj.requires
+
+CMakeFiles/lab3.dir/Board.cpp.obj.provides: CMakeFiles/lab3.dir/Board.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/Board.cpp.obj.provides.build
+.PHONY : CMakeFiles/lab3.dir/Board.cpp.obj.provides
+
+CMakeFiles/lab3.dir/Board.cpp.obj.provides.build: CMakeFiles/lab3.dir/Board.cpp.obj
+
+
+CMakeFiles/lab3.dir/Figure.cpp.obj: CMakeFiles/lab3.dir/flags.make
+CMakeFiles/lab3.dir/Figure.cpp.obj: ../Figure.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\oop\lab3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/lab3.dir/Figure.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\lab3.dir\Figure.cpp.obj -c D:\oop\lab3\Figure.cpp
+
+CMakeFiles/lab3.dir/Figure.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab3.dir/Figure.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\oop\lab3\Figure.cpp > CMakeFiles\lab3.dir\Figure.cpp.i
+
+CMakeFiles/lab3.dir/Figure.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab3.dir/Figure.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\oop\lab3\Figure.cpp -o CMakeFiles\lab3.dir\Figure.cpp.s
+
+CMakeFiles/lab3.dir/Figure.cpp.obj.requires:
+
+.PHONY : CMakeFiles/lab3.dir/Figure.cpp.obj.requires
+
+CMakeFiles/lab3.dir/Figure.cpp.obj.provides: CMakeFiles/lab3.dir/Figure.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/Figure.cpp.obj.provides.build
+.PHONY : CMakeFiles/lab3.dir/Figure.cpp.obj.provides
+
+CMakeFiles/lab3.dir/Figure.cpp.obj.provides.build: CMakeFiles/lab3.dir/Figure.cpp.obj
+
+
+CMakeFiles/lab3.dir/FigureBishop.cpp.obj: CMakeFiles/lab3.dir/flags.make
+CMakeFiles/lab3.dir/FigureBishop.cpp.obj: ../FigureBishop.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\oop\lab3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/lab3.dir/FigureBishop.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\lab3.dir\FigureBishop.cpp.obj -c D:\oop\lab3\FigureBishop.cpp
+
+CMakeFiles/lab3.dir/FigureBishop.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab3.dir/FigureBishop.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\oop\lab3\FigureBishop.cpp > CMakeFiles\lab3.dir\FigureBishop.cpp.i
+
+CMakeFiles/lab3.dir/FigureBishop.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab3.dir/FigureBishop.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\oop\lab3\FigureBishop.cpp -o CMakeFiles\lab3.dir\FigureBishop.cpp.s
+
+CMakeFiles/lab3.dir/FigureBishop.cpp.obj.requires:
+
+.PHONY : CMakeFiles/lab3.dir/FigureBishop.cpp.obj.requires
+
+CMakeFiles/lab3.dir/FigureBishop.cpp.obj.provides: CMakeFiles/lab3.dir/FigureBishop.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/FigureBishop.cpp.obj.provides.build
+.PHONY : CMakeFiles/lab3.dir/FigureBishop.cpp.obj.provides
+
+CMakeFiles/lab3.dir/FigureBishop.cpp.obj.provides.build: CMakeFiles/lab3.dir/FigureBishop.cpp.obj
+
+
+CMakeFiles/lab3.dir/FigureKing.cpp.obj: CMakeFiles/lab3.dir/flags.make
+CMakeFiles/lab3.dir/FigureKing.cpp.obj: ../FigureKing.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\oop\lab3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/lab3.dir/FigureKing.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\lab3.dir\FigureKing.cpp.obj -c D:\oop\lab3\FigureKing.cpp
+
+CMakeFiles/lab3.dir/FigureKing.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab3.dir/FigureKing.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\oop\lab3\FigureKing.cpp > CMakeFiles\lab3.dir\FigureKing.cpp.i
+
+CMakeFiles/lab3.dir/FigureKing.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab3.dir/FigureKing.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\oop\lab3\FigureKing.cpp -o CMakeFiles\lab3.dir\FigureKing.cpp.s
+
+CMakeFiles/lab3.dir/FigureKing.cpp.obj.requires:
+
+.PHONY : CMakeFiles/lab3.dir/FigureKing.cpp.obj.requires
+
+CMakeFiles/lab3.dir/FigureKing.cpp.obj.provides: CMakeFiles/lab3.dir/FigureKing.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/FigureKing.cpp.obj.provides.build
+.PHONY : CMakeFiles/lab3.dir/FigureKing.cpp.obj.provides
+
+CMakeFiles/lab3.dir/FigureKing.cpp.obj.provides.build: CMakeFiles/lab3.dir/FigureKing.cpp.obj
+
+
+CMakeFiles/lab3.dir/FigureKnight.cpp.obj: CMakeFiles/lab3.dir/flags.make
+CMakeFiles/lab3.dir/FigureKnight.cpp.obj: ../FigureKnight.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\oop\lab3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/lab3.dir/FigureKnight.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\lab3.dir\FigureKnight.cpp.obj -c D:\oop\lab3\FigureKnight.cpp
+
+CMakeFiles/lab3.dir/FigureKnight.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab3.dir/FigureKnight.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\oop\lab3\FigureKnight.cpp > CMakeFiles\lab3.dir\FigureKnight.cpp.i
+
+CMakeFiles/lab3.dir/FigureKnight.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab3.dir/FigureKnight.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\oop\lab3\FigureKnight.cpp -o CMakeFiles\lab3.dir\FigureKnight.cpp.s
+
+CMakeFiles/lab3.dir/FigureKnight.cpp.obj.requires:
+
+.PHONY : CMakeFiles/lab3.dir/FigureKnight.cpp.obj.requires
+
+CMakeFiles/lab3.dir/FigureKnight.cpp.obj.provides: CMakeFiles/lab3.dir/FigureKnight.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/FigureKnight.cpp.obj.provides.build
+.PHONY : CMakeFiles/lab3.dir/FigureKnight.cpp.obj.provides
+
+CMakeFiles/lab3.dir/FigureKnight.cpp.obj.provides.build: CMakeFiles/lab3.dir/FigureKnight.cpp.obj
+
+
+CMakeFiles/lab3.dir/FigurePawn.cpp.obj: CMakeFiles/lab3.dir/flags.make
+CMakeFiles/lab3.dir/FigurePawn.cpp.obj: ../FigurePawn.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\oop\lab3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/lab3.dir/FigurePawn.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\lab3.dir\FigurePawn.cpp.obj -c D:\oop\lab3\FigurePawn.cpp
+
+CMakeFiles/lab3.dir/FigurePawn.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab3.dir/FigurePawn.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\oop\lab3\FigurePawn.cpp > CMakeFiles\lab3.dir\FigurePawn.cpp.i
+
+CMakeFiles/lab3.dir/FigurePawn.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab3.dir/FigurePawn.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\oop\lab3\FigurePawn.cpp -o CMakeFiles\lab3.dir\FigurePawn.cpp.s
+
+CMakeFiles/lab3.dir/FigurePawn.cpp.obj.requires:
+
+.PHONY : CMakeFiles/lab3.dir/FigurePawn.cpp.obj.requires
+
+CMakeFiles/lab3.dir/FigurePawn.cpp.obj.provides: CMakeFiles/lab3.dir/FigurePawn.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/FigurePawn.cpp.obj.provides.build
+.PHONY : CMakeFiles/lab3.dir/FigurePawn.cpp.obj.provides
+
+CMakeFiles/lab3.dir/FigurePawn.cpp.obj.provides.build: CMakeFiles/lab3.dir/FigurePawn.cpp.obj
+
+
+CMakeFiles/lab3.dir/FigureRook.cpp.obj: CMakeFiles/lab3.dir/flags.make
+CMakeFiles/lab3.dir/FigureRook.cpp.obj: ../FigureRook.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\oop\lab3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/lab3.dir/FigureRook.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\lab3.dir\FigureRook.cpp.obj -c D:\oop\lab3\FigureRook.cpp
+
+CMakeFiles/lab3.dir/FigureRook.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab3.dir/FigureRook.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\oop\lab3\FigureRook.cpp > CMakeFiles\lab3.dir\FigureRook.cpp.i
+
+CMakeFiles/lab3.dir/FigureRook.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab3.dir/FigureRook.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\oop\lab3\FigureRook.cpp -o CMakeFiles\lab3.dir\FigureRook.cpp.s
+
+CMakeFiles/lab3.dir/FigureRook.cpp.obj.requires:
+
+.PHONY : CMakeFiles/lab3.dir/FigureRook.cpp.obj.requires
+
+CMakeFiles/lab3.dir/FigureRook.cpp.obj.provides: CMakeFiles/lab3.dir/FigureRook.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/FigureRook.cpp.obj.provides.build
+.PHONY : CMakeFiles/lab3.dir/FigureRook.cpp.obj.provides
+
+CMakeFiles/lab3.dir/FigureRook.cpp.obj.provides.build: CMakeFiles/lab3.dir/FigureRook.cpp.obj
+
+
+CMakeFiles/lab3.dir/FigureQueen.cpp.obj: CMakeFiles/lab3.dir/flags.make
+CMakeFiles/lab3.dir/FigureQueen.cpp.obj: ../FigureQueen.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\oop\lab3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/lab3.dir/FigureQueen.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\lab3.dir\FigureQueen.cpp.obj -c D:\oop\lab3\FigureQueen.cpp
+
+CMakeFiles/lab3.dir/FigureQueen.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab3.dir/FigureQueen.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\oop\lab3\FigureQueen.cpp > CMakeFiles\lab3.dir\FigureQueen.cpp.i
+
+CMakeFiles/lab3.dir/FigureQueen.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab3.dir/FigureQueen.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\oop\lab3\FigureQueen.cpp -o CMakeFiles\lab3.dir\FigureQueen.cpp.s
+
+CMakeFiles/lab3.dir/FigureQueen.cpp.obj.requires:
+
+.PHONY : CMakeFiles/lab3.dir/FigureQueen.cpp.obj.requires
+
+CMakeFiles/lab3.dir/FigureQueen.cpp.obj.provides: CMakeFiles/lab3.dir/FigureQueen.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/FigureQueen.cpp.obj.provides.build
+.PHONY : CMakeFiles/lab3.dir/FigureQueen.cpp.obj.provides
+
+CMakeFiles/lab3.dir/FigureQueen.cpp.obj.provides.build: CMakeFiles/lab3.dir/FigureQueen.cpp.obj
+
+
 # Object files for target lab3
 lab3_OBJECTS = \
-"CMakeFiles/lab3.dir/main.cpp.obj"
+"CMakeFiles/lab3.dir/main.cpp.obj" \
+"CMakeFiles/lab3.dir/BoardPosition.cpp.obj" \
+"CMakeFiles/lab3.dir/Board.cpp.obj" \
+"CMakeFiles/lab3.dir/Figure.cpp.obj" \
+"CMakeFiles/lab3.dir/FigureBishop.cpp.obj" \
+"CMakeFiles/lab3.dir/FigureKing.cpp.obj" \
+"CMakeFiles/lab3.dir/FigureKnight.cpp.obj" \
+"CMakeFiles/lab3.dir/FigurePawn.cpp.obj" \
+"CMakeFiles/lab3.dir/FigureRook.cpp.obj" \
+"CMakeFiles/lab3.dir/FigureQueen.cpp.obj"
 
 # External object files for target lab3
 lab3_EXTERNAL_OBJECTS =
 
 lab3.exe: CMakeFiles/lab3.dir/main.cpp.obj
+lab3.exe: CMakeFiles/lab3.dir/BoardPosition.cpp.obj
+lab3.exe: CMakeFiles/lab3.dir/Board.cpp.obj
+lab3.exe: CMakeFiles/lab3.dir/Figure.cpp.obj
+lab3.exe: CMakeFiles/lab3.dir/FigureBishop.cpp.obj
+lab3.exe: CMakeFiles/lab3.dir/FigureKing.cpp.obj
+lab3.exe: CMakeFiles/lab3.dir/FigureKnight.cpp.obj
+lab3.exe: CMakeFiles/lab3.dir/FigurePawn.cpp.obj
+lab3.exe: CMakeFiles/lab3.dir/FigureRook.cpp.obj
+lab3.exe: CMakeFiles/lab3.dir/FigureQueen.cpp.obj
 lab3.exe: CMakeFiles/lab3.dir/build.make
 lab3.exe: CMakeFiles/lab3.dir/linklibs.rsp
 lab3.exe: CMakeFiles/lab3.dir/objects1.rsp
 lab3.exe: CMakeFiles/lab3.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Anton\CLionProjects\lab3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable lab3.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\oop\lab3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable lab3.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\lab3.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -101,6 +335,15 @@ CMakeFiles/lab3.dir/build: lab3.exe
 .PHONY : CMakeFiles/lab3.dir/build
 
 CMakeFiles/lab3.dir/requires: CMakeFiles/lab3.dir/main.cpp.obj.requires
+CMakeFiles/lab3.dir/requires: CMakeFiles/lab3.dir/BoardPosition.cpp.obj.requires
+CMakeFiles/lab3.dir/requires: CMakeFiles/lab3.dir/Board.cpp.obj.requires
+CMakeFiles/lab3.dir/requires: CMakeFiles/lab3.dir/Figure.cpp.obj.requires
+CMakeFiles/lab3.dir/requires: CMakeFiles/lab3.dir/FigureBishop.cpp.obj.requires
+CMakeFiles/lab3.dir/requires: CMakeFiles/lab3.dir/FigureKing.cpp.obj.requires
+CMakeFiles/lab3.dir/requires: CMakeFiles/lab3.dir/FigureKnight.cpp.obj.requires
+CMakeFiles/lab3.dir/requires: CMakeFiles/lab3.dir/FigurePawn.cpp.obj.requires
+CMakeFiles/lab3.dir/requires: CMakeFiles/lab3.dir/FigureRook.cpp.obj.requires
+CMakeFiles/lab3.dir/requires: CMakeFiles/lab3.dir/FigureQueen.cpp.obj.requires
 
 .PHONY : CMakeFiles/lab3.dir/requires
 
@@ -109,6 +352,6 @@ CMakeFiles/lab3.dir/clean:
 .PHONY : CMakeFiles/lab3.dir/clean
 
 CMakeFiles/lab3.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\Anton\CLionProjects\lab3 C:\Users\Anton\CLionProjects\lab3 C:\Users\Anton\CLionProjects\lab3\cmake-build-debug C:\Users\Anton\CLionProjects\lab3\cmake-build-debug C:\Users\Anton\CLionProjects\lab3\cmake-build-debug\CMakeFiles\lab3.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\oop\lab3 D:\oop\lab3 D:\oop\lab3\cmake-build-debug D:\oop\lab3\cmake-build-debug D:\oop\lab3\cmake-build-debug\CMakeFiles\lab3.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/lab3.dir/depend
 

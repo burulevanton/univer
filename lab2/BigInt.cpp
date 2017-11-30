@@ -1,5 +1,6 @@
 #include <cstring>
 #include <iomanip>
+
 #include "BigInt.h"
 BigInt::BigInt() = default;
 BigInt::BigInt(char *number) {

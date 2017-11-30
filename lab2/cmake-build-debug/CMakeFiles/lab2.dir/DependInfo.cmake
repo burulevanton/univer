@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/Anton/CLionProjects/lab2/BigInt.cpp" "C:/Users/Anton/CLionProjects/lab2/cmake-build-debug/CMakeFiles/lab2.dir/BigInt.cpp.obj"
-  "C:/Users/Anton/CLionProjects/lab2/main.cpp" "C:/Users/Anton/CLionProjects/lab2/cmake-build-debug/CMakeFiles/lab2.dir/main.cpp.obj"
-  "C:/Users/Anton/CLionProjects/lab2/matrix.cpp" "C:/Users/Anton/CLionProjects/lab2/cmake-build-debug/CMakeFiles/lab2.dir/matrix.cpp.obj"
+  "D:/oop/lab2/BigInt.cpp" "D:/oop/lab2/cmake-build-debug/CMakeFiles/lab2.dir/BigInt.cpp.obj"
+  "D:/oop/lab2/main.cpp" "D:/oop/lab2/cmake-build-debug/CMakeFiles/lab2.dir/main.cpp.obj"
+  "D:/oop/lab2/matrix.cpp" "D:/oop/lab2/cmake-build-debug/CMakeFiles/lab2.dir/matrix.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

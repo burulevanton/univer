@@ -33,7 +33,6 @@ Container<T>::~Container() {
 
 template <typename T>
 void Container<T>::push(T other) {
-    cout<<other<<endl;
     if(this->current_size==this->max_size-1){
         throw out_of_range("Out of range");
     }
@@ -73,7 +72,10 @@ int Container<T>::size() {
 template <typename T>
 void Container<T>::printContainer() {
     for (int i = max_size-1; i >= 0; i--)
+    {
+        if(this->containerPtr[i]!=0)
         cout << "|" << setw(4) << this->containerPtr[i] << endl;
+    }
 }
 int main() {
     Container<int> container(5);
@@ -88,6 +90,7 @@ int main() {
     container.push(14);
     container.printContainer();
     container.pop();
+    cout<<endl;
     container.printContainer();
     return 0;
 }

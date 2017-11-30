@@ -42,10 +42,10 @@ RM = "C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E remo
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Anton\CLionProjects\lab2
+CMAKE_SOURCE_DIR = D:\oop\lab2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Anton\CLionProjects\lab2\cmake-build-debug
+CMAKE_BINARY_DIR = D:\oop\lab2\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/lab2.dir/depend.make
@@ -58,16 +58,16 @@ include CMakeFiles/lab2.dir/flags.make
 
 CMakeFiles/lab2.dir/main.cpp.obj: CMakeFiles/lab2.dir/flags.make
 CMakeFiles/lab2.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Anton\CLionProjects\lab2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lab2.dir/main.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\lab2.dir\main.cpp.obj -c C:\Users\Anton\CLionProjects\lab2\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\oop\lab2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lab2.dir/main.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\lab2.dir\main.cpp.obj -c D:\oop\lab2\main.cpp
 
 CMakeFiles/lab2.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab2.dir/main.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Anton\CLionProjects\lab2\main.cpp > CMakeFiles\lab2.dir\main.cpp.i
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\oop\lab2\main.cpp > CMakeFiles\lab2.dir\main.cpp.i
 
 CMakeFiles/lab2.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab2.dir/main.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Anton\CLionProjects\lab2\main.cpp -o CMakeFiles\lab2.dir\main.cpp.s
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\oop\lab2\main.cpp -o CMakeFiles\lab2.dir\main.cpp.s
 
 CMakeFiles/lab2.dir/main.cpp.obj.requires:
 
@@ -82,16 +82,16 @@ CMakeFiles/lab2.dir/main.cpp.obj.provides.build: CMakeFiles/lab2.dir/main.cpp.ob
 
 CMakeFiles/lab2.dir/matrix.cpp.obj: CMakeFiles/lab2.dir/flags.make
 CMakeFiles/lab2.dir/matrix.cpp.obj: ../matrix.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Anton\CLionProjects\lab2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/lab2.dir/matrix.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\lab2.dir\matrix.cpp.obj -c C:\Users\Anton\CLionProjects\lab2\matrix.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\oop\lab2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/lab2.dir/matrix.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\lab2.dir\matrix.cpp.obj -c D:\oop\lab2\matrix.cpp
 
 CMakeFiles/lab2.dir/matrix.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab2.dir/matrix.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Anton\CLionProjects\lab2\matrix.cpp > CMakeFiles\lab2.dir\matrix.cpp.i
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\oop\lab2\matrix.cpp > CMakeFiles\lab2.dir\matrix.cpp.i
 
 CMakeFiles/lab2.dir/matrix.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab2.dir/matrix.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Anton\CLionProjects\lab2\matrix.cpp -o CMakeFiles\lab2.dir\matrix.cpp.s
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\oop\lab2\matrix.cpp -o CMakeFiles\lab2.dir\matrix.cpp.s
 
 CMakeFiles/lab2.dir/matrix.cpp.obj.requires:
 
@@ -106,16 +106,16 @@ CMakeFiles/lab2.dir/matrix.cpp.obj.provides.build: CMakeFiles/lab2.dir/matrix.cp
 
 CMakeFiles/lab2.dir/BigInt.cpp.obj: CMakeFiles/lab2.dir/flags.make
 CMakeFiles/lab2.dir/BigInt.cpp.obj: ../BigInt.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Anton\CLionProjects\lab2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/lab2.dir/BigInt.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\lab2.dir\BigInt.cpp.obj -c C:\Users\Anton\CLionProjects\lab2\BigInt.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\oop\lab2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/lab2.dir/BigInt.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\lab2.dir\BigInt.cpp.obj -c D:\oop\lab2\BigInt.cpp
 
 CMakeFiles/lab2.dir/BigInt.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab2.dir/BigInt.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Anton\CLionProjects\lab2\BigInt.cpp > CMakeFiles\lab2.dir\BigInt.cpp.i
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\oop\lab2\BigInt.cpp > CMakeFiles\lab2.dir\BigInt.cpp.i
 
 CMakeFiles/lab2.dir/BigInt.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab2.dir/BigInt.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Anton\CLionProjects\lab2\BigInt.cpp -o CMakeFiles\lab2.dir\BigInt.cpp.s
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\oop\lab2\BigInt.cpp -o CMakeFiles\lab2.dir\BigInt.cpp.s
 
 CMakeFiles/lab2.dir/BigInt.cpp.obj.requires:
 
@@ -144,7 +144,7 @@ lab2.exe: CMakeFiles/lab2.dir/build.make
 lab2.exe: CMakeFiles/lab2.dir/linklibs.rsp
 lab2.exe: CMakeFiles/lab2.dir/objects1.rsp
 lab2.exe: CMakeFiles/lab2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Anton\CLionProjects\lab2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable lab2.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\oop\lab2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable lab2.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\lab2.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -163,6 +163,6 @@ CMakeFiles/lab2.dir/clean:
 .PHONY : CMakeFiles/lab2.dir/clean
 
 CMakeFiles/lab2.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\Anton\CLionProjects\lab2 C:\Users\Anton\CLionProjects\lab2 C:\Users\Anton\CLionProjects\lab2\cmake-build-debug C:\Users\Anton\CLionProjects\lab2\cmake-build-debug C:\Users\Anton\CLionProjects\lab2\cmake-build-debug\CMakeFiles\lab2.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\oop\lab2 D:\oop\lab2 D:\oop\lab2\cmake-build-debug D:\oop\lab2\cmake-build-debug D:\oop\lab2\cmake-build-debug\CMakeFiles\lab2.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/lab2.dir/depend
 

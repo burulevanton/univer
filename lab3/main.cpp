@@ -1,52 +1,40 @@
-#include <iostream>
-#include <string>
-using namespace std;
-enum colors{
-    WHITE,
-    BLACK
-};
-class TFigure{
-private:
-    int chasrPosToInt(char position){
-        switch(position){
-            case 'a' :
-                return 0;
-            case 'b' :
-                return 1;
-            case 'c':
-                return 2;
-            case 'd':
-                return 3;
-            case 'e':
-                return 4;
-            case 'f':
-                return 5;
-            case 'g':
-                return 6;
-            case 'h':
-                return 7;
-            default:
-                return -1;
-        }
-    }
-protected:
-    int position_X;
-    int position_Y;
-    colors color;
-public:
-    TFigure(char pos_X, int pos_y, colors color){
-        this->position_X=chasrPosToInt(pos_X);
-        this->position_Y=pos_y;
-        this->color=color;
-        TFigure *figures[32] = Board::getArray();
-    }
+#include "FigureKing.h"
+#include<iostream>
+#include<string>
 
-};
-class Board{
-private:
-    static TFigure *figures[32];
-public:
-    static TFigure* getArray(){
-        return *figures;
-    }
-};
+int main() {
+	setlocale(LC_ALL, "Russian");
+	Board *board = new Board("input.txt");
+	board->drawBoard();
+	string s;
+	cout << "Введите координаты белого короля: ";
+	cin >> s;
+	auto column = static_cast<int>(s[0]) - 'a';
+	s.erase(0, 1);
+	auto row = stoi(s);
+	board->initFigure(FigureColor::White, FigureType::King, BoardPosition(row - 1, column), false);
+	board->drawBoard();
+	cout << "Провека положения на доске" << endl;
+	cout << endl;
+	auto white_king = (const FigureKing*)board->figure(FigureColor::White, FigureType::King);
+	auto whiteKingProtectedMovesCount = white_king->availableMoves(board).size();
+	const Figure *myFigure = nullptr;
+	BoardPosition newPosition;
+	board->killKing(FigureColor::White, &myFigure, newPosition);
+	string status;
+	if (myFigure != nullptr && whiteKingProtectedMovesCount == 0) {
+		status = "Мат\n";
+		status += "Поставлен" + board->figureTypeToString(myFigure->getType());
+	}
+	else if (myFigure != nullptr && whiteKingProtectedMovesCount != 0) {
+		status = "Шах\n";
+		status += "Поставлен " + board->figureTypeToString(myFigure->getType());
+	}
+	else if (myFigure == nullptr && whiteKingProtectedMovesCount == 0) {
+		status = "Безвыходная ситуация";
+	}
+	else
+		status = "Всё нормально";
+	cout << status << endl;
+	system("pause");
+}

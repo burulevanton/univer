@@ -1,0 +1,3 @@
+pawn black d6
+pawn black f6
+bishop black b8

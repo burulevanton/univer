@@ -1,4 +1,4 @@
-"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\Anton\CLionProjects\lab4
+"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" D:\oop\lab4
 -- The C compiler identification is GNU 7.1.0
 -- The CXX compiler identification is GNU 7.1.0
 -- Check for working C compiler: C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/gcc.exe
@@ -15,4 +15,4 @@
 -- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: C:/Users/Anton/CLionProjects/lab4/cmake-build-debug
+-- Build files have been written to: D:/oop/lab4/cmake-build-debug

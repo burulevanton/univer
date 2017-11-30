@@ -8,28 +8,28 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/Anton/CLionProjects/lab3/cmake-build-debug"/>
+				<Option working_dir="D:/oop/lab3/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Anton/CLionProjects/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Anton/CLionProjects/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Anton/CLionProjects/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Anton/CLionProjects/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/oop/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/oop/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/oop/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/oop/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/Anton/CLionProjects/lab3/cmake-build-debug"/>
+				<Option working_dir="D:/oop/lab3/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Anton/CLionProjects/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Anton/CLionProjects/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Anton/CLionProjects/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Anton/CLionProjects/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/oop/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/oop/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/oop/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/oop/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="lab3">
-				<Option output="C:/Users/Anton/CLionProjects/lab3/cmake-build-debug/lab3.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Anton/CLionProjects/lab3/cmake-build-debug"/>
+				<Option output="D:/oop/lab3/cmake-build-debug/lab3.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/oop/lab3/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -42,15 +42,15 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Anton/CLionProjects/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 lab3"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Anton/CLionProjects/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Anton/CLionProjects/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Anton/CLionProjects/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/oop/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 lab3"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/oop/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/oop/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/oop/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="lab3/fast">
-				<Option output="C:/Users/Anton/CLionProjects/lab3/cmake-build-debug/lab3.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Anton/CLionProjects/lab3/cmake-build-debug"/>
+				<Option output="D:/oop/lab3/cmake-build-debug/lab3.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/oop/lab3/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -63,27 +63,87 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Anton/CLionProjects/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 lab3/fast"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Anton/CLionProjects/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Anton/CLionProjects/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Anton/CLionProjects/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/oop/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 lab3/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/oop/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/oop/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/oop/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/Anton/CLionProjects/lab3/cmake-build-debug"/>
+				<Option working_dir="D:/oop/lab3/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Anton/CLionProjects/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Anton/CLionProjects/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Anton/CLionProjects/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Anton/CLionProjects/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/oop/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/oop/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/oop/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/oop/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/Anton/CLionProjects/lab3/main.cpp">
+		<Unit filename="D:/oop/lab3/Board.cpp">
 			<Option target="lab3"/>
 		</Unit>
-		<Unit filename="C:/Users/Anton/CLionProjects/lab3/CMakeLists.txt">
+		<Unit filename="D:/oop/lab3/Board.h">
+			<Option target="lab3"/>
+		</Unit>
+		<Unit filename="D:/oop/lab3/BoardPosition.cpp">
+			<Option target="lab3"/>
+		</Unit>
+		<Unit filename="D:/oop/lab3/BoardPosition.h">
+			<Option target="lab3"/>
+		</Unit>
+		<Unit filename="D:/oop/lab3/Figure.cpp">
+			<Option target="lab3"/>
+		</Unit>
+		<Unit filename="D:/oop/lab3/Figure.h">
+			<Option target="lab3"/>
+		</Unit>
+		<Unit filename="D:/oop/lab3/FigureBishop.cpp">
+			<Option target="lab3"/>
+		</Unit>
+		<Unit filename="D:/oop/lab3/FigureBishop.h">
+			<Option target="lab3"/>
+		</Unit>
+		<Unit filename="D:/oop/lab3/FigureColor.h">
+			<Option target="lab3"/>
+		</Unit>
+		<Unit filename="D:/oop/lab3/FigureKing.cpp">
+			<Option target="lab3"/>
+		</Unit>
+		<Unit filename="D:/oop/lab3/FigureKing.h">
+			<Option target="lab3"/>
+		</Unit>
+		<Unit filename="D:/oop/lab3/FigureKnight.cpp">
+			<Option target="lab3"/>
+		</Unit>
+		<Unit filename="D:/oop/lab3/FigureKnight.h">
+			<Option target="lab3"/>
+		</Unit>
+		<Unit filename="D:/oop/lab3/FigurePawn.cpp">
+			<Option target="lab3"/>
+		</Unit>
+		<Unit filename="D:/oop/lab3/FigurePawn.h">
+			<Option target="lab3"/>
+		</Unit>
+		<Unit filename="D:/oop/lab3/FigureQueen.cpp">
+			<Option target="lab3"/>
+		</Unit>
+		<Unit filename="D:/oop/lab3/FigureQueen.h">
+			<Option target="lab3"/>
+		</Unit>
+		<Unit filename="D:/oop/lab3/FigureRook.cpp">
+			<Option target="lab3"/>
+		</Unit>
+		<Unit filename="D:/oop/lab3/FigureRook.h">
+			<Option target="lab3"/>
+		</Unit>
+		<Unit filename="D:/oop/lab3/FigureType.h">
+			<Option target="lab3"/>
+		</Unit>
+		<Unit filename="D:/oop/lab3/main.cpp">
+			<Option target="lab3"/>
+		</Unit>
+		<Unit filename="D:/oop/lab3/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
