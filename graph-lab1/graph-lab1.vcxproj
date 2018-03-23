@@ -116,12 +116,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Graph.h" />
+    <ClInclude Include="GraphAdjList.h" />
     <ClInclude Include="GraphAdjMatrix.h" />
+    <ClInclude Include="GraphListOfEdges.h" />
     <ClInclude Include="IGraph.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Graph.cpp" />
+    <ClCompile Include="GraphAdjList.cpp" />
     <ClCompile Include="GraphAdjMatrix.cpp" />
+    <ClCompile Include="GraphListOfEdges.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
