@@ -25,3 +25,23 @@ int GraphListOfEdges::changeEdge(int from, int to, int newWeight)
 		data[std::make_pair(to, from)] = newWeight;
 	return oldWeight;
 }
+
+GraphListOfEdges::GraphListOfEdges(bool isOriented, bool isWeight, int vertexCount) :isOriented(isOriented),
+                                                                                     isWeight(isWeight),
+                                                                                     vertexCount(vertexCount) {}
+
+GraphListOfEdges* GraphListOfEdges::toListOfEdges() { return this;}
+
+GraphAdjList* GraphListOfEdges::toAdjList() {
+    auto graph = new GraphAdjList(this->isOriented, this->isWeight, this->vertexCount);
+    for(const auto &item : data)
+        graph->addEdge(item.first.first,item.first.second, item.second);
+    return graph;
+}
+
+GraphAdjMatrix* GraphListOfEdges::toAdjMatrix() {
+    auto graph = new GraphAdjMatrix(this->isOriented, this->isWeight, this->vertexCount);
+    for(const auto &item : data)
+        graph->addEdge(item.first.first,item.first.second, item.second);
+    return graph;
+}

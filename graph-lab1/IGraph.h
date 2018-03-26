@@ -16,3 +16,7 @@ public:
 	virtual GraphListOfEdges* toListOfEdges() = 0;
 	virtual void writeGraph(std::string fileName) = 0;
 };
+
+#include "GraphAdjMatrix.h"
+#include "GraphAdjList.h"
+#include "GraphListOfEdges.h"

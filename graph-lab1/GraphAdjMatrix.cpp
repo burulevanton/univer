@@ -24,3 +24,29 @@ int GraphAdjMatrix::changeEdge(int from, int to, int newWeight)
 		data[to][from] = newWeight;
 	return oldWeight;
 }
+GraphAdjMatrix::GraphAdjMatrix(bool isOriented, bool isWeight, int size) : isOriented(isOriented), isWeight(isWeight) {
+	for(auto i =0;i<size;i++)
+		this->data.emplace_back(size);
+}
+
+GraphAdjMatrix* GraphAdjMatrix::toAdjMatrix() {
+    return this;
+}
+
+GraphAdjList* GraphAdjMatrix::toAdjList() {
+    auto graph = new GraphAdjList(this->isOriented, this->isWeight, this->data.size());
+    for(auto i=0;i<data.size();i++)
+        for(auto j=0;j<data[i].size();j++)
+            if(data[i][j] != 0)
+                graph->addEdge(i, j, data[i][k]);
+    return graph;
+}
+
+GraphListOfEdges* GraphAdjList::toListOfEdges() {
+    auto graph = new GraphListOfEdges(this->isOriented, this->isWeight, this->data.size());
+    for(auto i=0;i<data.size();i++)
+        for(auto j=0;j<data[i].size();j++)
+            if(data[i][j]!=0)
+                graph->addEdge(i,j,data[i][j]);
+    return graph;
+}

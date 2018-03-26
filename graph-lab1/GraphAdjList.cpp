@@ -16,13 +16,36 @@ int GraphAdjList::changeEdge(int from, int to, int newWeight)
 		data[from][to] = newWeight;
 	return oldWeight;
 }
-GraphAdjList * GraphAdjList::toAdjList()
-{
-	return this;
-}
+
 void GraphAdjList::removeEdge(int from, int to)
 {
 	data[from].erase(to);
 	if (!isOriented)
 		data[to].erase(from);
+}
+
+GraphAdjList * GraphAdjList::toAdjList()
+{
+    return this;
+}
+
+GraphAdjMatrix* GraphAdjList::toAdjMatrix() {
+    auto graph = new GraphAdjMatrix(this->isOriented, this->isWeight, this->data.size());
+    for(auto i = 0; i<this->data.size();i++)
+        for(const auto &pair : data[i])
+            graph->addEdge(i,pair.first,pair.second);
+    return graph;
+}
+
+GraphListOfEdges* GraphAdjList::toListOfEdges() {
+    auto graph = new GraphListOfEdges(this->isOriented, this->isWeight, this->data.size());
+    for(auto i =0;i<data.size();i++)
+        for(const auto &pair : data[i])
+            graph->addEdge(i,pair.first,pair.second);
+    return graph;
+}
+
+GraphAdjList::GraphAdjList(bool isOriented, bool isWeight, int countOfVortex) : isOriented(isOriented),
+                                                                                isWeight(isWeight){
+    this->data = std::vector<std::map<int,int>>(countOfVortex);
 }
