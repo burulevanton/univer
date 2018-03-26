@@ -9,7 +9,7 @@ private:
 	std::vector<std::vector<int, int>> data;
 public:
 	GraphAdjMatrix(bool isOriented, bool isWeight, int size);
-	void readGraph(std::string fileName);
+	void readGraph(std::ifstream file);
 	void addEdge(int from, int to, int weight);
 	void removeEdge(int from, int to);
 	int changeEdge(int from, int to, int newWeight);

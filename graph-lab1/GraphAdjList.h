@@ -10,7 +10,7 @@ private:
 	std::vector<std::map<int, int>> data;
 public:
     GraphAdjList(bool isOriented, bool isWeight, int countOfVortex);
-	void readGraph(std::string fileName);
+	void readGraph(std::ifstream& file);
 	void addEdge(int from, int to, int weight);
 	void removeEdge(int from, int to);
 	int changeEdge(int from, int to, int newWeight);

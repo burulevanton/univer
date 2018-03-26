@@ -1,4 +1,5 @@
 #include "GraphAdjList.h"
+#include <sstream>
 
 void GraphAdjList::addEdge(int from, int to, int weight)
 {
@@ -24,6 +25,8 @@ void GraphAdjList::removeEdge(int from, int to)
 		data[to].erase(from);
 }
 
+
+
 GraphAdjList * GraphAdjList::toAdjList()
 {
     return this;
@@ -48,4 +51,25 @@ GraphListOfEdges* GraphAdjList::toListOfEdges() {
 GraphAdjList::GraphAdjList(bool isOriented, bool isWeight, int countOfVortex) : isOriented(isOriented),
                                                                                 isWeight(isWeight){
     this->data = std::vector<std::map<int,int>>(countOfVortex);
+}
+
+void GraphAdjList::readGraph(std::ifstream &file) {
+    int countOfVertex;
+    file>>countOfVertex;
+    file>>this->isOriented;
+    file>>this->isWeight;
+    this->data = std::vector<std::map<int,int>>(countOfVertex);
+    for(int i=0;i<countOfVertex;i++)
+    {
+        string s;
+        getline(s,file);
+        std::istringstream input(s);
+        while(!input.eof()) {
+            int to, weight;
+            file >> to;
+            if (isWeight)
+                file >> weight;
+            addEdge(i, to - 1, weight);
+        }
+    }
 }

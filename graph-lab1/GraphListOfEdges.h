@@ -10,7 +10,7 @@ private:
 	std::map<std::pair<int, int>, int> data;
 public:
 	GraphListOfEdges(bool isOriented, bool isWeight, int vertexCount);
-	void readGraph(std::string fileName);
+	void readGraph(std::ifstream& file);
 	void addEdge(int from, int to, int weight);
 	void removeEdge(int from, int to);
 	int changeEdge(int from, int to, int newWeight);

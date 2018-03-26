@@ -50,3 +50,20 @@ GraphListOfEdges* GraphAdjList::toListOfEdges() {
                 graph->addEdge(i,j,data[i][j]);
     return graph;
 }
+
+void GraphAdjMatrix::readGraph(std::ifstream& file) {
+    int countOfVortex;
+    file>>countOfVortex;
+    file>>this->isOriented;
+    file>>this->isWeight;
+    for(auto i=0;i<countOfVortex;i++)
+        this->data.emplace_back(countOfVortex);
+    for(auto i=0;i<countOfVortex;i++)
+        for(auto j=0;j<countOfVortex;j++)
+        {
+            int weight;
+            file>>weight;
+            if(weight!=0)
+                this->addEdge(i,j,weight);
+        }
+}

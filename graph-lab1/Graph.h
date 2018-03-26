@@ -13,7 +13,7 @@ public:
 	void removeEdge(int from, int to);
 	int changeEdge(int from, int to, int newWeight);
 	void transformToAdjMatrix();
-	void transfromToAdjList();
+	void transformToAdjList();
 	void transformToListOfEdges();
 	void writeGraph(std::string fileName);
 };

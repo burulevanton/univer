@@ -1,7 +1,25 @@
 #include "Graph.h"
 
 void Graph::readGraph(std::string fileName) {
-	this->_graph->readGraph(fileName);
+    std::ifstream file(fileName);
+    std::string type;
+    file >> type;
+    switch(type){
+        case "L" : {
+            this->renewGraph((IGraph *) new GraphAdjList);
+            break;
+        }
+        case "C" : {
+            this->renewGraph((IGraph *) new GraphAdjMatrix);
+            break;
+        }
+        case "E": {
+            this->renewGraph((IGraph *) new GraphListOfEdges);
+            break;
+        }
+
+    }
+	this->_graph->readGraph(file);
 }
 
 void Graph::addEdge(int from, int to, int weight) {
@@ -26,7 +44,7 @@ void Graph::transformToAdjMatrix() {
 	this->renewGraph(newGraph);
 }
 
-void Graph::transfromToAdjList() {
+void Graph::transformToAdjList() {
 	auto newGraph = (IGraph *)this->_graph->toAdjList();
 	this->renewGraph(newGraph);
 }
@@ -39,3 +57,4 @@ void Graph::transformToListOfEdges() {
 void Graph::writeGraph(std::string fileName) {
 	this->_graph->writeGraph(fileName);
 }
+

@@ -45,3 +45,19 @@ GraphAdjMatrix* GraphListOfEdges::toAdjMatrix() {
         graph->addEdge(item.first.first,item.first.second, item.second);
     return graph;
 }
+
+void GraphListOfEdges::readGraph(std::ifstream &file) {
+    file>>this->vertexCount;
+    int m;
+    file>>m;
+    file>>this->isOriented;
+    file>>this->isWeight;
+    for(auto i=0;i<m;i++)
+    {
+        int from,to,weight;
+        file>>from>>to;
+        if(isWeight)
+            file>>weight;
+        this->addEdge(from-1,to-1,weight);
+    }
+}
