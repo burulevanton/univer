@@ -61,8 +61,8 @@ void GraphAdjList::readGraph(std::ifstream &file) {
     this->data = std::vector<std::map<int,int>>(countOfVertex);
     for(int i=0;i<countOfVertex;i++)
     {
-        string s;
-        getline(s,file);
+        std::string s;
+        getline(file, s);
         std::istringstream input(s);
         while(!input.eof()) {
             int to, weight;
@@ -72,4 +72,22 @@ void GraphAdjList::readGraph(std::ifstream &file) {
             addEdge(i, to - 1, weight);
         }
     }
+    file.close();
+}
+
+void GraphAdjList::writeGraph(std::string fileName) {
+    std::ofstream file(fileName);
+    file<<"L "<<this->data.size()<<"\n";
+    file<<isOriented<<" "<<isWeight<<"\n";
+    for(const auto &row : this->data) {
+        std::string del;
+        for(const auto &pair : row){
+            file<<del<<(pair.first+1);
+            if(this->isWeight)
+                file<<" "<<pair.second;
+            del = " ";
+        }
+        file<<"\n";
+    }
+    file.close();
 }

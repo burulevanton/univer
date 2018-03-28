@@ -38,11 +38,11 @@ GraphAdjList* GraphAdjMatrix::toAdjList() {
     for(auto i=0;i<data.size();i++)
         for(auto j=0;j<data[i].size();j++)
             if(data[i][j] != 0)
-                graph->addEdge(i, j, data[i][k]);
+                graph->addEdge(i, j, data[i][j]);
     return graph;
 }
 
-GraphListOfEdges* GraphAdjList::toListOfEdges() {
+GraphListOfEdges* GraphAdjMatrix::toListOfEdges() {
     auto graph = new GraphListOfEdges(this->isOriented, this->isWeight, this->data.size());
     for(auto i=0;i<data.size();i++)
         for(auto j=0;j<data[i].size();j++)
@@ -51,7 +51,7 @@ GraphListOfEdges* GraphAdjList::toListOfEdges() {
     return graph;
 }
 
-void GraphAdjMatrix::readGraph(std::ifstream& file) {
+void GraphAdjMatrix::readGraph(std::ifstream &file) {
     int countOfVortex;
     file>>countOfVortex;
     file>>this->isOriented;
@@ -66,4 +66,20 @@ void GraphAdjMatrix::readGraph(std::ifstream& file) {
             if(weight!=0)
                 this->addEdge(i,j,weight);
         }
+    file.close();
+}
+
+void GraphAdjMatrix::writeGraph(std::string fileName) {
+    std::ofstream file(fileName);
+    file<<"C "<<this->data.size()<<"\n";
+    file<<isOriented<<" "<<isWeight<<"\n";
+    for(const auto &row : this->data) {
+        std::string del;
+        for(const auto &item : row){
+            file<<del<<item;
+            del = " ";
+        }
+        file<<"\n";
+    }
+    file.close();
 }

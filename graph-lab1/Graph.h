@@ -1,5 +1,6 @@
 #pragma once
 
+#include <iostream>
 #include "IGraph.h"
 
 
@@ -8,6 +9,7 @@ private:
 	IGraph * _graph;
 	void renewGraph(IGraph *newGraph);
 public:
+	Graph();
 	void readGraph(std::string fileName);
 	void addEdge(int from, int to, int weight);
 	void removeEdge(int from, int to);

@@ -9,6 +9,7 @@ private:
 	int vertexCount;
 	std::map<std::pair<int, int>, int> data;
 public:
+	GraphListOfEdges(){};
 	GraphListOfEdges(bool isOriented, bool isWeight, int vertexCount);
 	void readGraph(std::ifstream& file);
 	void addEdge(int from, int to, int weight);

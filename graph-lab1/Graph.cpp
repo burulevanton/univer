@@ -1,24 +1,17 @@
 #include "Graph.h"
-
+Graph::Graph() {
+    this->_graph = nullptr;
+}
 void Graph::readGraph(std::string fileName) {
     std::ifstream file(fileName);
     std::string type;
     file >> type;
-    switch(type){
-        case "L" : {
+        if(type == "L")
             this->renewGraph((IGraph *) new GraphAdjList);
-            break;
-        }
-        case "C" : {
+        else if (type == "C")
             this->renewGraph((IGraph *) new GraphAdjMatrix);
-            break;
-        }
-        case "E": {
+        else if (type == "E")
             this->renewGraph((IGraph *) new GraphListOfEdges);
-            break;
-        }
-
-    }
 	this->_graph->readGraph(file);
 }
 

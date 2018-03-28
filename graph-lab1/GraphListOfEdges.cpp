@@ -60,4 +60,18 @@ void GraphListOfEdges::readGraph(std::ifstream &file) {
             file>>weight;
         this->addEdge(from-1,to-1,weight);
     }
+    file.close();
+}
+
+void GraphListOfEdges::writeGraph(std::string fileName) {
+    std::ofstream file(fileName);
+    file<<"E "<<this->vertexCount<<" "<<this->data.size()<<"\n";
+    file<<isOriented<<" "<<isWeight<<"\n";
+    for(const auto &item : this->data) {
+        file<<(item.first.first+1) << " "<<(item.first.second+1);
+        if(isWeight)
+            file<<item.second;
+        file<<"\n";
+    }
+    file.close();
 }
