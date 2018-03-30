@@ -80,31 +80,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="E:/graph/graph-lab1/Graph.cpp">
-			<Option target="graph-lab1"/>
-		</Unit>
 		<Unit filename="E:/graph/graph-lab1/Graph.h">
-			<Option target="graph-lab1"/>
-		</Unit>
-		<Unit filename="E:/graph/graph-lab1/GraphAdjList.cpp">
-			<Option target="graph-lab1"/>
-		</Unit>
-		<Unit filename="E:/graph/graph-lab1/GraphAdjList.h">
-			<Option target="graph-lab1"/>
-		</Unit>
-		<Unit filename="E:/graph/graph-lab1/GraphAdjMatrix.cpp">
-			<Option target="graph-lab1"/>
-		</Unit>
-		<Unit filename="E:/graph/graph-lab1/GraphAdjMatrix.h">
-			<Option target="graph-lab1"/>
-		</Unit>
-		<Unit filename="E:/graph/graph-lab1/GraphListOfEdges.cpp">
-			<Option target="graph-lab1"/>
-		</Unit>
-		<Unit filename="E:/graph/graph-lab1/GraphListOfEdges.h">
-			<Option target="graph-lab1"/>
-		</Unit>
-		<Unit filename="E:/graph/graph-lab1/IGraph.h">
 			<Option target="graph-lab1"/>
 		</Unit>
 		<Unit filename="E:/graph/graph-lab1/main.cpp">

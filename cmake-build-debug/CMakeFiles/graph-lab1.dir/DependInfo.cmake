@@ -4,10 +4,6 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "E:/graph/graph-lab1/Graph.cpp" "E:/graph/cmake-build-debug/CMakeFiles/graph-lab1.dir/graph-lab1/Graph.cpp.obj"
-  "E:/graph/graph-lab1/GraphAdjList.cpp" "E:/graph/cmake-build-debug/CMakeFiles/graph-lab1.dir/graph-lab1/GraphAdjList.cpp.obj"
-  "E:/graph/graph-lab1/GraphAdjMatrix.cpp" "E:/graph/cmake-build-debug/CMakeFiles/graph-lab1.dir/graph-lab1/GraphAdjMatrix.cpp.obj"
-  "E:/graph/graph-lab1/GraphListOfEdges.cpp" "E:/graph/cmake-build-debug/CMakeFiles/graph-lab1.dir/graph-lab1/GraphListOfEdges.cpp.obj"
   "E:/graph/graph-lab1/main.cpp" "E:/graph/cmake-build-debug/CMakeFiles/graph-lab1.dir/graph-lab1/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

@@ -122,114 +122,6 @@ graph-lab1/fast:
 	$(MAKE) -f CMakeFiles\graph-lab1.dir\build.make CMakeFiles/graph-lab1.dir/build
 .PHONY : graph-lab1/fast
 
-graph-lab1/Graph.obj: graph-lab1/Graph.cpp.obj
-
-.PHONY : graph-lab1/Graph.obj
-
-# target to build an object file
-graph-lab1/Graph.cpp.obj:
-	$(MAKE) -f CMakeFiles\graph-lab1.dir\build.make CMakeFiles/graph-lab1.dir/graph-lab1/Graph.cpp.obj
-.PHONY : graph-lab1/Graph.cpp.obj
-
-graph-lab1/Graph.i: graph-lab1/Graph.cpp.i
-
-.PHONY : graph-lab1/Graph.i
-
-# target to preprocess a source file
-graph-lab1/Graph.cpp.i:
-	$(MAKE) -f CMakeFiles\graph-lab1.dir\build.make CMakeFiles/graph-lab1.dir/graph-lab1/Graph.cpp.i
-.PHONY : graph-lab1/Graph.cpp.i
-
-graph-lab1/Graph.s: graph-lab1/Graph.cpp.s
-
-.PHONY : graph-lab1/Graph.s
-
-# target to generate assembly for a file
-graph-lab1/Graph.cpp.s:
-	$(MAKE) -f CMakeFiles\graph-lab1.dir\build.make CMakeFiles/graph-lab1.dir/graph-lab1/Graph.cpp.s
-.PHONY : graph-lab1/Graph.cpp.s
-
-graph-lab1/GraphAdjList.obj: graph-lab1/GraphAdjList.cpp.obj
-
-.PHONY : graph-lab1/GraphAdjList.obj
-
-# target to build an object file
-graph-lab1/GraphAdjList.cpp.obj:
-	$(MAKE) -f CMakeFiles\graph-lab1.dir\build.make CMakeFiles/graph-lab1.dir/graph-lab1/GraphAdjList.cpp.obj
-.PHONY : graph-lab1/GraphAdjList.cpp.obj
-
-graph-lab1/GraphAdjList.i: graph-lab1/GraphAdjList.cpp.i
-
-.PHONY : graph-lab1/GraphAdjList.i
-
-# target to preprocess a source file
-graph-lab1/GraphAdjList.cpp.i:
-	$(MAKE) -f CMakeFiles\graph-lab1.dir\build.make CMakeFiles/graph-lab1.dir/graph-lab1/GraphAdjList.cpp.i
-.PHONY : graph-lab1/GraphAdjList.cpp.i
-
-graph-lab1/GraphAdjList.s: graph-lab1/GraphAdjList.cpp.s
-
-.PHONY : graph-lab1/GraphAdjList.s
-
-# target to generate assembly for a file
-graph-lab1/GraphAdjList.cpp.s:
-	$(MAKE) -f CMakeFiles\graph-lab1.dir\build.make CMakeFiles/graph-lab1.dir/graph-lab1/GraphAdjList.cpp.s
-.PHONY : graph-lab1/GraphAdjList.cpp.s
-
-graph-lab1/GraphAdjMatrix.obj: graph-lab1/GraphAdjMatrix.cpp.obj
-
-.PHONY : graph-lab1/GraphAdjMatrix.obj
-
-# target to build an object file
-graph-lab1/GraphAdjMatrix.cpp.obj:
-	$(MAKE) -f CMakeFiles\graph-lab1.dir\build.make CMakeFiles/graph-lab1.dir/graph-lab1/GraphAdjMatrix.cpp.obj
-.PHONY : graph-lab1/GraphAdjMatrix.cpp.obj
-
-graph-lab1/GraphAdjMatrix.i: graph-lab1/GraphAdjMatrix.cpp.i
-
-.PHONY : graph-lab1/GraphAdjMatrix.i
-
-# target to preprocess a source file
-graph-lab1/GraphAdjMatrix.cpp.i:
-	$(MAKE) -f CMakeFiles\graph-lab1.dir\build.make CMakeFiles/graph-lab1.dir/graph-lab1/GraphAdjMatrix.cpp.i
-.PHONY : graph-lab1/GraphAdjMatrix.cpp.i
-
-graph-lab1/GraphAdjMatrix.s: graph-lab1/GraphAdjMatrix.cpp.s
-
-.PHONY : graph-lab1/GraphAdjMatrix.s
-
-# target to generate assembly for a file
-graph-lab1/GraphAdjMatrix.cpp.s:
-	$(MAKE) -f CMakeFiles\graph-lab1.dir\build.make CMakeFiles/graph-lab1.dir/graph-lab1/GraphAdjMatrix.cpp.s
-.PHONY : graph-lab1/GraphAdjMatrix.cpp.s
-
-graph-lab1/GraphListOfEdges.obj: graph-lab1/GraphListOfEdges.cpp.obj
-
-.PHONY : graph-lab1/GraphListOfEdges.obj
-
-# target to build an object file
-graph-lab1/GraphListOfEdges.cpp.obj:
-	$(MAKE) -f CMakeFiles\graph-lab1.dir\build.make CMakeFiles/graph-lab1.dir/graph-lab1/GraphListOfEdges.cpp.obj
-.PHONY : graph-lab1/GraphListOfEdges.cpp.obj
-
-graph-lab1/GraphListOfEdges.i: graph-lab1/GraphListOfEdges.cpp.i
-
-.PHONY : graph-lab1/GraphListOfEdges.i
-
-# target to preprocess a source file
-graph-lab1/GraphListOfEdges.cpp.i:
-	$(MAKE) -f CMakeFiles\graph-lab1.dir\build.make CMakeFiles/graph-lab1.dir/graph-lab1/GraphListOfEdges.cpp.i
-.PHONY : graph-lab1/GraphListOfEdges.cpp.i
-
-graph-lab1/GraphListOfEdges.s: graph-lab1/GraphListOfEdges.cpp.s
-
-.PHONY : graph-lab1/GraphListOfEdges.s
-
-# target to generate assembly for a file
-graph-lab1/GraphListOfEdges.cpp.s:
-	$(MAKE) -f CMakeFiles\graph-lab1.dir\build.make CMakeFiles/graph-lab1.dir/graph-lab1/GraphListOfEdges.cpp.s
-.PHONY : graph-lab1/GraphListOfEdges.cpp.s
-
 graph-lab1/main.obj: graph-lab1/main.cpp.obj
 
 .PHONY : graph-lab1/main.obj
@@ -266,18 +158,6 @@ help:
 	@echo ... graph-lab1
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... graph-lab1/Graph.obj
-	@echo ... graph-lab1/Graph.i
-	@echo ... graph-lab1/Graph.s
-	@echo ... graph-lab1/GraphAdjList.obj
-	@echo ... graph-lab1/GraphAdjList.i
-	@echo ... graph-lab1/GraphAdjList.s
-	@echo ... graph-lab1/GraphAdjMatrix.obj
-	@echo ... graph-lab1/GraphAdjMatrix.i
-	@echo ... graph-lab1/GraphAdjMatrix.s
-	@echo ... graph-lab1/GraphListOfEdges.obj
-	@echo ... graph-lab1/GraphListOfEdges.i
-	@echo ... graph-lab1/GraphListOfEdges.s
 	@echo ... graph-lab1/main.obj
 	@echo ... graph-lab1/main.i
 	@echo ... graph-lab1/main.s
