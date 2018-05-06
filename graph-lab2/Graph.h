@@ -7,6 +7,12 @@
 #include <map>
 #include <vector>
 #include <sstream>
+#include <algorithm>
+#include <functional>
+#include <limits>
+#include <queue>
+
+#include "DSU.h"
 
 class GraphAdjMatrix;
 class GraphAdjList;
@@ -41,6 +47,8 @@ public:
     GraphAdjList* toAdjList() override ;
     GraphListOfEdges * toListOfEdges() override ;
     void writeGraph(std::string fileName) override ;
+
+    IGraph *getSpaingTreePrima() const;
 };
 
 class GraphAdjMatrix :
@@ -70,7 +78,7 @@ private:
     int vertexCount;
     std::map<std::pair<int, int>, int> data;
 public:
-    GraphListOfEdges(){};
+    GraphListOfEdges() = default;
     GraphListOfEdges(bool isOriented, bool isWeight, int vertexCount);
     void readGraph(std::ifstream& file) override ;
     void addEdge(int from, int to, int weight) override ;
@@ -80,6 +88,10 @@ public:
     GraphAdjList* toAdjList() override ;
     GraphListOfEdges * toListOfEdges() override ;
     void writeGraph(std::string fileName) override ;
+
+    IGraph *getSpaingTreeKruscal()const;
+    IGraph *getSpaingTreeBoruvka() const;
+
 };
 
 /*GraphAdjList start*/
@@ -171,6 +183,35 @@ void GraphAdjList::writeGraph(std::string fileName) {
         file<<"\n";
     }
     file.close();
+}
+
+IGraph* GraphAdjList::getSpaingTreePrima() const {
+    std::priority_queue<std::pair<int, int>, std::vector<std::pair<int, int>>, std::greater<std::pair<int, int>>> pq;
+    std::vector<int> distances(data.size(), std::numeric_limits<int>::max());
+    std::vector<int> parent(data.size(), -1);
+    std::vector<bool> inMST(data.size(), false);
+    pq.push(std::make_pair(0, 0));
+    distances[0] = 0;
+
+    while (!pq.empty()){
+        auto u = pq.top().second;
+        pq.pop();
+        inMST[u] = true;
+        for(const auto &pair : data[u]){
+            int v = pair.first;
+            int weight = pair.second;
+            if (!inMST[v] && distances[v] > weight){
+                distances[v] = weight;
+                pq.push(std::make_pair(distances[v], v));
+                parent[v] = u;
+            }
+        }
+    }
+
+    auto graph = new GraphAdjList(isOriented, isWeight, data.size());
+    for (int i = 1; i < parent.size(); i++)
+        graph->addEdge(parent[i], i, distances[i]);
+    return graph;
 }
 
 /*GraphAdjList end*/
@@ -339,6 +380,65 @@ void GraphListOfEdges::writeGraph(std::string fileName) {
     file.close();
 }
 
+IGraph *GraphListOfEdges::getSpaingTreeKruscal() const {
+    auto pairs = std::vector<std::pair<std::pair<int, int>, int>>(data.begin(), data.end());
+    sort(pairs.begin(), pairs.end(),
+         [](std::pair<std::pair<int, int>, int> a,
+            std::pair<std::pair<int, int>, int> b) {
+             return a.second < b.second;
+         });
+    DSU dsu(vertexCount);
+    for(int i=0; i < vertexCount; i++)
+        dsu.makeSet(i);
+
+    auto graph = new GraphListOfEdges(isOriented, isWeight, vertexCount);
+    for(auto &item : pairs){
+        int from = item.first.first;
+        int to = item.first.second;
+        if (dsu.find(from) != dsu.find(to)){
+            graph->addEdge(from, to, item.second);
+            dsu.unite(from, to);
+        }
+    }
+    return graph;
+}
+
+IGraph* GraphListOfEdges::getSpaingTreeBoruvka() const {
+    auto pairs = std::vector<std::pair<std::pair<int,int>, int>>(data.begin(), data.end());
+
+    DSU dsu(vertexCount);
+    for(int i=0;i < vertexCount;i++)
+        dsu.makeSet(i);
+
+    auto graph = new GraphListOfEdges(isOriented, isWeight, vertexCount);
+    while (graph->data.size() < vertexCount -1){
+        auto minEdges = std::map<int, int>();
+        for (int i = 0;i < vertexCount; i++)
+            minEdges[i] = -1;
+        for(int i = 0; i < pairs.size(); i++){
+            auto edge = pairs[i];
+            int fromComponent = dsu.find(edge.first.first);
+            int toComponent = dsu.find(edge.first.second);
+            if (fromComponent != toComponent) {
+                if(minEdges[fromComponent] == -1 ||
+                        pairs[minEdges[fromComponent]].second > edge.second)
+                    minEdges[fromComponent] = i;
+                if(minEdges[toComponent] == -1 ||
+                        pairs[minEdges[toComponent]].second > edge.second)
+                    minEdges[toComponent] = i;
+            }
+        }
+        for(int i = 0; i< minEdges.size(); i++){
+            if(minEdges[i] != -1){
+                auto edge = pairs[minEdges[i]];
+                dsu.unite(edge.first.first, edge.first.second);
+                graph->addEdge(edge.first.first, edge.first.second, edge.second);
+            }
+        }
+    }
+    return graph;
+}
+
 /*GraphListOfEdges end*/
 class Graph {
 private:
@@ -389,5 +489,26 @@ public:
 	void writeGraph(std::string fileName) {
         this->_graph->writeGraph(fileName);
     }
+    Graph getSpaingTreePrima(){
+	    transformToAdjList();
+	    IGraph *temp = reinterpret_cast<GraphAdjList *>(_graph)->getSpaingTreePrima();
+	    Graph g = Graph();
+	    g._graph = temp;
+        return g;
+	}
+    Graph getSpaingTreeKruscal(){
+	    transformToListOfEdges();
+	    IGraph *temp = reinterpret_cast<GraphListOfEdges *>(_graph)->getSpaingTreeKruscal();
+	    Graph g = Graph();
+	    g._graph = temp;
+        return g;
+	}
+	Graph getSpaingTreeBoruvka(){
+	    transformToListOfEdges();
+	    IGraph *temp = reinterpret_cast<GraphListOfEdges *>(_graph)->getSpaingTreeBoruvka();
+	    Graph g = Graph();
+	    g._graph = temp;
+        return g;
+	}
 };
 
