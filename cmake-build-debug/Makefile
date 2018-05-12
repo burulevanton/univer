@@ -162,33 +162,6 @@ graph-lab1/main.cpp.s:
 	$(MAKE) -f CMakeFiles\graph-lab1.dir\build.make CMakeFiles/graph-lab1.dir/graph-lab1/main.cpp.s
 .PHONY : graph-lab1/main.cpp.s
 
-graph-lab2/DSU.obj: graph-lab2/DSU.cpp.obj
-
-.PHONY : graph-lab2/DSU.obj
-
-# target to build an object file
-graph-lab2/DSU.cpp.obj:
-	$(MAKE) -f CMakeFiles\graph-lab2.dir\build.make CMakeFiles/graph-lab2.dir/graph-lab2/DSU.cpp.obj
-.PHONY : graph-lab2/DSU.cpp.obj
-
-graph-lab2/DSU.i: graph-lab2/DSU.cpp.i
-
-.PHONY : graph-lab2/DSU.i
-
-# target to preprocess a source file
-graph-lab2/DSU.cpp.i:
-	$(MAKE) -f CMakeFiles\graph-lab2.dir\build.make CMakeFiles/graph-lab2.dir/graph-lab2/DSU.cpp.i
-.PHONY : graph-lab2/DSU.cpp.i
-
-graph-lab2/DSU.s: graph-lab2/DSU.cpp.s
-
-.PHONY : graph-lab2/DSU.s
-
-# target to generate assembly for a file
-graph-lab2/DSU.cpp.s:
-	$(MAKE) -f CMakeFiles\graph-lab2.dir\build.make CMakeFiles/graph-lab2.dir/graph-lab2/DSU.cpp.s
-.PHONY : graph-lab2/DSU.cpp.s
-
 graph-lab2/main.obj: graph-lab2/main.cpp.obj
 
 .PHONY : graph-lab2/main.obj
@@ -229,9 +202,6 @@ help:
 	@echo ... graph-lab1/main.obj
 	@echo ... graph-lab1/main.i
 	@echo ... graph-lab1/main.s
-	@echo ... graph-lab2/DSU.obj
-	@echo ... graph-lab2/DSU.i
-	@echo ... graph-lab2/DSU.s
 	@echo ... graph-lab2/main.obj
 	@echo ... graph-lab2/main.i
 	@echo ... graph-lab2/main.s

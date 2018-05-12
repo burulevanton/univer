@@ -128,12 +128,6 @@
 		<Unit filename="E:/graph/graph-lab1/main.cpp">
 			<Option target="graph-lab1"/>
 		</Unit>
-		<Unit filename="E:/graph/graph-lab2/DSU.cpp">
-			<Option target="graph-lab2"/>
-		</Unit>
-		<Unit filename="E:/graph/graph-lab2/DSU.h">
-			<Option target="graph-lab2"/>
-		</Unit>
 		<Unit filename="E:/graph/graph-lab2/Graph.h">
 			<Option target="graph-lab2"/>
 		</Unit>
