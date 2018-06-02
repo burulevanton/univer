@@ -352,6 +352,8 @@ void GraphListOfEdges::addEdge(int from, int to, int weight)
 {
     if (!isWeight)
         weight = 1;
+    if (!isOriented && data.count(std::make_pair(to, from)) > 0)
+        return;
     data[std::make_pair(from, to)] = weight;
     /*if (!isOriented)
         data[std::make_pair(to, from)] = weight;*/
