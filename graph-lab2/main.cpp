@@ -4,8 +4,11 @@ using namespace std;
 
 int main(){
     Graph g;
-    g.readGraph("E:\\graph\\graph-lab2\\input.txt");
-//    g.transformToAdjList();
-//    g.transformToListOfEdges();
+    g.readGraph("input.txt");
+    //Graph gg=g.getSpaingTreeBoruvka();
+    Graph gg = g.getSpaingTreeKruscal();
+    // Graph gg=g.getSpaingTreePrima();
+    //gg.transformToAdjList();
+    gg.writeGraph("output.txt");
     return 0;
 }
