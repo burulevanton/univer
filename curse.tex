@@ -1,24 +1,25 @@
 \documentclass[a4paper]{article}
-\usepackage[14pt]{extsizes}
+%\usepackage[14pt]{extsizes}
+\usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[english,russian]{babel}
 \usepackage{geometry}
 \usepackage{indentfirst}
 \usepackage{enumerate}
 \usepackage{tabularx}
-\usepackage{ltxtable}
 \geometry{left=3.5cm}
 \geometry{right=1.5cm}
 \geometry{top=2cm}
 \geometry{bottom=2cm}
 \linespread{1.3}
+\usepackage{parskip}
 \makeatletter
 \renewcommand{\@biblabel}[1]{#1.}
 \renewcommand\contentsname{Projects List}
 \makeatother
 \addto\captionsrussian{\def\refname{Литература}}
 \usepackage[final]{graphicx}
-\graphicspath{{images/}}
+\graphicspath{{image/}}
 %нумерация страниц
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -32,13 +33,28 @@
 \fancypagestyle{plain}{ 
     \fancyhf{}
     \rhead{\thepage}}
-\setcounter{page}{3}
+
 %\sloppy
+\usepackage{titlesec}
+  \newpagestyle{kmvmain}[\small]{
+    \setfoot[]%even-left
+            []%even-center
+            []%even-right
+            {}%odd-left
+            {\large{Челябинск-2018}}%odd-center
+            {}%  odd-right
+}
 \usepackage{setspace}
 \begin{document}
+\input{title}
+\newpage
+\input{task}
+\newpage
+\begin{Large}
 \begin{spacing}{0.9}
     \tableofcontents 
-    \end{spacing} 
+    \end{spacing}
+    \end{Large}
 \input{beginning}
 \input{analysis}
 \input{requirements}
