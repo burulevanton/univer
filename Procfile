@@ -1,1 +1,1 @@
-web: python3 server.py $9090
+web: python3 server.py $PORT 9090
