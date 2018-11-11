@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package ad;
+
+service AdService{
+    rpc SendAd (Ad) returns (AdReply) {}
+    rpc GetOthersAd (User) returns (Ads) {}
+    rpc GetUserAd (User) returns (Ads) {}
+    rpc Sign (User) returns (AdReply) {}
+}
+
+message Ad{
+    User user = 1;
+    string title = 3;
+    string text = 4;
+}
+
+message AdReply {
+    string message = 1;
+}
+
+message User{
+    string name = 1;
+    string email = 2;
+}
+
+message Ads{
+    repeated Ad ads = 1;
+}
