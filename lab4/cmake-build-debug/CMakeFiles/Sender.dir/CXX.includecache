@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+E:/pp/lab4/sender.cpp
+windows.h
+-
+stdio.h
+-
+thread
+-
+tchar.h
+-
+string
+-
+

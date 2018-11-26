@@ -1,0 +1,4 @@
+E:/pp/lab4/cmake-build-debug/CMakeFiles/Sender.dir
+E:/pp/lab4/cmake-build-debug/CMakeFiles/edit_cache.dir
+E:/pp/lab4/cmake-build-debug/CMakeFiles/Receiver.dir
+E:/pp/lab4/cmake-build-debug/CMakeFiles/rebuild_cache.dir
