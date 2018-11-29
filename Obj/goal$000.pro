@@ -1,19 +1,14 @@
-PREDICATES
-country(string, string, integer, string)
-show_all()
-show_greater_then(integer)
-show_lesser_then(integer)
+PREDICATES 
+show_all(integer, integer, integer)
+check(integer, integer, integer)
 
 CLAUSES
 
-country("russia", "moscow", 146,"europe").
-country("belarus", "minsk", 9,"europe").
-country("china","pekin", 1386, "asia").
-country("kanada","ottawa",36,"amerika").
-
-show_all() :- country(X,Y,Z,Q), writef("country: %s. capital: %s. peopleCount: %dM. Continent: %s.",X,Y,Z,Q), nl, fail.
-show_greater_then(V):- country(X,Y,Z,Q), Z>V, writef("country: %s. capital: %s. peopleCount: %dM. Continent: %s.",X,Y,Z,Q),nl, fail.
-show_lesser_then(V):- country(X,Y,Z,Q), Z<V, writef("country: %s. capital: %s. peopleCount: %dM. Continent: %s.", X,Y,Z,Q), nl, fail.
-
+check(X,Y,Z) :- not(X=Z) and not(Y=Z) and not(X=Y), writef("%d%d%d",X,Y,Z), nl; true.
+show_all(X,Y,Z) :- check(X,Y,Z),
+		Z<9, Z1= Z+1, show_all(X,Y,Z1);
+		Y<9, Y1= Y+1, show_all(X,Y1,0);
+		X<9, X1=X+1, show_all(X1,0,0); true.
+		
 GOAL
-show_lesser_then(40).
+show_all(1,0,0).

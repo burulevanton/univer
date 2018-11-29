@@ -11,4 +11,4 @@ show_all(X,Y,Z) :- check(X,Y,Z),
 		X<9, X1=X+1, show_all(X1,0,0); true.
 		
 GOAL
-show_all(1,0,0).
+show_all(9,0,0).
