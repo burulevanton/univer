@@ -1,19 +1,19 @@
 object Form1: TForm1
-  Left = 818
+  Left = 618
   Height = 613
-  Top = 256
+  Top = 237
   Width = 928
   Caption = 'Form1'
   ClientHeight = 613
   ClientWidth = 928
   LCLVersion = '1.8.4.0'
   object PageControl1: TPageControl
-    Left = 40
-    Height = 472
-    Top = 32
-    Width = 768
-    ActivePage = RawSql
-    TabIndex = 12
+    Left = 32
+    Height = 552
+    Top = 40
+    Width = 872
+    ActivePage = UniversityGroup
+    TabIndex = 5
     TabOrder = 0
     object Department: TTabSheet
       Caption = 'Кафедра'
@@ -28,6 +28,15 @@ object Form1: TForm1
         Columns = <>
         DataSource = DataSourceDepartment
         TabOrder = 0
+      end
+      object ReportDepartment: TButton
+        Left = 8
+        Height = 25
+        Top = 216
+        Width = 96
+        Caption = 'Отчёт'
+        OnClick = ReportDepartmentClick
+        TabOrder = 1
       end
     end
     object Performance: TTabSheet
@@ -44,16 +53,25 @@ object Form1: TForm1
         DataSource = DataSourcePerformance
         TabOrder = 0
       end
+      object ReportPerformance: TButton
+        Left = 8
+        Height = 25
+        Top = 280
+        Width = 96
+        Caption = 'Отчёт'
+        OnClick = ReportPerformanceClick
+        TabOrder = 1
+      end
     end
     object Student: TTabSheet
       Caption = 'Студенты'
-      ClientHeight = 340
-      ClientWidth = 768
+      ClientHeight = 524
+      ClientWidth = 864
       object DBGridStudent: TDBGrid
         Left = 16
-        Height = 264
+        Height = 248
         Top = 24
-        Width = 656
+        Width = 416
         Color = clWindow
         Columns = <>
         DataSource = DataSourceStudent
@@ -77,8 +95,8 @@ object Form1: TForm1
     end
     object Teacher: TTabSheet
       Caption = 'Преподаватели'
-      ClientHeight = 340
-      ClientWidth = 768
+      ClientHeight = 524
+      ClientWidth = 864
       object DBGridTeacher: TDBGrid
         Left = 8
         Height = 240
@@ -89,20 +107,59 @@ object Form1: TForm1
         DataSource = DataSourceTeacher
         TabOrder = 0
       end
+      object ReportTeacher: TButton
+        Left = 8
+        Height = 25
+        Top = 280
+        Width = 96
+        Caption = 'Отчёт'
+        OnClick = ReportTeacherClick
+        TabOrder = 1
+      end
     end
     object UniversityGroup: TTabSheet
       Caption = 'Группы'
-      ClientHeight = 340
-      ClientWidth = 768
+      ClientHeight = 524
+      ClientWidth = 864
       object DBGridUniversityGroup: TDBGrid
         Left = 8
-        Height = 240
+        Height = 328
         Top = 24
-        Width = 568
+        Width = 440
         Color = clWindow
         Columns = <>
         DataSource = DataSourceUniversityGroup
         TabOrder = 0
+      end
+      object Chart1: TChart
+        Left = 456
+        Height = 328
+        Top = 24
+        Width = 392
+        AxisList = <        
+          item
+            Marks.LabelBrush.Style = bsClear
+            Minors = <>
+            Title.LabelFont.Orientation = 900
+            Title.LabelBrush.Style = bsClear
+          end        
+          item
+            Alignment = calBottom
+            Marks.LabelBrush.Style = bsClear
+            Minors = <>
+            Title.LabelBrush.Style = bsClear
+          end>
+        Foot.Brush.Color = clBtnFace
+        Foot.Font.Color = clBlue
+        Title.Brush.Color = clBtnFace
+        Title.Font.Color = clBlue
+        Title.Text.Strings = (
+          'TAChart'
+        )
+        object Chart1BarSeries1: TBarSeries
+          BarBrush.Color = clRed
+          Source = DbChartGroup
+        end
       end
     end
     object DepartmentEdit: TTabSheet
@@ -2615,7 +2672,37 @@ object Form1: TForm1
     top = 456
   end
   object SQLQueryPerformanceView: TSQLQuery
-    FieldDefs = <>
+    IndexName = 'DEFAULT_ORDER'
+    FieldDefs = <    
+      item
+        Name = 'surname'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'number'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'name'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'surname_1'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'score'
+        DataType = ftInteger
+        Precision = -1
+      end>
+    Active = True
     Database = PQConnection1
     Transaction = SQLTransaction1
     SQL.Strings = (
@@ -2638,5 +2725,55 @@ object Form1: TForm1
     DataSet = SQLQueryPerformanceView
     left = 328
     top = 456
+  end
+  object frReportTeacher: TfrReport
+    Dataset = frDBDataSetTeacher
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    DataType = dtDataSet
+    left = 424
+    top = 456
+  end
+  object frDBDataSetTeacher: TfrDBDataSet
+    DataSet = SQLQueryTeacher
+    left = 480
+    top = 456
+  end
+  object DbChartGroup: TDbChartSource
+    DataSource = DataSourceGRoupChart
+    FieldX = 'number'
+    FieldY = 'avg'
+    left = 728
+    top = 464
+  end
+  object SQLQueryGroupChart: TSQLQuery
+    IndexName = 'DEFAULT_ORDER'
+    FieldDefs = <    
+      item
+        Name = 'number'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'avg'
+        DataType = ftBCD
+        Precision = -1
+        Size = 4
+      end>
+    Active = True
+    Database = PQConnection1
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select universitygroup.number, avg(score) from performance inner join universitygroup on performance.id_group = universitygroup.id group by universitygroup.id order by universitygroup.id;'
+    )
+    Params = <>
+    left = 784
+    top = 464
+  end
+  object DataSourceGRoupChart: TDataSource
+    DataSet = SQLQueryGroupChart
+    left = 840
+    top = 464
   end
 end

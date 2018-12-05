@@ -22,16 +22,22 @@
         <FormatVersion Value="1"/>
       </local>
     </RunParams>
-    <RequiredPackages Count="3">
+    <RequiredPackages Count="5">
       <Item1>
-        <PackageName Value="SynEdit"/>
+        <PackageName Value="TAChartLazarusPkg"/>
       </Item1>
       <Item2>
-        <PackageName Value="FCL"/>
+        <PackageName Value="lazreport"/>
       </Item2>
       <Item3>
-        <PackageName Value="LCL"/>
+        <PackageName Value="SynEdit"/>
       </Item3>
+      <Item4>
+        <PackageName Value="FCL"/>
+      </Item4>
+      <Item5>
+        <PackageName Value="LCL"/>
+      </Item5>
     </RequiredPackages>
     <Units Count="3">
       <Unit0>

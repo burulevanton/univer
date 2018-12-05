@@ -7,13 +7,22 @@ interface
 uses
   Classes, SysUtils, pqconnection, sqldb, db, FileUtil, SynHighlighterSQL,
   SynEdit, Forms, Controls, Graphics, Dialogs, DBGrids, ComCtrls, DbCtrls,
-  DBExtCtrls, Menus, StdCtrls, FormRawSqlParamUnit, LR_Class, LR_DBSet, LR_BarC;
+  DBExtCtrls, Menus, StdCtrls, FormRawSqlParamUnit, TADbSource, TAGraph,
+  TARadialSeries, TASeries, LR_Class, LR_DBSet, LR_BarC;
 
 type
 
   { TForm1 }
 
   TForm1 = class(TForm)
+    Chart1: TChart;
+    Chart1BarSeries1: TBarSeries;
+    Chart2: TChart;
+    Chart2BarSeries1: TBarSeries;
+    DataSourceSubjectChart: TDataSource;
+    DataSourceGRoupChart: TDataSource;
+    DbChartGroup: TDbChartSource;
+    DbChartSourceSubject: TDbChartSource;
     ReportDepartment: TButton;
     ButtonRawDoubleSqlExecute: TButton;
     DataSourceRawDoubleSqlSecond: TDataSource;
@@ -92,6 +101,8 @@ type
     ReportTeacher: TButton;
     ReportPerformance: TButton;
     SaveDialogRawSql: TSaveDialog;
+    SQLQuerySubjectChart: TSQLQuery;
+    SQLQueryGroupChart: TSQLQuery;
     SQLQueryPerformanceView: TSQLQuery;
     SQLQueryRawDoubleSqlSecond: TSQLQuery;
     SQLQueryRawDoubleSqlMain: TSQLQuery;
