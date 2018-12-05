@@ -1,0 +1,53 @@
+object FormRawSqlParam: TFormRawSqlParam
+  Left = 844
+  Height = 317
+  Top = 353
+  Width = 596
+  Caption = 'Param'
+  ClientHeight = 317
+  ClientWidth = 596
+  LCLVersion = '1.8.4.0'
+  object ButtonPanelDialog: TButtonPanel
+    Left = 6
+    Height = 34
+    Top = 277
+    Width = 584
+    OKButton.Name = 'OKButton'
+    OKButton.DefaultCaption = True
+    HelpButton.Name = 'HelpButton'
+    HelpButton.DefaultCaption = True
+    CloseButton.Name = 'CloseButton'
+    CloseButton.DefaultCaption = True
+    CancelButton.Name = 'CancelButton'
+    CancelButton.DefaultCaption = True
+    TabOrder = 0
+    ShowButtons = [pbOK, pbCancel]
+  end
+  object StringGridMain: TStringGrid
+    Left = 0
+    Height = 280
+    Top = 0
+    Width = 598
+    ColCount = 4
+    Columns = <    
+      item
+        Title.Caption = 'Key'
+        Width = 82
+      end    
+      item
+        Title.Caption = 'Type'
+        Width = 105
+      end    
+      item
+        Title.Caption = 'Value'
+        Width = 191
+      end>
+    TabOrder = 1
+    ColWidths = (
+      0
+      82
+      105
+      191
+    )
+  end
+end

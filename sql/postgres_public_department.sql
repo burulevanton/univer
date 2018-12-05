@@ -1,0 +1,1 @@
+INSERT INTO public.department (id, name, phone_number, head_of_department) VALUES (1, 'Кафедра системного программирования', '(351)272-30-80', 'Л.Б. Соколинский');

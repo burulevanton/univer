@@ -16,6 +16,7 @@ begin
   RequireDerivedFormResource:=True;
   Application.Initialize;
   Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TFormRawSqlParam, FormRawSqlParam);
   Application.Run;
 end.
 

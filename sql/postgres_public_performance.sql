@@ -1,0 +1,2 @@
+INSERT INTO public.performance (id_student, id_group, id_subject, id_teacher, score) VALUES (1, 1, 2, 1, 3);
+INSERT INTO public.performance (id_student, id_group, id_subject, id_teacher, score) VALUES (1, 1, 1, 1, 4);

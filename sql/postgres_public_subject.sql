@@ -1,0 +1,2 @@
+INSERT INTO public.subject (id, name, hours_amount, hours_of_lectures, hours_of_practice, number_of_semesters) VALUES (1, 'Введение в сервис-ориентированные архитектуры', 108, 32, 16, 1);
+INSERT INTO public.subject (id, name, hours_amount, hours_of_lectures, hours_of_practice, number_of_semesters) VALUES (2, 'Интеллектуальные системы и технологии', 108, 16, 32, 1);

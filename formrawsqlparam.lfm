@@ -1,0 +1,26 @@
+object Form2: TForm2
+  Left = 839
+  Height = 317
+  Top = 352
+  Width = 596
+  Caption = 'Param'
+  ClientHeight = 317
+  ClientWidth = 596
+  LCLVersion = '1.8.4.0'
+  object ButtonPanel1: TButtonPanel
+    Left = 6
+    Height = 34
+    Top = 277
+    Width = 584
+    OKButton.Name = 'OKButton'
+    OKButton.DefaultCaption = True
+    HelpButton.Name = 'HelpButton'
+    HelpButton.DefaultCaption = True
+    CloseButton.Name = 'CloseButton'
+    CloseButton.DefaultCaption = True
+    CancelButton.Name = 'CancelButton'
+    CancelButton.DefaultCaption = True
+    TabOrder = 0
+    ShowButtons = [pbOK, pbCancel]
+  end
+end

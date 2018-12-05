@@ -1,0 +1,1 @@
+INSERT INTO public.student (id, id_group, number_in_group, name, surname, patronymic, birth_date, address, average_score) VALUES (1, 1, 7, 'Антон', 'Бурулев', 'Александрович', '1998-07-17', 'ул. Молодогвардейцев 32-43', 3);

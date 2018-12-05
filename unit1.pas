@@ -7,14 +7,19 @@ interface
 uses
   Classes, SysUtils, pqconnection, sqldb, db, FileUtil, SynHighlighterSQL,
   SynEdit, Forms, Controls, Graphics, Dialogs, DBGrids, ComCtrls, DbCtrls,
-  DBExtCtrls, Menus, StdCtrls;
+  DBExtCtrls, Menus, StdCtrls, FormRawSqlParamUnit;
 
 type
 
   { TForm1 }
 
   TForm1 = class(TForm)
+    ButtonRawDoubleSqlExecute: TButton;
+    DataSourceRawDoubleSqlSecond: TDataSource;
+    DataSourceRawDoubleSqlMain: TDataSource;
     DataSourceRawSql: TDataSource;
+    DBGridRawDoubleSql: TDBGrid;
+    RawSqlParams: TButton;
     RawSqlOpen: TButton;
     RawSqlSave: TButton;
     RawSqlExecute: TButton;
@@ -77,6 +82,8 @@ type
     PageControl1: TPageControl;
     PQConnection1: TPQConnection;
     SaveDialogRawSql: TSaveDialog;
+    SQLQueryRawDoubleSqlSecond: TSQLQuery;
+    SQLQueryRawDoubleSqlMain: TSQLQuery;
     SQLQueryRawSql: TSQLQuery;
     SQLQueryUniversityGroup: TSQLQuery;
     SQLQueryTeacher: TSQLQuery;
@@ -96,12 +103,17 @@ type
     GroupEdit: TTabSheet;
     RawSql: TTabSheet;
     RawSqlEdit: TSynEdit;
+    SynRawDoubleSqlMain: TSynEdit;
+    SyncRawDoubleSqlSecond: TSynEdit;
     SynSQLSyn1: TSynSQLSyn;
+    RawDoubleSql: TTabSheet;
     TeacherEdit: TTabSheet;
     UniversityGroup: TTabSheet;
     Teacher: TTabSheet;
+    procedure ButtonRawDoubleSqlExecuteClick(Sender: TObject);
     procedure RawSqlExecuteClick(Sender: TObject);
     procedure RawSqlOpenClick(Sender: TObject);
+    procedure RawSqlParamsClick(Sender: TObject);
     procedure RawSqlSaveClick(Sender: TObject);
     procedure SQLQueryDepartmentAfterPost(DataSet: TDataSet);
     procedure SQLQueryPerformanceAfterPost(DataSet: TDataSet);
@@ -155,11 +167,35 @@ begin
    end;
 end;
 
+procedure TForm1.RawSqlParamsClick(Sender: TObject);
+var
+  form:TFormRawSqlParam;
+begin
+   Application.CreateForm(TFormRawSqlParam, form);
+   self.SQLQueryRawSql.SQL.Text:=self.RawSqlEdit.Text;
+   form.Reload(self.SQLQueryRawSql.Params);
+   if(form.ShowModal() = 1) then
+   begin
+     form.Fill(self.SQLQueryRawSql);
+   end;
+   form.Destroy();
+end;
+
 procedure TForm1.RawSqlExecuteClick(Sender: TObject);
 begin
    self.SQLQueryRawSql.Close();
    self.SQLQueryRawSql.SQL.Text:=self.RawSqlEdit.Text;
    self.SQLQueryRawSql.Open();
+end;
+
+procedure TForm1.ButtonRawDoubleSqlExecuteClick(Sender: TObject);
+begin
+   self.SQLQueryRawDoubleSqlMain.Close();
+   self.SQLQueryRawDoubleSqlSecond.Close();
+   self.SQLQueryRawDoubleSqlMain.SQL.Text := self.SynRawDoubleSqlMain.Text;
+   self.SQLQueryRawDoubleSqlSecond.SQL.Text := self.SyncRawDoubleSqlSecond.Text;
+   self.SQLQueryRawDoubleSqlSecond.Open();
+   self.SQLQueryRawDoubleSqlMain.Open();
 end;
 
 procedure TForm1.RawSqlSaveClick(Sender: TObject);

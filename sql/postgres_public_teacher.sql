@@ -1,0 +1,2 @@
+INSERT INTO public.teacher (id, name, surname, patronymic, academic_title, id_department) VALUES (1, 'Алина', 'Латипова', 'Таиховна', 'Кандидат физико-математических наук', 1);
+INSERT INTO public.teacher (id, name, surname, patronymic, academic_title, id_department) VALUES (2, 'Павел', 'Верман', 'Генрихович', 'Старший преподаватель', 1);
