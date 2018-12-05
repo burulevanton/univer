@@ -21,7 +21,7 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit1"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="206"/>
+        <TopLine Value="10"/>
         <CursorPos X="51" Y="10"/>
         <UsageCount Value="29"/>
         <Loaded Value="True"/>
@@ -165,7 +165,7 @@
       </Position29>
       <Position30>
         <Filename Value="unit1.pas"/>
-        <Caret Line="10" Column="51" TopLine="205"/>
+        <Caret Line="10" Column="51" TopLine="207"/>
       </Position30>
     </JumpHistory>
   </ProjectSession>

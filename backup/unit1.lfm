@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 763
+  Left = 818
   Height = 613
-  Top = 288
+  Top = 256
   Width = 928
   Caption = 'Form1'
   ClientHeight = 613
@@ -12,8 +12,8 @@ object Form1: TForm1
     Height = 472
     Top = 32
     Width = 768
-    ActivePage = RawDoubleSql
-    TabIndex = 13
+    ActivePage = RawSql
+    TabIndex = 12
     TabOrder = 0
     object Department: TTabSheet
       Caption = 'Кафедра'
@@ -32,8 +32,8 @@ object Form1: TForm1
     end
     object Performance: TTabSheet
       Caption = 'Успеваемость'
-      ClientHeight = 340
-      ClientWidth = 768
+      ClientHeight = 444
+      ClientWidth = 760
       object DBGridPerfomance: TDBGrid
         Left = 8
         Height = 240
@@ -62,8 +62,8 @@ object Form1: TForm1
     end
     object Subject: TTabSheet
       Caption = 'Предметы'
-      ClientHeight = 340
-      ClientWidth = 768
+      ClientHeight = 444
+      ClientWidth = 760
       object DBGridSubject: TDBGrid
         Left = 8
         Height = 240
@@ -378,8 +378,8 @@ object Form1: TForm1
     end
     object SubjectEdit: TTabSheet
       Caption = 'Предметы-Изменить'
-      ClientHeight = 340
-      ClientWidth = 768
+      ClientHeight = 444
+      ClientWidth = 760
       object DBNavigatorSubject: TDBNavigator
         Left = 0
         Height = 25
@@ -2203,6 +2203,15 @@ object Form1: TForm1
         DataSource = DataSourceRawDoubleSqlMain
         TabOrder = 2
       end
+      object ButtonRawDoubleSqlExecute: TButton
+        Left = 136
+        Height = 25
+        Top = 408
+        Width = 131
+        Caption = 'Выполнить запрос'
+        OnClick = ButtonRawDoubleSqlExecuteClick
+        TabOrder = 3
+      end
     end
   end
   object PQConnection1: TPQConnection
@@ -2586,5 +2595,48 @@ object Form1: TForm1
     DataSet = SQLQueryRawDoubleSqlSecond
     left = 544
     top = 576
+  end
+  object frReportDepartment: TfrReport
+    Dataset = frDBDataSetDepartment
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    DataType = dtDataSet
+    left = 56
+    top = 456
+  end
+  object frDBDataSetDepartment: TfrDBDataSet
+    DataSet = SQLQueryDepartment
+    left = 112
+    top = 456
+  end
+  object frBarCodeObject1: TfrBarCodeObject
+    left = 168
+    top = 456
+  end
+  object SQLQueryPerformanceView: TSQLQuery
+    FieldDefs = <>
+    Database = PQConnection1
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'Select student.surname, universitygroup.number, subject.name, teacher.surname, performance.score from performance INNER JOIN student on performance.id_student = student.id INNER JOIN subject on performance.id_subject = subject.id INNER JOIN universitygroup on performance.id_group = universitygroup.id INNER JOIN teacher on performance.id_teacher = teacher.id;'
+    )
+    Params = <>
+    left = 624
+    top = 528
+  end
+  object frReportPerformance: TfrReport
+    Dataset = frDBDataSetPerformance
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    DataType = dtDataSet
+    left = 256
+    top = 456
+  end
+  object frDBDataSetPerformance: TfrDBDataSet
+    DataSet = SQLQueryPerformanceView
+    left = 328
+    top = 456
   end
 end

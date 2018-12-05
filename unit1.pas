@@ -7,18 +7,26 @@ interface
 uses
   Classes, SysUtils, pqconnection, sqldb, db, FileUtil, SynHighlighterSQL,
   SynEdit, Forms, Controls, Graphics, Dialogs, DBGrids, ComCtrls, DbCtrls,
-  DBExtCtrls, Menus, StdCtrls, FormRawSqlParamUnit;
+  DBExtCtrls, Menus, StdCtrls, FormRawSqlParamUnit, LR_Class, LR_DBSet, LR_BarC;
 
 type
 
   { TForm1 }
 
   TForm1 = class(TForm)
+    ReportDepartment: TButton;
     ButtonRawDoubleSqlExecute: TButton;
     DataSourceRawDoubleSqlSecond: TDataSource;
     DataSourceRawDoubleSqlMain: TDataSource;
     DataSourceRawSql: TDataSource;
     DBGridRawDoubleSql: TDBGrid;
+    frBarCodeObject1: TfrBarCodeObject;
+    frDBDataSetTeacher: TfrDBDataSet;
+    frDBDataSetPerformance: TfrDBDataSet;
+    frDBDataSetDepartment: TfrDBDataSet;
+    frReportTeacher: TfrReport;
+    frReportPerformance: TfrReport;
+    frReportDepartment: TfrReport;
     RawSqlParams: TButton;
     RawSqlOpen: TButton;
     RawSqlSave: TButton;
@@ -81,7 +89,10 @@ type
     OpenDialogRawSql: TOpenDialog;
     PageControl1: TPageControl;
     PQConnection1: TPQConnection;
+    ReportTeacher: TButton;
+    ReportPerformance: TButton;
     SaveDialogRawSql: TSaveDialog;
+    SQLQueryPerformanceView: TSQLQuery;
     SQLQueryRawDoubleSqlSecond: TSQLQuery;
     SQLQueryRawDoubleSqlMain: TSQLQuery;
     SQLQueryRawSql: TSQLQuery;
@@ -115,6 +126,9 @@ type
     procedure RawSqlOpenClick(Sender: TObject);
     procedure RawSqlParamsClick(Sender: TObject);
     procedure RawSqlSaveClick(Sender: TObject);
+    procedure ReportDepartmentClick(Sender: TObject);
+    procedure ReportPerformanceClick(Sender: TObject);
+    procedure ReportTeacherClick(Sender: TObject);
     procedure SQLQueryDepartmentAfterPost(DataSet: TDataSet);
     procedure SQLQueryPerformanceAfterPost(DataSet: TDataSet);
     procedure SQLQueryStudentAfterPost(DataSet: TDataSet);
@@ -204,6 +218,24 @@ begin
   begin
     self.RawSqlEdit.Lines.SaveToFile(self.SaveDialogRawSql.FileName);
   end;
+end;
+
+procedure TForm1.ReportDepartmentClick(Sender: TObject);
+begin
+  self.frReportDepartment.LoadFromFile('department.lrf');
+  self.frReportDepartment.ShowReport();
+end;
+
+procedure TForm1.ReportPerformanceClick(Sender: TObject);
+begin
+  self.frReportPerformance.LoadFromFile('performance.lrf');
+  self.frReportPerformance.ShowReport();
+end;
+
+procedure TForm1.ReportTeacherClick(Sender: TObject);
+begin
+  self.frReportTeacher.LoadFromFile('teacher.lrf');
+  self.frReportTeacher.ShowReport();
 end;
 
 procedure TForm1.SQLQueryPerformanceAfterPost(DataSet: TDataSet);

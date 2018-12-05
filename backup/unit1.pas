@@ -7,17 +7,23 @@ interface
 uses
   Classes, SysUtils, pqconnection, sqldb, db, FileUtil, SynHighlighterSQL,
   SynEdit, Forms, Controls, Graphics, Dialogs, DBGrids, ComCtrls, DbCtrls,
-  DBExtCtrls, Menus, StdCtrls, FormRawSqlParamUnit;
+  DBExtCtrls, Menus, StdCtrls, FormRawSqlParamUnit, LR_Class, LR_DBSet, LR_BarC;
 
 type
 
   { TForm1 }
 
   TForm1 = class(TForm)
+    ButtonRawDoubleSqlExecute: TButton;
     DataSourceRawDoubleSqlSecond: TDataSource;
     DataSourceRawDoubleSqlMain: TDataSource;
     DataSourceRawSql: TDataSource;
     DBGridRawDoubleSql: TDBGrid;
+    frBarCodeObject1: TfrBarCodeObject;
+    frDBDataSetPerformance: TfrDBDataSet;
+    frDBDataSetDepartment: TfrDBDataSet;
+    frReportPerformance: TfrReport;
+    frReportDepartment: TfrReport;
     RawSqlParams: TButton;
     RawSqlOpen: TButton;
     RawSqlSave: TButton;
@@ -81,6 +87,7 @@ type
     PageControl1: TPageControl;
     PQConnection1: TPQConnection;
     SaveDialogRawSql: TSaveDialog;
+    SQLQueryPerformanceView: TSQLQuery;
     SQLQueryRawDoubleSqlSecond: TSQLQuery;
     SQLQueryRawDoubleSqlMain: TSQLQuery;
     SQLQueryRawSql: TSQLQuery;
@@ -109,6 +116,7 @@ type
     TeacherEdit: TTabSheet;
     UniversityGroup: TTabSheet;
     Teacher: TTabSheet;
+    procedure ButtonRawDoubleSqlExecuteClick(Sender: TObject);
     procedure RawSqlExecuteClick(Sender: TObject);
     procedure RawSqlOpenClick(Sender: TObject);
     procedure RawSqlParamsClick(Sender: TObject);
@@ -184,6 +192,16 @@ begin
    self.SQLQueryRawSql.Close();
    self.SQLQueryRawSql.SQL.Text:=self.RawSqlEdit.Text;
    self.SQLQueryRawSql.Open();
+end;
+
+procedure TForm1.ButtonRawDoubleSqlExecuteClick(Sender: TObject);
+begin
+   self.SQLQueryRawDoubleSqlMain.Close();
+   self.SQLQueryRawDoubleSqlSecond.Close();
+   self.SQLQueryRawDoubleSqlMain.SQL.Text := self.SynRawDoubleSqlMain.Text;
+   self.SQLQueryRawDoubleSqlSecond.SQL.Text := self.SyncRawDoubleSqlSecond.Text;
+   self.SQLQueryRawDoubleSqlSecond.Open();
+   self.SQLQueryRawDoubleSqlMain.Open();
 end;
 
 procedure TForm1.RawSqlSaveClick(Sender: TObject);
