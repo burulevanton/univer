@@ -1,24 +1,25 @@
 object Form1: TForm1
-  Left = 618
+  Left = 773
   Height = 613
-  Top = 237
+  Top = 397
   Width = 928
   Caption = 'Form1'
-  ClientHeight = 613
+  ClientHeight = 593
   ClientWidth = 928
+  Menu = MainMenu1
   LCLVersion = '1.8.4.0'
   object PageControl1: TPageControl
     Left = 32
     Height = 552
     Top = 40
     Width = 872
-    ActivePage = Subject
-    TabIndex = 3
+    ActivePage = Department
+    TabIndex = 0
     TabOrder = 0
     object Department: TTabSheet
       Caption = 'Кафедра'
-      ClientHeight = 444
-      ClientWidth = 760
+      ClientHeight = 524
+      ClientWidth = 864
       object DBGridDepartment: TDBGrid
         Left = 8
         Height = 184
@@ -41,8 +42,8 @@ object Form1: TForm1
     end
     object Performance: TTabSheet
       Caption = 'Успеваемость'
-      ClientHeight = 444
-      ClientWidth = 760
+      ClientHeight = 524
+      ClientWidth = 864
       object DBGridPerfomance: TDBGrid
         Left = 8
         Height = 240
@@ -68,9 +69,9 @@ object Form1: TForm1
       ClientHeight = 524
       ClientWidth = 864
       object DBGridStudent: TDBGrid
-        Left = 16
+        Left = 8
         Height = 248
-        Top = 24
+        Top = 16
         Width = 416
         Color = clWindow
         Columns = <>
@@ -458,7 +459,6 @@ object Form1: TForm1
         NumGlyphs = 1
         MaxLength = 0
         TabOrder = 9
-        Text = '17.07.1998'
         DataField = 'birth_date'
         DataSource = DataSourceStudent
       end
@@ -2304,7 +2304,7 @@ object Form1: TForm1
   object PQConnection1: TPQConnection
     Connected = True
     LoginPrompt = False
-    DatabaseName = 'postgres'
+    DatabaseName = 'company'
     KeepConnection = False
     Password = '123'
     Transaction = SQLTransaction1
@@ -2841,5 +2841,38 @@ object Form1: TForm1
     FieldY = 'avg'
     left = 728
     top = 520
+  end
+  object MainMenu1: TMainMenu
+    left = 584
+    top = 456
+    object MenuItemMain: TMenuItem
+      Caption = 'Меню'
+      object MenuItemExport: TMenuItem
+        Caption = 'DB -> Excel'
+        OnClick = MenuItemExportClick
+      end
+      object MenuItemImport: TMenuItem
+        Caption = 'Excel -> DB'
+        OnClick = MenuItemImportClick
+      end
+      object MenuItemRefresh: TMenuItem
+        Caption = 'Обновить'
+        OnClick = MenuItemRefreshClick
+      end
+      object MenuItemQuit: TMenuItem
+        Caption = 'Выйти'
+        OnClick = MenuItemQuitClick
+      end
+    end
+  end
+  object OpenDialogExcel: TOpenDialog
+    Filter = 'Excel|*.xls'
+    left = 876
+    top = 335
+  end
+  object SaveDialogExcel: TSaveDialog
+    Filter = 'Excel|*.xls'
+    left = 880
+    top = 392
   end
 end
