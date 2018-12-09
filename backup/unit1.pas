@@ -1,4 +1,4 @@
-unit Unit1;
+unit MainFormUnit;
 
 {$mode objfpc}{$H+}
 
@@ -13,9 +13,9 @@ uses
 
 type
 
-  { TForm1 }
+  { TMainForm }
 
-  TForm1 = class(TForm)
+  TMainForm = class(TForm)
     Chart1: TChart;
     Chart1BarSeries1: TBarSeries;
     Chart2: TChart;
@@ -166,15 +166,15 @@ type
   end;
 
 var
-  Form1: TForm1;
+  MainForm: TMainForm;
 
 implementation
 
 {$R *.lfm}
 
 
-{ TForm1 }
-procedure TForm1.RefreshSql();
+{ TMainForm }
+procedure TMainForm.RefreshSql();
 begin
   self.SQLQueryUniversityGroup.Close();
   self.SQLQueryUniversityGroup.Open();
@@ -190,14 +190,14 @@ begin
   self.SQLQueryDepartment.Open();
 end;
 
-procedure TForm1.SQLQueryDepartmentAfterPost(DataSet: TDataSet);
+procedure TMainForm.SQLQueryDepartmentAfterPost(DataSet: TDataSet);
 begin
   self.SQLQueryDepartment.ApplyUpdates(0);
   self.SQLTransaction1.Commit();
   self.RefreshSql();
 end;
 
-procedure TForm1.RawSqlOpenClick(Sender: TObject);
+procedure TMainForm.RawSqlOpenClick(Sender: TObject);
 begin
    if(self.OpenDialogRawSql.Execute()) then
    begin
@@ -205,7 +205,7 @@ begin
    end;
 end;
 
-procedure TForm1.RawSqlParamsClick(Sender: TObject);
+procedure TMainForm.RawSqlParamsClick(Sender: TObject);
 var
   form:TFormRawSqlParam;
 begin
@@ -219,14 +219,14 @@ begin
    form.Destroy();
 end;
 
-procedure TForm1.RawSqlExecuteClick(Sender: TObject);
+procedure TMainForm.RawSqlExecuteClick(Sender: TObject);
 begin
    self.SQLQueryRawSql.Close();
    self.SQLQueryRawSql.SQL.Text:=self.RawSqlEdit.Text;
    self.SQLQueryRawSql.Open();
 end;
 
-procedure TForm1.ButtonRawDoubleSqlExecuteClick(Sender: TObject);
+procedure TMainForm.ButtonRawDoubleSqlExecuteClick(Sender: TObject);
 begin
    self.SQLQueryRawDoubleSqlMain.Close();
    self.SQLQueryRawDoubleSqlSecond.Close();
@@ -270,7 +270,7 @@ begin
   ds.DataSet.First();
 end;
 
-procedure TForm1.MenuItemExportClick(Sender: TObject);
+procedure TMainForm.MenuItemExportClick(Sender: TObject);
 var
   MyWorkBook: TsWorkbook;
   header: TStringList;
@@ -287,12 +287,13 @@ begin
     DataSourceToWorksheet(self.DataSourceDepartment, MyWorkBook.AddWorksheet('Department'), header);
 
     header.Clear();
-    header.Add('ID_student');
-    header.Add('ID_group');
-    header.Add('ID_subject');
-    header.Add('ID_teacher');
-    header.Add('Score');
-    DataSourceToWorksheet(self.DataSourcePerformance, MyWorkBook.AddWorksheet('Performance'), header);
+    header.Add('ID');
+    header.Add('Number');
+    header.Add('Department_id');
+    header.Add('Students_amount');
+    header.Add('Average_score');
+    header.Add('Group_leader');
+    DataSourceToWorksheet(self.DataSourceUniversityGroup, MyWorkBook.AddWorksheet('Universitygroup'), header);
 
     header.Clear();
     header.Add('ID');
@@ -325,19 +326,18 @@ begin
     DataSourceToWorksheet(self.DataSourceTeacher, MyWorkBook.AddWorksheet('Teacher'), header);
 
     header.Clear();
-    header.Add('ID');
-    header.Add('Number');
-    header.Add('Department_id');
-    header.Add('Students_amount');
-    header.Add('Average_score');
-    header.Add('Group_leader');
-    DataSourceToWorksheet(self.DataSourceUniversityGroup, MyWorkBook.AddWorksheet('Universitygroup'), header);
+    header.Add('ID_student');
+    header.Add('ID_group');
+    header.Add('ID_subject');
+    header.Add('ID_teacher');
+    header.Add('Score');
+    DataSourceToWorksheet(self.DataSourcePerformance, MyWorkBook.AddWorksheet('Performance'), header);
 
     MyWorkBook.WriteToFile(self.SaveDialogExcel.FileName, sfExcel8, True);
   end;
 end;
 
-procedure TForm1.MenuItemImportClick(Sender: TObject);
+procedure TMainForm.MenuItemImportClick(Sender: TObject);
 var
   MyWorkBook: TsWorkbook;
   MyWorksheet: TsWorksheet;
@@ -470,17 +470,17 @@ begin
   self.DataSourceUniversityGroup.DataSet.Post();
 end;
 
-procedure TForm1.MenuItemQuitClick(Sender: TObject);
+procedure TMainForm.MenuItemQuitClick(Sender: TObject);
 begin
   Application.Terminate();
 end;
 
-procedure TForm1.MenuItemRefreshClick(Sender: TObject);
+procedure TMainForm.MenuItemRefreshClick(Sender: TObject);
 begin
   self.RefreshSql();
 end;
 
-procedure TForm1.RawSqlSaveClick(Sender: TObject);
+procedure TMainForm.RawSqlSaveClick(Sender: TObject);
 begin
   if(self.SaveDialogRawSql.Execute()) then
   begin
@@ -488,53 +488,53 @@ begin
   end;
 end;
 
-procedure TForm1.ReportDepartmentClick(Sender: TObject);
+procedure TMainForm.ReportDepartmentClick(Sender: TObject);
 begin
   self.frReportDepartment.LoadFromFile('department.lrf');
   self.frReportDepartment.ShowReport();
 end;
 
-procedure TForm1.ReportPerformanceClick(Sender: TObject);
+procedure TMainForm.ReportPerformanceClick(Sender: TObject);
 begin
   self.frReportPerformance.LoadFromFile('performance.lrf');
   self.frReportPerformance.ShowReport();
 end;
 
-procedure TForm1.ReportTeacherClick(Sender: TObject);
+procedure TMainForm.ReportTeacherClick(Sender: TObject);
 begin
   self.frReportTeacher.LoadFromFile('teacher.lrf');
   self.frReportTeacher.ShowReport();
 end;
 
-procedure TForm1.SQLQueryPerformanceAfterPost(DataSet: TDataSet);
+procedure TMainForm.SQLQueryPerformanceAfterPost(DataSet: TDataSet);
 begin
   self.SQLQueryPerformance.ApplyUpdates(0);
   self.SQLTransaction1.Commit();
   self.RefreshSql();
 end;
 
-procedure TForm1.SQLQueryStudentAfterPost(DataSet: TDataSet);
+procedure TMainForm.SQLQueryStudentAfterPost(DataSet: TDataSet);
 begin
   self.SQLQueryStudent.ApplyUpdates(0);
   self.SQLTransaction1.Commit();
   self.RefreshSql();
 end;
 
-procedure TForm1.SQLQuerySubjectAfterPost(DataSet: TDataSet);
+procedure TMainForm.SQLQuerySubjectAfterPost(DataSet: TDataSet);
 begin
   self.SQLQuerySubject.ApplyUpdates(0);
   self.SQLTransaction1.Commit();
   self.RefreshSql();
 end;
 
-procedure TForm1.SQLQueryTeacherAfterPost(DataSet: TDataSet);
+procedure TMainForm.SQLQueryTeacherAfterPost(DataSet: TDataSet);
 begin
   self.SQLQueryTeacher.ApplyUpdates(0);
   self.SQLTransaction1.Commit();
   self.RefreshSql();
 end;
 
-procedure TForm1.SQLQueryUniversityGroupAfterPost(DataSet: TDataSet);
+procedure TMainForm.SQLQueryUniversityGroupAfterPost(DataSet: TDataSet);
 begin
   self.SQLQueryUniversityGroup.ApplyUpdates(0);
   self.SQLTransaction1.Commit();

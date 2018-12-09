@@ -1,9 +1,9 @@
-object Form1: TForm1
-  Left = 790
+object MainForm: TMainForm
+  Left = 883
   Height = 613
-  Top = 230
+  Top = 364
   Width = 928
-  Caption = 'Form1'
+  Caption = 'Main'
   ClientHeight = 593
   ClientWidth = 928
   Menu = MainMenu1
@@ -2304,7 +2304,7 @@ object Form1: TForm1
   object PQConnection1: TPQConnection
     Connected = True
     LoginPrompt = False
-    DatabaseName = 'company'
+    DatabaseName = 'postgres'
     KeepConnection = False
     Password = '123'
     Transaction = SQLTransaction1

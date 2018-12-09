@@ -42,26 +42,34 @@
         <PackageName Value="LCL"/>
       </Item6>
     </RequiredPackages>
-    <Units Count="3">
+    <Units Count="4">
       <Unit0>
         <Filename Value="ppvpd.lpr"/>
         <IsPartOfProject Value="True"/>
       </Unit0>
       <Unit1>
-        <Filename Value="unit1.pas"/>
+        <Filename Value="mainformunit.pas"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="Form1"/>
+        <ComponentName Value="MainForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="Unit1"/>
+        <UnitName Value="MainFormUnit"/>
       </Unit1>
       <Unit2>
         <Filename Value="formrawsqlparamunit.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FormRawSqlParam"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FormRawSqlParamUnit"/>
       </Unit2>
+      <Unit3>
+        <Filename Value="unitlogin.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Login"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UnitLogin"/>
+      </Unit3>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
