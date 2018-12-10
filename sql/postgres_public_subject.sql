@@ -1,2 +1,9 @@
 INSERT INTO public.subject (id, name, hours_amount, hours_of_lectures, hours_of_practice, number_of_semesters) VALUES (1, 'Введение в сервис-ориентированные архитектуры', 108, 32, 16, 1);
 INSERT INTO public.subject (id, name, hours_amount, hours_of_lectures, hours_of_practice, number_of_semesters) VALUES (2, 'Интеллектуальные системы и технологии', 108, 16, 32, 1);
+INSERT INTO public.subject (id, name, hours_amount, hours_of_lectures, hours_of_practice, number_of_semesters) VALUES (3, 'Практикум по виду профессиональной деятельности', 72, 0, 32, 2);
+INSERT INTO public.subject (id, name, hours_amount, hours_of_lectures, hours_of_practice, number_of_semesters) VALUES (4, 'Администрирование операционных систем Unix/Linux', 144, 32, 32, 1);
+INSERT INTO public.subject (id, name, hours_amount, hours_of_lectures, hours_of_practice, number_of_semesters) VALUES (5, 'Функциональное и логическое программирование', 108, 32, 16, 1);
+INSERT INTO public.subject (id, name, hours_amount, hours_of_lectures, hours_of_practice, number_of_semesters) VALUES (6, 'Управление ИТ-проектами', 72, 32, 0, 1);
+INSERT INTO public.subject (id, name, hours_amount, hours_of_lectures, hours_of_practice, number_of_semesters) VALUES (7, 'Основы параллельного программирования', 144, 32, 32, 1);
+INSERT INTO public.subject (id, name, hours_amount, hours_of_lectures, hours_of_practice, number_of_semesters) VALUES (8, 'Автоматизация деятельности предприятия', 108, 16, 32, 1);
+INSERT INTO public.subject (id, name, hours_amount, hours_of_lectures, hours_of_practice, number_of_semesters) VALUES (9, 'Основы технологии программирования .NET', 108, 32, 16, 1);

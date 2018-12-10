@@ -1,2 +1,11 @@
 INSERT INTO public.teacher (id, name, surname, patronymic, academic_title, id_department) VALUES (1, 'Алина', 'Латипова', 'Таиховна', 'Кандидат физико-математических наук', 1);
 INSERT INTO public.teacher (id, name, surname, patronymic, academic_title, id_department) VALUES (2, 'Павел', 'Верман', 'Генрихович', 'Старший преподаватель', 1);
+INSERT INTO public.teacher (id, name, surname, patronymic, academic_title, id_department) VALUES (3, 'Михаил', 'Сухов', 'Васильевич', 'Доцент', 1);
+INSERT INTO public.teacher (id, name, surname, patronymic, academic_title, id_department) VALUES (4, 'Константин', 'Беседин', 'Юрьевич', 'Преподаватель', 1);
+INSERT INTO public.teacher (id, name, surname, patronymic, academic_title, id_department) VALUES (5, 'Роман', 'Чулкевич', 'Андреевич', 'Преподаватель', 1);
+INSERT INTO public.teacher (id, name, surname, patronymic, academic_title, id_department) VALUES (6, 'Глеб', 'Радченко', 'Игоревич', 'Кандидат физико-математических наук', 1);
+INSERT INTO public.teacher (id, name, surname, patronymic, academic_title, id_department) VALUES (7, 'Сергей', 'Иванов', 'Александрович', 'Кандидат физико-математических наук', 1);
+INSERT INTO public.teacher (id, name, surname, patronymic, academic_title, id_department) VALUES (8, 'Татьяна', 'Маковецкая', 'Юрьевна', 'Кандидат физико-математических наук', 1);
+INSERT INTO public.teacher (id, name, surname, patronymic, academic_title, id_department) VALUES (9, 'Наталья', 'Барабанщикова', 'Игоревна', 'Преподаватель', 1);
+INSERT INTO public.teacher (id, name, surname, patronymic, academic_title, id_department) VALUES (10, 'Ольга', 'Иванова', 'Николаевна', 'Кандидат педагогических наук', 1);
+INSERT INTO public.teacher (id, name, surname, patronymic, academic_title, id_department) VALUES (11, 'Роман', 'Шангин', 'Эдуардович', 'Кандидат физико-математических наук', 1);

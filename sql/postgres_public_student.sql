@@ -1,1 +1,7 @@
 INSERT INTO public.student (id, id_group, number_in_group, name, surname, patronymic, birth_date, address, average_score) VALUES (1, 1, 7, 'Антон', 'Бурулев', 'Александрович', '1998-07-17', 'ул. Молодогвардейцев 32-43', 3);
+INSERT INTO public.student (id, id_group, number_in_group, name, surname, patronymic, birth_date, address, average_score) VALUES (2, 1, 1, 'Игорь', 'Аверкин', 'Дмитриевич', '1997-09-12', 'ул. Проспект Ленина 45-43', 3.6);
+INSERT INTO public.student (id, id_group, number_in_group, name, surname, patronymic, birth_date, address, average_score) VALUES (3, 1, 8, 'Михаил', 'Иванов', 'Игоревич', '1997-06-12', 'ул. Энгельса 18-9', 3.4);
+INSERT INTO public.student (id, id_group, number_in_group, name, surname, patronymic, birth_date, address, average_score) VALUES (4, 2, 17, 'Герман', 'Соколов', 'Владиславович', '1996-12-07', 'ул. Университетская 38-12', 2.3);
+INSERT INTO public.student (id, id_group, number_in_group, name, surname, patronymic, birth_date, address, average_score) VALUES (5, 2, 7, 'Владимир', 'Мурашов', 'Иванович', '1997-11-05', 'ул. Комсомольский проспект 12-9', 2.1);
+INSERT INTO public.student (id, id_group, number_in_group, name, surname, patronymic, birth_date, address, average_score) VALUES (6, 3, 5, 'Вилен', 'Ватутин', 'Владиславович', '1997-09-19', 'ул. Кирова 3-8', 4);
+INSERT INTO public.student (id, id_group, number_in_group, name, surname, patronymic, birth_date, address, average_score) VALUES (7, 3, 14, 'Евгений ', 'Пятин', 'Александрович', '1996-02-09', 'ул. Энтузиастов 65-31', 3.6);

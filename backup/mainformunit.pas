@@ -21,7 +21,7 @@ type
     ButtonPassword: TButton;
     ButtonDelete: TButton;
     Chart1: TChart;
-    Chart1BarSeries1: TBarSeries;
+    Chart1LineSeries1: TLineSeries;
     Chart2: TChart;
     Chart2BarSeries1: TBarSeries;
     DataSourceUsers: TDataSource;
@@ -216,6 +216,8 @@ begin
   self.SQLQueryPerformance.Open();
   self.SQLQueryDepartment.Close();
   self.SQLQueryDepartment.Open();
+  self.SQLQueryGroupChart.Close();
+  self.SQLQueryGroupChart.Open();
 
   if(self.UserRole = 'role_admin') then
   begin
@@ -381,7 +383,7 @@ end;
 
 procedure TMainForm.ListBoxUsersClick(Sender: TObject);
 begin
-  self.PreventRadioGroupUsersRolesRefresh:=false;
+  self.PreventRadioGroupUsersRolesRefresh:=true;
   self.RadioGroupUsersRoles.Enabled:=true;
   self.ButtonPassword.Enabled:=true;
   self.ButtonDelete.Enabled:=true;
