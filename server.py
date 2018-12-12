@@ -8,27 +8,28 @@ import ad_pb2_grpc
 import db
 
 _ONE_DAY_IN_SECONDS = 60 * 60 * 24
-#ads = []
 
 
 class AdService(ad_pb2_grpc.AdServiceServicer):
     def SendAd(self, request, context):
+        if len(request.title) > 256:
+            return ad_pb2.AdReply(message='Длина заголовка не должна превышать 256 символов')
         db.add_ad(request.title, request.text, request.user)
-        return ad_pb2.AdReply(message='Обьявление %s от пользователя %s добавлено' % (request.title, request.user.name))
+        return ad_pb2.AdReply(message='Обьявление "%s" от пользователя %s добавлено' % (request.title, request.user.name))
 
     @staticmethod
     def create_int_ad(current_ads, ads):
         for ad in ads:
             int_ad = current_ads.ads.add()
-            int_ad.user.name = str(ad[4])
-            int_ad.user.email = str(ad[5])
+            int_ad.user.name = str(ad[5])
+            int_ad.user.email = str(ad[6])
             int_ad.title = str(ad[1])
             int_ad.text = str(ad[2])
+            int_ad.date = str(ad[4])
 
-    def GetOthersAd(self, request, context):
+    def GetAds(self, request, context):
         current_ads = ad_pb2.Ads()
-        ads = db.get_other_ads(request)
-        print(ads)
+        ads = db.get_ads(request)
         self.create_int_ad(current_ads, ads)
         return current_ads
 

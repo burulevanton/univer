@@ -19,8 +19,8 @@ class AdServiceStub(object):
         request_serializer=ad__pb2.Ad.SerializeToString,
         response_deserializer=ad__pb2.AdReply.FromString,
         )
-    self.GetOthersAd = channel.unary_unary(
-        '/ad.AdService/GetOthersAd',
+    self.GetAds = channel.unary_unary(
+        '/ad.AdService/GetAds',
         request_serializer=ad__pb2.User.SerializeToString,
         response_deserializer=ad__pb2.Ads.FromString,
         )
@@ -47,7 +47,7 @@ class AdServiceServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
-  def GetOthersAd(self, request, context):
+  def GetAds(self, request, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -76,8 +76,8 @@ def add_AdServiceServicer_to_server(servicer, server):
           request_deserializer=ad__pb2.Ad.FromString,
           response_serializer=ad__pb2.AdReply.SerializeToString,
       ),
-      'GetOthersAd': grpc.unary_unary_rpc_method_handler(
-          servicer.GetOthersAd,
+      'GetAds': grpc.unary_unary_rpc_method_handler(
+          servicer.GetAds,
           request_deserializer=ad__pb2.User.FromString,
           response_serializer=ad__pb2.Ads.SerializeToString,
       ),

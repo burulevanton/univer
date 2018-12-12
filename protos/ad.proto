@@ -4,15 +4,16 @@ package ad;
 
 service AdService{
     rpc SendAd (Ad) returns (AdReply) {}
-    rpc GetOthersAd (User) returns (Ads) {}
+    rpc GetAds (User) returns (Ads) {}
     rpc GetUserAd (User) returns (Ads) {}
     rpc Sign (User) returns (AdReply) {}
 }
 
 message Ad{
     User user = 1;
-    string title = 3;
-    string text = 4;
+    string title = 2;
+    string text = 3;
+    string date = 4;
 }
 
 message AdReply {

@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='ad',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\x08\x61\x64.proto\x12\x02\x61\x64\"9\n\x02\x41\x64\x12\x16\n\x04user\x18\x01 \x01(\x0b\x32\x08.ad.User\x12\r\n\x05title\x18\x03 \x01(\t\x12\x0c\n\x04text\x18\x04 \x01(\t\"\x1a\n\x07\x41\x64Reply\x12\x0f\n\x07message\x18\x01 \x01(\t\"#\n\x04User\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05\x65mail\x18\x02 \x01(\t\"\x1a\n\x03\x41\x64s\x12\x13\n\x03\x61\x64s\x18\x01 \x03(\x0b\x32\x06.ad.Ad2\x93\x01\n\tAdService\x12\x1f\n\x06SendAd\x12\x06.ad.Ad\x1a\x0b.ad.AdReply\"\x00\x12\"\n\x0bGetOthersAd\x12\x08.ad.User\x1a\x07.ad.Ads\"\x00\x12 \n\tGetUserAd\x12\x08.ad.User\x1a\x07.ad.Ads\"\x00\x12\x1f\n\x04Sign\x12\x08.ad.User\x1a\x0b.ad.AdReply\"\x00\x62\x06proto3')
+  serialized_pb=_b('\n\x08\x61\x64.proto\x12\x02\x61\x64\"G\n\x02\x41\x64\x12\x16\n\x04user\x18\x01 \x01(\x0b\x32\x08.ad.User\x12\r\n\x05title\x18\x02 \x01(\t\x12\x0c\n\x04text\x18\x03 \x01(\t\x12\x0c\n\x04\x64\x61te\x18\x04 \x01(\t\"\x1a\n\x07\x41\x64Reply\x12\x0f\n\x07message\x18\x01 \x01(\t\"#\n\x04User\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05\x65mail\x18\x02 \x01(\t\"\x1a\n\x03\x41\x64s\x12\x13\n\x03\x61\x64s\x18\x01 \x03(\x0b\x32\x06.ad.Ad2\x8e\x01\n\tAdService\x12\x1f\n\x06SendAd\x12\x06.ad.Ad\x1a\x0b.ad.AdReply\"\x00\x12\x1d\n\x06GetAds\x12\x08.ad.User\x1a\x07.ad.Ads\"\x00\x12 \n\tGetUserAd\x12\x08.ad.User\x1a\x07.ad.Ads\"\x00\x12\x1f\n\x04Sign\x12\x08.ad.User\x1a\x0b.ad.AdReply\"\x00\x62\x06proto3')
 )
 
 
@@ -41,13 +41,20 @@ _AD = _descriptor.Descriptor(
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='title', full_name='ad.Ad.title', index=1,
-      number=3, type=9, cpp_type=9, label=1,
+      number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='text', full_name='ad.Ad.text', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='date', full_name='ad.Ad.date', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -66,7 +73,7 @@ _AD = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=16,
-  serialized_end=73,
+  serialized_end=87,
 )
 
 
@@ -96,8 +103,8 @@ _ADREPLY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=75,
-  serialized_end=101,
+  serialized_start=89,
+  serialized_end=115,
 )
 
 
@@ -134,8 +141,8 @@ _USER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=103,
-  serialized_end=138,
+  serialized_start=117,
+  serialized_end=152,
 )
 
 
@@ -165,8 +172,8 @@ _ADS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=140,
-  serialized_end=166,
+  serialized_start=154,
+  serialized_end=180,
 )
 
 _AD.fields_by_name['user'].message_type = _USER
@@ -213,8 +220,8 @@ _ADSERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=169,
-  serialized_end=316,
+  serialized_start=183,
+  serialized_end=325,
   methods=[
   _descriptor.MethodDescriptor(
     name='SendAd',
@@ -226,8 +233,8 @@ _ADSERVICE = _descriptor.ServiceDescriptor(
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
-    name='GetOthersAd',
-    full_name='ad.AdService.GetOthersAd',
+    name='GetAds',
+    full_name='ad.AdService.GetAds',
     index=1,
     containing_service=None,
     input_type=_USER,
