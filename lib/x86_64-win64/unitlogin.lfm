@@ -1,7 +1,7 @@
 object Login: TLogin
-  Left = 1184
+  Left = 1149
   Height = 204
-  Top = 624
+  Top = 304
   Width = 331
   Caption = 'Login'
   ClientHeight = 204

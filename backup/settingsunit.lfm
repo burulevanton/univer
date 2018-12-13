@@ -1,0 +1,148 @@
+object FormSettings: TFormSettings
+  Left = 1047
+  Height = 289
+  Top = 259
+  Width = 279
+  Caption = 'Settings'
+  ClientHeight = 289
+  ClientWidth = 279
+  LCLVersion = '1.8.4.0'
+  object ImageBackground: TImage
+    Left = 0
+    Height = 289
+    Top = 0
+    Width = 279
+    Align = alClient
+  end
+  object ButtonFont: TButton
+    Left = 8
+    Height = 25
+    Top = 24
+    Width = 264
+    Caption = 'Шрифт'
+    OnClick = ButtonFontClick
+    TabOrder = 0
+  end
+  object ButtonFormColor: TButton
+    Left = 8
+    Height = 25
+    Top = 64
+    Width = 264
+    Caption = 'Цвет формы'
+    TabOrder = 1
+  end
+  object ButtonDefaultFormColor: TButton
+    Left = 8
+    Height = 25
+    Top = 104
+    Width = 264
+    Caption = 'Стандартный цвет формы'
+    TabOrder = 2
+  end
+  object ButtonBackgroundSet: TButton
+    Left = 8
+    Height = 25
+    Top = 144
+    Width = 264
+    Caption = 'Установить фоновое изображение'
+    TabOrder = 3
+  end
+  object ButtonBackgroundClear: TButton
+    Left = 8
+    Height = 25
+    Top = 184
+    Width = 264
+    Caption = 'Удалить фоновое изображение'
+    TabOrder = 4
+  end
+  object Label1: TLabel
+    Left = 128
+    Height = 15
+    Top = 216
+    Width = 27
+    Caption = 'Язык'
+    ParentColor = False
+  end
+  object ButtonRussian: TButton
+    Left = 8
+    Height = 25
+    Top = 248
+    Width = 112
+    Caption = 'Русский'
+    Enabled = False
+    TabOrder = 5
+  end
+  object ButtonEnglish: TButton
+    Left = 160
+    Height = 25
+    Top = 248
+    Width = 112
+    Caption = 'English'
+    TabOrder = 6
+  end
+  object FontDialogFont: TFontDialog
+    MinFontSize = 0
+    MaxFontSize = 0
+    left = 23
+    top = 9
+  end
+  object ColorDialogFont: TColorDialog
+    Color = clBlack
+    CustomColors.Strings = (
+      'ColorA=000000'
+      'ColorB=000080'
+      'ColorC=008000'
+      'ColorD=008080'
+      'ColorE=800000'
+      'ColorF=800080'
+      'ColorG=808000'
+      'ColorH=808080'
+      'ColorI=C0C0C0'
+      'ColorJ=0000FF'
+      'ColorK=00FF00'
+      'ColorL=00FFFF'
+      'ColorM=FF0000'
+      'ColorN=FF00FF'
+      'ColorO=FFFF00'
+      'ColorP=FFFFFF'
+      'ColorQ=C0DCC0'
+      'ColorR=F0CAA6'
+      'ColorS=F0FBFF'
+      'ColorT=A4A0A0'
+    )
+    left = 240
+    top = 9
+  end
+  object ColorDialogForm: TColorDialog
+    Color = clDefault
+    CustomColors.Strings = (
+      'ColorA=000000'
+      'ColorB=000080'
+      'ColorC=008000'
+      'ColorD=008080'
+      'ColorE=800000'
+      'ColorF=800080'
+      'ColorG=808000'
+      'ColorH=808080'
+      'ColorI=C0C0C0'
+      'ColorJ=0000FF'
+      'ColorK=00FF00'
+      'ColorL=00FFFF'
+      'ColorM=FF0000'
+      'ColorN=FF00FF'
+      'ColorO=FFFF00'
+      'ColorP=FFFFFF'
+      'ColorQ=C0DCC0'
+      'ColorR=F0CAA6'
+      'ColorS=F0FBFF'
+      'ColorT=A4A0A0'
+    )
+    left = 23
+    top = 64
+  end
+  object OpenDialogBackground: TOpenDialog
+    Filter = 'PNG|*.png'
+    left = 232
+    top = 136
+  end
+end

@@ -1,7 +1,7 @@
 object MainForm: TMainForm
-  Left = 443
+  Left = 559
   Height = 636
-  Top = 210
+  Top = 155
   Width = 928
   Caption = 'Main'
   ClientHeight = 616
@@ -10,6 +10,13 @@ object MainForm: TMainForm
   OnClose = FormClose
   OnShow = FormShow
   LCLVersion = '1.8.4.0'
+  object ImageBackground: TImage
+    Left = 0
+    Height = 616
+    Top = 0
+    Width = 928
+    Align = alClient
+  end
   object PageControl1: TPageControl
     Left = 32
     Height = 552
@@ -2937,6 +2944,10 @@ object MainForm: TMainForm
       object MenuItemImport: TMenuItem
         Caption = 'Excel -> DB'
         OnClick = MenuItemImportClick
+      end
+      object MenuItemSettings: TMenuItem
+        Caption = 'Настройки'
+        OnClick = MenuItemSettingsClick
       end
       object MenuItemRefresh: TMenuItem
         Caption = 'Обновить'

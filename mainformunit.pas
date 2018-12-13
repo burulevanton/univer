@@ -9,7 +9,7 @@ uses
   SynEdit, Forms, Controls, Graphics, Dialogs, DBGrids, ComCtrls, DbCtrls,
   DBExtCtrls, Menus, StdCtrls, PairSplitter, Buttons, ExtCtrls,
   FormRawSqlParamUnit, TADbSource, TAGraph, TARadialSeries, TASeries, LR_Class,
-  LR_DBSet, LR_BarC, fpspreadsheet, fpsTypes, xlsbiff8, fpsutils;
+  LR_DBSet, LR_BarC, fpspreadsheet, fpsTypes, xlsbiff8, fpsutils, SettingsUnit;
 
 type
 
@@ -30,8 +30,10 @@ type
     DataSourceGRoupChart: TDataSource;
     DbChartGroup: TDbChartSource;
     DbChartSourceSubject: TDbChartSource;
+    ImageBackground: TImage;
     ListBoxUsers: TListBox;
     MainMenu1: TMainMenu;
+    MenuItemSettings: TMenuItem;
     MenuItemMain: TMenuItem;
     MenuItemExport: TMenuItem;
     MenuItemImport: TMenuItem;
@@ -168,6 +170,7 @@ type
     procedure MenuItemImportClick(Sender: TObject);
     procedure MenuItemQuitClick(Sender: TObject);
     procedure MenuItemRefreshClick(Sender: TObject);
+    procedure MenuItemSettingsClick(Sender: TObject);
     procedure RadioGroupUsersRolesSelectionChanged(Sender: TObject);
     procedure RawSqlExecuteClick(Sender: TObject);
     procedure RawSqlOpenClick(Sender: TObject);
@@ -186,6 +189,7 @@ type
     UserRole:string;
     PreventRadioGroupUsersRolesRefresh: boolean;
     procedure RefreshSql();
+    procedure RefreshSettings();
   public
 
   end;
@@ -193,12 +197,36 @@ type
 var
   MainForm: TMainForm;
 
+resourcestring
+
+  MessageAddUserCaption = 'Добавить пользователя';
+  MessageAddUserText = 'Введите имя пользователя';
+  MessageChangePasswordCaption = 'Поменять пароль';
+  MessageChangePasswordText = 'Введите новый пароль';
+  MessageRenameUserCaption = 'Переименовать пользователя';
+  MessageRenameUserText = 'Введите новоё имя пользователя';
+  MessageDeleteUserCaption = 'Удалить пользователя';
+  MessageDeleteUserText = 'Вы уверены?';
+  RadioGroupUsersRolesAdmin = 'Админ';
+  RadioGroupUsersRolesOperator = 'Оператор';
+  RadioGroupUsersRolesUser = 'Пользователь';
+
 implementation
 
 {$R *.lfm}
 
 
 { TMainForm }
+procedure TMainForm.RefreshSettings();
+begin
+  self.Font := FormSettings.FontDialogFont.Font;
+  self.Color:= FormSettings.ColorDialogForm.Color;
+   if FileExists(FormSettings.OpenDialogBackground.FileName) then
+    self.ImageBackground.Picture.LoadFromFile(FormSettings.OpenDialogBackground.FileName)
+  else
+    self.ImageBackground.Picture.Clear();
+end;
+
 procedure TMainForm.RefreshSql();
 var
   i: Integer;
@@ -298,7 +326,7 @@ end;
 procedure TMainForm.ButtonAddClick(Sender: TObject);
 var userName: string;
 begin
-     userName:=InputBox('Добавить пользователя', 'Введите имя пользователя','');
+     userName:=InputBox(MessageAddUserCaption, MessageAddUserText,'');
      if not (userName = '') then
      begin
        self.PQConnection1.ExecuteDirect('CREATE USER "' + userName + '";');
@@ -309,7 +337,7 @@ end;
 
 procedure TMainForm.ButtonDeleteClick(Sender: TObject);
 begin
-  if MessageDlg('Удалить пользователя', 'Вы уверены?', mtConfirmation, [mbNo, mbYes], 0) = mrYes then
+  if MessageDlg(MessageDeleteUserCaption, MessageDeleteUserText, mtConfirmation, [mbNo, mbYes], 0) = mrYes then
   begin
     self.PQConnection1.ExecuteDirect('DROP ROLE "' + self.ListBoxUsers.Items[self.ListBoxUsers.ItemIndex] + '";');
     self.SQLTransaction1.Commit();
@@ -320,7 +348,7 @@ end;
 procedure TMainForm.ButtonEditClick(Sender: TObject);
 var userName:string;
 begin
-   userName:=InputBox('Переименовать пользователя', 'Введите новое имя пользователя','');
+   userName:=InputBox(MessageRenameUserCaption, MessageRenameUserText,'');
    if not (userName = '') then
    begin
      self.PQConnection1.ExecuteDirect('ALTER ROLE "' + self.ListBoxUsers.Items[self.ListBoxUsers.ItemIndex] + '" RENAME TO "' + userName + '";');
@@ -333,7 +361,7 @@ procedure TMainForm.ButtonPasswordClick(Sender: TObject);
 var
   password: string;
 begin
-   password := PasswordBox('Изменить пароль', 'Введите новый пароль');
+   password := PasswordBox(MessageChangePasswordCaption, MessageChangePasswordText);
    if not (password = '') then
    begin
      self.PQConnection1.ExecuteDirect('ALTER ROLE "' + self.ListBoxUsers.Items[self.ListBoxUsers.ItemIndex] + '" PASSWORD ''' + password + ''';');
@@ -355,6 +383,8 @@ begin
   self.SQLQueryTeacher.Active:=true;
   self.SQLQueryUniversityGroup.Active:=true;
 
+  self.RefreshSettings();
+
   self.SQLQueryRoles.ParamByName('username').AsString:=self.PQConnection1.UserName;
   self.SQLQueryRoles.Active:=true;
 
@@ -373,6 +403,10 @@ begin
   if(self.UserRole = 'role_admin') then
   begin
        self.SQLQueryUsers.Active:=true;
+       self.RadioGroupUsersRoles.Items.Clear();
+       self.RadioGroupUsersRoles.Items.Add(RadioGroupUsersRolesAdmin);
+       self.RadioGroupUsersRoles.Items.Add(RadioGroupUsersRolesOperator);
+       self.RadioGroupUsersRoles.Items.Add(RadioGroupUsersRolesUser);
   end
   else
   begin
@@ -667,6 +701,12 @@ end;
 procedure TMainForm.MenuItemRefreshClick(Sender: TObject);
 begin
   self.RefreshSql();
+end;
+
+procedure TMainForm.MenuItemSettingsClick(Sender: TObject);
+begin
+     FormSettings.ShowModal();
+     self.RefreshSettings();
 end;
 
 procedure TMainForm.RadioGroupUsersRolesSelectionChanged(Sender: TObject);

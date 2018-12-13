@@ -15,9 +15,9 @@ uses
 begin
   RequireDerivedFormResource:=True;
   Application.Initialize;
+  Application.CreateForm(TLogin, Login);
   Application.CreateForm(TMainForm, MainForm);
   Application.CreateForm(TFormRawSqlParam, FormRawSqlParam);
-  Application.CreateForm(TLogin, Login);
   Application.Run;
 end.
 

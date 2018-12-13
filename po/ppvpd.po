@@ -1,0 +1,192 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+#: mainformunit.messageaddusercaption
+msgid "Добавить пользователя"
+msgstr ""
+
+#: mainformunit.messageaddusertext
+msgid "Введите имя пользователя"
+msgstr ""
+
+#: mainformunit.messagechangepasswordcaption
+msgid "Поменять пароль"
+msgstr ""
+
+#: mainformunit.messagechangepasswordtext
+msgid "Введите новый пароль"
+msgstr ""
+
+#: mainformunit.messagedeleteusercaption
+msgid "Удалить пользователя"
+msgstr ""
+
+#: mainformunit.messagedeleteusertext
+msgid "Вы уверены?"
+msgstr ""
+
+#: mainformunit.messagerenameusercaption
+msgid "Переименовать пользователя"
+msgstr ""
+
+#: mainformunit.messagerenameusertext
+msgid "Введите новоё имя пользователя"
+msgstr ""
+
+#: mainformunit.radiogroupusersrolesadmin
+msgid "Админ"
+msgstr ""
+
+#: mainformunit.radiogroupusersrolesoperator
+msgid "Оператор"
+msgstr ""
+
+#: mainformunit.radiogroupusersrolesuser
+msgid "Пользователь"
+msgstr ""
+
+#: tmainform.buttonadd.caption
+msgid "Добавить"
+msgstr ""
+
+#: tmainform.buttondelete.caption
+msgid "Удалить"
+msgstr ""
+
+#: tmainform.buttonedit.caption
+msgid "Редактировать"
+msgstr ""
+
+#: tmainform.buttonpassword.caption
+msgid "Пароль"
+msgstr ""
+
+#: tmainform.buttonrawdoublesqlexecute.caption
+msgctxt "tmainform.buttonrawdoublesqlexecute.caption"
+msgid "Выполнить запрос"
+msgstr ""
+
+#: tmainform.caption
+msgid "Main"
+msgstr ""
+
+#: tmainform.department.caption
+msgid "Кафедра"
+msgstr ""
+
+#: tmainform.departmentedit.caption
+msgid "Кафедра-Изменить"
+msgstr ""
+
+#: tmainform.groupedit.caption
+msgid "Группы-Изменить"
+msgstr ""
+
+#: tmainform.menuitemexport.caption
+msgid "DB -> Excel"
+msgstr ""
+
+#: tmainform.menuitemimport.caption
+msgid "Excel -> DB"
+msgstr ""
+
+#: tmainform.menuitemmain.caption
+msgid "Меню"
+msgstr ""
+
+#: tmainform.menuitemquit.caption
+msgid "Выйти"
+msgstr ""
+
+#: tmainform.menuitemrefresh.caption
+msgid "Обновить"
+msgstr ""
+
+#: tmainform.menuitemsettings.caption
+msgid "Настройки"
+msgstr ""
+
+#: tmainform.performance.caption
+msgid "Успеваемость"
+msgstr ""
+
+#: tmainform.performanceedit.caption
+msgid "Успеваемость-Изменить"
+msgstr ""
+
+#: tmainform.radiogroupusersroles.caption
+msgid "Roles"
+msgstr ""
+
+#: tmainform.rawdoublesql.caption
+msgid "Выполнить двойной SQL"
+msgstr ""
+
+#: tmainform.rawsql.caption
+msgid "Выполнить SQL"
+msgstr ""
+
+#: tmainform.rawsqlexecute.caption
+msgctxt "tmainform.rawsqlexecute.caption"
+msgid "Выполнить запрос"
+msgstr ""
+
+#: tmainform.rawsqlopen.caption
+msgid "Открыть запрос"
+msgstr ""
+
+#: tmainform.rawsqlparams.caption
+msgid "Параметры..."
+msgstr ""
+
+#: tmainform.rawsqlsave.caption
+msgid "Сохранить запрос"
+msgstr ""
+
+#: tmainform.reportdepartment.caption
+msgctxt "tmainform.reportdepartment.caption"
+msgid "Отчёт"
+msgstr ""
+
+#: tmainform.reportperformance.caption
+msgctxt "tmainform.reportperformance.caption"
+msgid "Отчёт"
+msgstr ""
+
+#: tmainform.reportteacher.caption
+msgctxt "tmainform.reportteacher.caption"
+msgid "Отчёт"
+msgstr ""
+
+#: tmainform.student.caption
+msgid "Студенты"
+msgstr ""
+
+#: tmainform.studentsedit.caption
+msgid "Студенты-Изменить"
+msgstr ""
+
+#: tmainform.subject.caption
+msgid "Предметы"
+msgstr ""
+
+#: tmainform.subjectedit.caption
+msgid "Предметы-Изменить"
+msgstr ""
+
+#: tmainform.tabsheetusers.caption
+msgid "Пользователи"
+msgstr ""
+
+#: tmainform.teacher.caption
+msgid "Преподаватели"
+msgstr ""
+
+#: tmainform.teacheredit.caption
+msgid "Преподаватели-Изменить"
+msgstr ""
+
+#: tmainform.universitygroup.caption
+msgid "Группы"
+msgstr ""
+

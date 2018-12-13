@@ -7,7 +7,7 @@ uses
   cthreads,
   {$ENDIF}{$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms,FormRawSqlParamUnit, tachartlazaruspkg, UnitLogin, MainFormUnit
+  Forms,FormRawSqlParamUnit, tachartlazaruspkg, UnitLogin, MainFormUnit, SettingsUnit
   { you can add units after this };
 
 {$R *.res}
@@ -18,6 +18,7 @@ begin
   Application.CreateForm(TLogin, Login);
   Application.CreateForm(TMainForm, MainForm);
   Application.CreateForm(TFormRawSqlParam, FormRawSqlParam);
+  Application.CreateForm(TFormSettings, FormSettings);
   Application.Run;
 end.
 
