@@ -13,6 +13,7 @@ type
   { TFormSettings }
 
   TFormSettings = class(TForm)
+    Button1: TButton;
     ButtonRussian: TButton;
     ButtonEnglish: TButton;
     ButtonBackgroundSet: TButton;
@@ -26,6 +27,7 @@ type
     ImageBackground: TImage;
     Label1: TLabel;
     OpenDialogBackground: TOpenDialog;
+    procedure Button1Click(Sender: TObject);
     procedure ButtonBackgroundClearClick(Sender: TObject);
     procedure ButtonBackgroundSetClick(Sender: TObject);
     procedure ButtonDefaultFormColorClick(Sender: TObject);
@@ -34,11 +36,12 @@ type
     procedure ButtonFormColorClick(Sender: TObject);
     procedure ButtonRussianClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
+  public
     procedure SaveToFile();
     procedure LoadFromFile();
     procedure RefreshSettings();
-  public
 
   end;
 
@@ -174,6 +177,12 @@ begin
   self.RefreshSettings();
 end;
 
+procedure TFormSettings.Button1Click(Sender: TObject);
+begin
+   self.LoadFromFile();
+  self.RefreshSettings();
+end;
+
 procedure TFormSettings.ButtonFormColorClick(Sender: TObject);
 begin
   self.ColorDialogForm.Execute();
@@ -185,6 +194,7 @@ procedure TFormSettings.ButtonRussianClick(Sender: TObject);
 begin
   self.ButtonRussian.Enabled:=false;
   self.ButtonEnglish.Enabled:=true;
+
   self.SaveToFile();
   self.RefreshSettings();
 end;
@@ -194,4 +204,11 @@ begin
   self.LoadFromFile();
   self.RefreshSettings();
 end;
+
+procedure TFormSettings.FormShow(Sender: TObject);
+begin
+  self.LoadFromFile();
+  self.RefreshSettings();
+end;
+
 end.

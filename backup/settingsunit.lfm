@@ -1,7 +1,7 @@
 object FormSettings: TFormSettings
-  Left = 1047
+  Left = 1269
   Height = 289
-  Top = 259
+  Top = 255
   Width = 279
   Caption = 'Settings'
   ClientHeight = 289
@@ -29,6 +29,7 @@ object FormSettings: TFormSettings
     Top = 64
     Width = 264
     Caption = 'Цвет формы'
+    OnClick = ButtonFormColorClick
     TabOrder = 1
   end
   object ButtonDefaultFormColor: TButton
@@ -37,6 +38,7 @@ object FormSettings: TFormSettings
     Top = 104
     Width = 264
     Caption = 'Стандартный цвет формы'
+    OnClick = ButtonDefaultFormColorClick
     TabOrder = 2
   end
   object ButtonBackgroundSet: TButton
@@ -45,6 +47,7 @@ object FormSettings: TFormSettings
     Top = 144
     Width = 264
     Caption = 'Установить фоновое изображение'
+    OnClick = ButtonBackgroundSetClick
     TabOrder = 3
   end
   object ButtonBackgroundClear: TButton
@@ -53,6 +56,7 @@ object FormSettings: TFormSettings
     Top = 184
     Width = 264
     Caption = 'Удалить фоновое изображение'
+    OnClick = ButtonBackgroundClearClick
     TabOrder = 4
   end
   object Label1: TLabel
@@ -70,6 +74,7 @@ object FormSettings: TFormSettings
     Width = 112
     Caption = 'Русский'
     Enabled = False
+    OnClick = ButtonRussianClick
     TabOrder = 5
   end
   object ButtonEnglish: TButton
@@ -78,7 +83,18 @@ object FormSettings: TFormSettings
     Top = 248
     Width = 112
     Caption = 'English'
+    Enabled = False
+    OnClick = ButtonEnglishClick
     TabOrder = 6
+  end
+  object Button1: TButton
+    Left = 16
+    Height = 25
+    Top = 216
+    Width = 75
+    Caption = 'Button1'
+    OnClick = Button1Click
+    TabOrder = 7
   end
   object FontDialogFont: TFontDialog
     MinFontSize = 0

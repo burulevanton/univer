@@ -326,7 +326,7 @@ end;
 procedure TMainForm.ButtonAddClick(Sender: TObject);
 var userName: string;
 begin
-     userName:=InputBox(self.MessageAddUserCaption, self.MessageAddUserText,'');
+     userName:=InputBox(MessageAddUserCaption, MessageAddUserText,'');
      if not (userName = '') then
      begin
        self.PQConnection1.ExecuteDirect('CREATE USER "' + userName + '";');
@@ -337,7 +337,7 @@ end;
 
 procedure TMainForm.ButtonDeleteClick(Sender: TObject);
 begin
-  if MessageDlg(self.MessageDeleteUserCaption, self.MessageDeleteUserText, mtConfirmation, [mbNo, mbYes], 0) = mrYes then
+  if MessageDlg(MessageDeleteUserCaption, MessageDeleteUserText, mtConfirmation, [mbNo, mbYes], 0) = mrYes then
   begin
     self.PQConnection1.ExecuteDirect('DROP ROLE "' + self.ListBoxUsers.Items[self.ListBoxUsers.ItemIndex] + '";');
     self.SQLTransaction1.Commit();
@@ -348,7 +348,7 @@ end;
 procedure TMainForm.ButtonEditClick(Sender: TObject);
 var userName:string;
 begin
-   userName:=InputBox(self.MessageRenameUserCaption, self.MessageRenameUserText,'');
+   userName:=InputBox(MessageRenameUserCaption, MessageRenameUserText,'');
    if not (userName = '') then
    begin
      self.PQConnection1.ExecuteDirect('ALTER ROLE "' + self.ListBoxUsers.Items[self.ListBoxUsers.ItemIndex] + '" RENAME TO "' + userName + '";');
@@ -361,7 +361,7 @@ procedure TMainForm.ButtonPasswordClick(Sender: TObject);
 var
   password: string;
 begin
-   password := PasswordBox(self.MessageChangePasswordCaption, self.MessageChangePasswordText);
+   password := PasswordBox(MessageChangePasswordCaption, MessageChangePasswordText);
    if not (password = '') then
    begin
      self.PQConnection1.ExecuteDirect('ALTER ROLE "' + self.ListBoxUsers.Items[self.ListBoxUsers.ItemIndex] + '" PASSWORD ''' + password + ''';');
@@ -372,6 +372,7 @@ end;
 
 procedure TMainForm.FormShow(Sender: TObject);
 begin
+  self.RefreshSettings();
   self.PQConnection1.Connected:=true;
   self.SQLQueryDepartment.Active:=true;
   self.SQLQueryGroupChart.Active:=true;
@@ -383,7 +384,6 @@ begin
   self.SQLQueryTeacher.Active:=true;
   self.SQLQueryUniversityGroup.Active:=true;
 
-  self.RefreshSettings();
 
   self.SQLQueryRoles.ParamByName('username').AsString:=self.PQConnection1.UserName;
   self.SQLQueryRoles.Active:=true;
@@ -404,9 +404,9 @@ begin
   begin
        self.SQLQueryUsers.Active:=true;
        self.RadioGroupUsersRoles.Items.Clear();
-       self.RadioGroupUsersRoles.Items.Add(self.RadioGroupUsersRolesAdmin);
-       self.RadioGroupUsersRoles.Items.Add(self.RadioGroupUsersRolesOperator);
-       self.RadioGroupUsersRoles.Items.Add(self.RadioGroupUsersRolesUser);
+       self.RadioGroupUsersRoles.Items.Add(RadioGroupUsersRolesAdmin);
+       self.RadioGroupUsersRoles.Items.Add(RadioGroupUsersRolesOperator);
+       self.RadioGroupUsersRoles.Items.Add(RadioGroupUsersRolesUser);
   end
   else
   begin

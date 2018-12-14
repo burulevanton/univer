@@ -1,7 +1,7 @@
 object FormSettings: TFormSettings
-  Left = 1419
+  Left = 1269
   Height = 289
-  Top = 265
+  Top = 255
   Width = 279
   Caption = 'Settings'
   ClientHeight = 289
@@ -83,8 +83,18 @@ object FormSettings: TFormSettings
     Top = 248
     Width = 112
     Caption = 'English'
+    Enabled = False
     OnClick = ButtonEnglishClick
     TabOrder = 6
+  end
+  object Button1: TButton
+    Left = 16
+    Height = 25
+    Top = 216
+    Width = 75
+    Caption = 'Button1'
+    OnClick = Button1Click
+    TabOrder = 7
   end
   object FontDialogFont: TFontDialog
     MinFontSize = 0

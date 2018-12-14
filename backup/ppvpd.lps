@@ -8,9 +8,10 @@
       <Unit0>
         <Filename Value="ppvpd.lpr"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="1"/>
-        <CursorPos X="20" Y="13"/>
-        <UsageCount Value="70"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="2"/>
+        <CursorPos Y="37"/>
+        <UsageCount Value="73"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -20,10 +21,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="MainFormUnit"/>
-        <IsVisibleTab Value="True"/>
-        <TopLine Value="677"/>
-        <CursorPos X="27" Y="691"/>
-        <UsageCount Value="70"/>
+        <TopLine Value="190"/>
+        <CursorPos X="35" Y="212"/>
+        <UsageCount Value="73"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
@@ -34,10 +34,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FormRawSqlParamUnit"/>
-        <EditorIndex Value="4"/>
+        <EditorIndex Value="5"/>
         <TopLine Value="13"/>
         <CursorPos X="29" Y="9"/>
-        <UsageCount Value="64"/>
+        <UsageCount Value="67"/>
         <Loaded Value="True"/>
       </Unit2>
       <Unit3>
@@ -47,75 +47,83 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="UnitLogin"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="4"/>
         <TopLine Value="9"/>
         <CursorPos X="2" Y="53"/>
-        <UsageCount Value="34"/>
+        <UsageCount Value="37"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit3>
       <Unit4>
+        <Filename Value="settingsunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormSettings"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="SettingsUnit"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="179"/>
+        <CursorPos X="3" Y="197"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit4>
+      <Unit5>
         <Filename Value="C:\lazarus\fpc\3.0.4\source\packages\fcl-db\src\sqldb\sqldb.pp"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="657"/>
         <CursorPos X="5" Y="653"/>
         <UsageCount Value="7"/>
-      </Unit4>
-      <Unit5>
+      </Unit5>
+      <Unit6>
         <Filename Value="C:\lazarus\lcl\include\menuitem.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="265"/>
         <CursorPos Y="280"/>
         <UsageCount Value="9"/>
-      </Unit5>
-      <Unit6>
-        <Filename Value="settingsunit.lfm"/>
-        <EditorIndex Value="-1"/>
-        <UsageCount Value="10"/>
-        <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit6>
       <Unit7>
-        <Filename Value="settingsunit.pas"/>
-        <UnitName Value="SettingsUnit"/>
-        <EditorIndex Value="2"/>
-        <TopLine Value="169"/>
-        <CursorPos X="5" Y="197"/>
+        <Filename Value="settingsunit.lfm"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="58"/>
+        <CursorPos X="20" Y="86"/>
         <UsageCount Value="11"/>
         <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit7>
     </Units>
-    <JumpHistory Count="30" HistoryIndex="29">
+    <JumpHistory Count="29" HistoryIndex="28">
       <Position1>
         <Filename Value="mainformunit.pas"/>
-        <Caret Line="367" Column="28" TopLine="353"/>
+        <Caret Line="220" Column="34" TopLine="208"/>
       </Position1>
       <Position2>
         <Filename Value="mainformunit.pas"/>
-        <Caret Line="629" Column="8" TopLine="624"/>
+        <Caret Line="219" Column="34" TopLine="207"/>
       </Position2>
       <Position3>
         <Filename Value="mainformunit.pas"/>
-        <Caret Line="296" Column="25" TopLine="288"/>
+        <Caret Line="220" Column="34" TopLine="208"/>
       </Position3>
       <Position4>
         <Filename Value="mainformunit.pas"/>
-        <Caret Line="309" Column="22" TopLine="286"/>
+        <Caret Line="219" Column="34" TopLine="207"/>
       </Position4>
       <Position5>
         <Filename Value="mainformunit.pas"/>
-        <Caret Line="328" Column="24" TopLine="319"/>
+        <Caret Line="220" Column="34" TopLine="208"/>
       </Position5>
       <Position6>
         <Filename Value="mainformunit.pas"/>
-        <Caret Line="314" Column="21" TopLine="314"/>
+        <Caret Line="219" Column="34" TopLine="207"/>
       </Position6>
       <Position7>
         <Filename Value="mainformunit.pas"/>
-        <Caret Line="219" Column="34" TopLine="201"/>
+        <Caret Line="220" Column="34" TopLine="208"/>
       </Position7>
       <Position8>
         <Filename Value="mainformunit.pas"/>
-        <Caret Line="218" Column="34" TopLine="200"/>
+        <Caret Line="219" Column="34" TopLine="207"/>
       </Position8>
       <Position9>
         <Filename Value="mainformunit.pas"/>
@@ -126,88 +134,114 @@
         <Caret Line="219" Column="34" TopLine="207"/>
       </Position10>
       <Position11>
-        <Filename Value="mainformunit.pas"/>
-        <Caret Line="220" Column="34" TopLine="208"/>
+        <Filename Value="ppvpd.lpr"/>
+        <Caret Line="18" Column="3"/>
       </Position11>
       <Position12>
-        <Filename Value="mainformunit.pas"/>
-        <Caret Line="219" Column="34" TopLine="207"/>
+        <Filename Value="settingsunit.pas"/>
+        <Caret Line="9" Column="45"/>
       </Position12>
       <Position13>
-        <Filename Value="mainformunit.pas"/>
-        <Caret Line="220" Column="34" TopLine="208"/>
+        <Filename Value="settingsunit.pas"/>
+        <Caret Line="191" Column="25" TopLine="168"/>
       </Position13>
       <Position14>
-        <Filename Value="mainformunit.pas"/>
-        <Caret Line="219" Column="34" TopLine="207"/>
+        <Filename Value="settingsunit.pas"/>
+        <Caret Line="197" TopLine="169"/>
       </Position14>
       <Position15>
-        <Filename Value="mainformunit.pas"/>
-        <Caret Line="220" Column="34" TopLine="208"/>
+        <Filename Value="settingsunit.pas"/>
+        <Caret Line="196" TopLine="168"/>
       </Position15>
       <Position16>
-        <Filename Value="mainformunit.pas"/>
-        <Caret Line="219" Column="34" TopLine="207"/>
+        <Filename Value="settingsunit.pas"/>
+        <Caret Line="197" Column="5" TopLine="169"/>
       </Position16>
       <Position17>
         <Filename Value="mainformunit.pas"/>
-        <Caret Line="220" Column="34" TopLine="208"/>
+        <Caret Line="191" Column="15" TopLine="177"/>
       </Position17>
       <Position18>
         <Filename Value="mainformunit.pas"/>
-        <Caret Line="219" Column="34" TopLine="207"/>
+        <Caret Line="12" Column="67"/>
       </Position18>
       <Position19>
-        <Filename Value="ppvpd.lpr"/>
-        <Caret Line="18" Column="3"/>
+        <Filename Value="mainformunit.pas"/>
+        <Caret Line="191" Column="15" TopLine="177"/>
       </Position19>
       <Position20>
-        <Filename Value="settingsunit.pas"/>
-        <Caret Line="9" Column="45"/>
+        <Filename Value="mainformunit.pas"/>
+        <Caret Line="213" Column="25" TopLine="198"/>
       </Position20>
       <Position21>
-        <Filename Value="settingsunit.pas"/>
-        <Caret Line="191" Column="25" TopLine="168"/>
+        <Filename Value="ppvpd.lpr"/>
+        <Caret Line="40" Column="14" TopLine="20"/>
       </Position21>
       <Position22>
-        <Filename Value="settingsunit.pas"/>
-        <Caret Line="197" TopLine="169"/>
+        <Filename Value="ppvpd.lpr"/>
+        <Caret Line="32" Column="24" TopLine="16"/>
       </Position22>
       <Position23>
-        <Filename Value="settingsunit.pas"/>
-        <Caret Line="196" TopLine="168"/>
+        <Filename Value="mainformunit.pas"/>
+        <Caret Line="375" Column="39" TopLine="363"/>
       </Position23>
       <Position24>
-        <Filename Value="settingsunit.pas"/>
-        <Caret Line="197" Column="5" TopLine="169"/>
+        <Filename Value="mainformunit.pas"/>
+        <Caret Line="376" Column="34" TopLine="363"/>
       </Position24>
       <Position25>
         <Filename Value="mainformunit.pas"/>
-        <Caret Line="191" Column="15" TopLine="177"/>
+        <Caret Line="375" Column="32" TopLine="361"/>
       </Position25>
       <Position26>
-        <Filename Value="mainformunit.pas"/>
-        <Caret Line="12" Column="67"/>
+        <Filename Value="ppvpd.lpr"/>
+        <Caret Line="47" Column="56" TopLine="23"/>
       </Position26>
       <Position27>
-        <Filename Value="mainformunit.pas"/>
-        <Caret Line="191" Column="15" TopLine="177"/>
+        <Filename Value="settingsunit.pas"/>
+        <Caret Line="202" TopLine="177"/>
       </Position27>
       <Position28>
-        <Filename Value="mainformunit.pas"/>
-        <Caret Line="12" Column="67" TopLine="183"/>
+        <Filename Value="settingsunit.pas"/>
+        <Caret Line="209" TopLine="181"/>
       </Position28>
       <Position29>
-        <Filename Value="mainformunit.pas"/>
-        <Caret Line="213" Column="25" TopLine="198"/>
+        <Filename Value="settingsunit.pas"/>
+        <Caret Line="183" Column="26" TopLine="180"/>
       </Position29>
-      <Position30>
-        <Filename Value="mainformunit.pas"/>
-        <Caret Line="688" Column="4" TopLine="709"/>
-      </Position30>
     </JumpHistory>
   </ProjectSession>
   <Debugging>
+    <BreakPoints Count="4">
+      <Item1>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="settingsunit.pas"/>
+        <Line Value="204"/>
+      </Item1>
+      <Item2>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="settingsunit.pas"/>
+        <Line Value="205"/>
+      </Item2>
+      <Item3>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="settingsunit.pas"/>
+        <Line Value="210"/>
+      </Item3>
+      <Item4>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="settingsunit.pas"/>
+        <Line Value="211"/>
+      </Item4>
+    </BreakPoints>
     <Watches Count="1">
       <Item1>
         <Expression Value="MyWorkBook"/>

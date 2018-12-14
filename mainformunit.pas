@@ -199,17 +199,17 @@ var
 
 resourcestring
 
-  MessageAddUserCaption = 'Добавить пользователя';
-  MessageAddUserText = 'Введите имя пользователя';
-  MessageChangePasswordCaption = 'Поменять пароль';
-  MessageChangePasswordText = 'Введите новый пароль';
-  MessageRenameUserCaption = 'Переименовать пользователя';
-  MessageRenameUserText = 'Введите новоё имя пользователя';
-  MessageDeleteUserCaption = 'Удалить пользователя';
-  MessageDeleteUserText = 'Вы уверены?';
-  RadioGroupUsersRolesAdmin = 'Админ';
-  RadioGroupUsersRolesOperator = 'Оператор';
-  RadioGroupUsersRolesUser = 'Пользователь';
+  MessageAddUserCaption = 'Add user';
+  MessageAddUserText = 'Enter user name';
+  MessageChangePasswordCaption = 'Change password';
+  MessageChangePasswordText = 'Enter new password';
+  MessageRenameUserCaption = 'Rename user';
+  MessageRenameUserText = 'Enter new user name';
+  MessageDeleteUserCaption = 'Delete user';
+  MessageDeleteUserText = 'Are you sure?';
+  RadioGroupUsersRolesAdmin = 'Admin';
+  RadioGroupUsersRolesOperator = 'Operator';
+  RadioGroupUsersRolesUser = 'User';
 
 implementation
 
@@ -372,6 +372,7 @@ end;
 
 procedure TMainForm.FormShow(Sender: TObject);
 begin
+  self.RefreshSettings();
   self.PQConnection1.Connected:=true;
   self.SQLQueryDepartment.Active:=true;
   self.SQLQueryGroupChart.Active:=true;
@@ -383,7 +384,6 @@ begin
   self.SQLQueryTeacher.Active:=true;
   self.SQLQueryUniversityGroup.Active:=true;
 
-  self.RefreshSettings();
 
   self.SQLQueryRoles.ParamByName('username').AsString:=self.PQConnection1.UserName;
   self.SQLQueryRoles.Active:=true;
