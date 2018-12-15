@@ -1,0 +1,1 @@
+Select student.surname, universitygroup.number, subject.name, teacher.surname, performance.score from performance INNER JOIN student on performance.id_student = student.id INNER JOIN subject on performance.id_subject = subject.id INNER JOIN universitygroup on performance.id_group = universitygroup.id INNER JOIN teacher on performance.id_teacher = teacher.id;

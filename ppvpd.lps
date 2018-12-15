@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="10"/>
+    <BuildModes Active="Default"/>
+    <Units Count="7">
+      <Unit0>
+        <Filename Value="ppvpd.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="2"/>
+        <CursorPos X="3" Y="21"/>
+        <UsageCount Value="77"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="mainformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="MainForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="MainFormUnit"/>
+        <CursorPos X="67" Y="12"/>
+        <UsageCount Value="77"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="formrawsqlparamunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormRawSqlParam"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="FormRawSqlParamUnit"/>
+        <EditorIndex Value="4"/>
+        <CursorPos X="62" Y="8"/>
+        <UsageCount Value="71"/>
+        <Loaded Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="unitlogin.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Login"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UnitLogin"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="3"/>
+        <CursorPos X="43" Y="9"/>
+        <UsageCount Value="41"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="formsettingsunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormSettings"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="FormSettingsUnit"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="172"/>
+        <CursorPos Y="149"/>
+        <UsageCount Value="29"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="C:\lazarus\fpc\3.0.4\source\packages\fcl-db\src\sqldb\sqldb.pp"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="657"/>
+        <CursorPos X="5" Y="653"/>
+        <UsageCount Value="6"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="C:\lazarus\lcl\include\menuitem.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="265"/>
+        <CursorPos Y="280"/>
+        <UsageCount Value="8"/>
+      </Unit6>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="mainformunit.pas"/>
+        <Caret Line="220" Column="34" TopLine="208"/>
+      </Position1>
+      <Position2>
+        <Filename Value="mainformunit.pas"/>
+        <Caret Line="219" Column="34" TopLine="207"/>
+      </Position2>
+      <Position3>
+        <Filename Value="mainformunit.pas"/>
+        <Caret Line="220" Column="34" TopLine="208"/>
+      </Position3>
+      <Position4>
+        <Filename Value="mainformunit.pas"/>
+        <Caret Line="219" Column="34" TopLine="207"/>
+      </Position4>
+      <Position5>
+        <Filename Value="mainformunit.pas"/>
+        <Caret Line="220" Column="34" TopLine="208"/>
+      </Position5>
+      <Position6>
+        <Filename Value="mainformunit.pas"/>
+        <Caret Line="219" Column="34" TopLine="207"/>
+      </Position6>
+      <Position7>
+        <Filename Value="mainformunit.pas"/>
+        <Caret Line="220" Column="34" TopLine="208"/>
+      </Position7>
+      <Position8>
+        <Filename Value="mainformunit.pas"/>
+        <Caret Line="219" Column="34" TopLine="207"/>
+      </Position8>
+      <Position9>
+        <Filename Value="mainformunit.pas"/>
+        <Caret Line="220" Column="34" TopLine="208"/>
+      </Position9>
+      <Position10>
+        <Filename Value="mainformunit.pas"/>
+        <Caret Line="219" Column="34" TopLine="207"/>
+      </Position10>
+      <Position11>
+        <Filename Value="formrawsqlparamunit.pas"/>
+        <Caret Line="32" TopLine="25"/>
+      </Position11>
+      <Position12>
+        <Filename Value="formsettingsunit.pas"/>
+        <Caret Column="22"/>
+      </Position12>
+      <Position13>
+        <Filename Value="mainformunit.pas"/>
+        <Caret Line="255" Column="31"/>
+      </Position13>
+      <Position14>
+        <Filename Value="formsettingsunit.pas"/>
+        <Caret Column="22"/>
+      </Position14>
+      <Position15>
+        <Filename Value="formsettingsunit.pas"/>
+        <Caret Line="49" Column="3" TopLine="21"/>
+      </Position15>
+      <Position16>
+        <Filename Value="formsettingsunit.pas"/>
+        <Caret Line="60" Column="3" TopLine="32"/>
+      </Position16>
+      <Position17>
+        <Filename Value="formsettingsunit.pas"/>
+        <Caret Line="56" Column="3" TopLine="37"/>
+      </Position17>
+      <Position18>
+        <Filename Value="formsettingsunit.pas"/>
+        <Caret Line="62" Column="3" TopLine="43"/>
+      </Position18>
+      <Position19>
+        <Filename Value="formsettingsunit.pas"/>
+        <Caret Line="68" Column="3" TopLine="49"/>
+      </Position19>
+      <Position20>
+        <Filename Value="formsettingsunit.pas"/>
+        <Caret Line="84" Column="3" TopLine="56"/>
+      </Position20>
+      <Position21>
+        <Filename Value="formsettingsunit.pas"/>
+        <Caret Line="41" Column="33" TopLine="26"/>
+      </Position21>
+      <Position22>
+        <Filename Value="mainformunit.pas"/>
+        <Caret Line="374" Column="3" TopLine="362"/>
+      </Position22>
+      <Position23>
+        <Filename Value="mainformunit.pas"/>
+        <Caret Line="371" Column="39" TopLine="364"/>
+      </Position23>
+      <Position24>
+        <Filename Value="mainformunit.pas"/>
+        <Caret Line="503" Column="3" TopLine="498"/>
+      </Position24>
+      <Position25>
+        <Filename Value="mainformunit.pas"/>
+        <Caret Line="12" Column="83"/>
+      </Position25>
+      <Position26>
+        <Filename Value="formsettingsunit.pas"/>
+        <Caret Line="117" TopLine="107"/>
+      </Position26>
+      <Position27>
+        <Filename Value="unitlogin.pas"/>
+        <Caret Line="9" Column="53"/>
+      </Position27>
+      <Position28>
+        <Filename Value="unitlogin.pas"/>
+        <Caret Line="68" Column="42" TopLine="40"/>
+      </Position28>
+      <Position29>
+        <Filename Value="unitlogin.pas"/>
+        <Caret Line="53" Column="24" TopLine="44"/>
+      </Position29>
+      <Position30>
+        <Filename Value="ppvpd.lpr"/>
+        <Caret Line="21" Column="3"/>
+      </Position30>
+    </JumpHistory>
+  </ProjectSession>
+  <Debugging>
+    <Watches Count="1">
+      <Item1>
+        <Expression Value="MyWorkBook"/>
+      </Item1>
+    </Watches>
+  </Debugging>
+</CONFIG>
