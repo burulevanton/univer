@@ -22,8 +22,8 @@ object MainForm: TMainForm
     Height = 552
     Top = 41
     Width = 872
-    ActivePage = Department
-    TabIndex = 0
+    ActivePage = TabSheetUsers
+    TabIndex = 14
     TabOrder = 0
     object Department: TTabSheet
       Caption = 'Department'
@@ -2311,7 +2311,7 @@ object MainForm: TMainForm
       end
     end
     object TabSheetUsers: TTabSheet
-      Caption = 'Пользователи'
+      Caption = 'Users'
       ClientHeight = 524
       ClientWidth = 864
       object PairSplitter1: TPairSplitter

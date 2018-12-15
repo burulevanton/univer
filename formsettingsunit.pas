@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
-  ExtCtrls, ButtonPanel, fpspreadsheet, fpsTypes, typinfo;
+  ExtCtrls, ButtonPanel, fpspreadsheet, fpsTypes, typinfo, LCLTranslator;
 
 type
 
@@ -72,6 +72,7 @@ procedure TFormSettings.ButtonEnglishClick(Sender: TObject);
 begin
   self.ButtonEnglish.Enabled:=false;
   self.ButtonRussian.Enabled:=true;
+  SetDefaultLang('en');
   self.SaveToFile();
   self.LoadFromFile();
 end;
@@ -103,6 +104,7 @@ procedure TFormSettings.ButtonRussianClick(Sender: TObject);
 begin
   self.ButtonRussian.Enabled:=false;
   self.ButtonEnglish.Enabled:=true;
+  SetDefaultLang('ru');
   self.SaveToFile();
   self.RefreshSettings();
 end;

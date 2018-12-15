@@ -1,0 +1,254 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+#: mainformunit.messageaddusercaption
+msgid "Add user"
+msgstr "Add user"
+
+#: mainformunit.messageaddusertext
+msgid "Enter user name"
+msgstr "Enter user name"
+
+#: mainformunit.messagechangepasswordcaption
+msgid "Change password"
+msgstr "Change password"
+
+#: mainformunit.messagechangepasswordtext
+msgid "Enter new password"
+msgstr "Enter new password"
+
+#: mainformunit.messagedeleteusercaption
+msgid "Delete user"
+msgstr "Delete user"
+
+#: mainformunit.messagedeleteusertext
+msgid "Are you sure?"
+msgstr "Are you sure?"
+
+#: mainformunit.messagerenameusercaption
+msgid "Rename user"
+msgstr "Rename user"
+
+#: mainformunit.messagerenameusertext
+msgid "Enter new user name"
+msgstr "Enter new user name"
+
+#: mainformunit.radiogroupusersrolesadmin
+msgid "Admin"
+msgstr "Admin"
+
+#: mainformunit.radiogroupusersrolesoperator
+msgid "Operator"
+msgstr "Operator"
+
+#: mainformunit.radiogroupusersrolesuser
+msgid "User"
+msgstr "User"
+
+#: tformsettings.buttonbackgroundclear.caption
+msgid "Clear background image"
+msgstr "Clear background image"
+
+#: tformsettings.buttonbackgroundset.caption
+msgid "Set background image"
+msgstr "Set background image"
+
+#: tformsettings.buttondefaultformcolor.caption
+msgid "Default form color"
+msgstr "Default form color"
+
+#: tformsettings.buttonenglish.caption
+msgid "English"
+msgstr "English"
+
+#: tformsettings.buttonfont.caption
+msgid "Font"
+msgstr "Font"
+
+#: tformsettings.buttonformcolor.caption
+msgid "Form color"
+msgstr "Form color"
+
+#: tformsettings.buttonrussian.caption
+msgid "Русский"
+msgstr "Русский"
+
+#: tformsettings.caption
+msgid "FormSettings"
+msgstr "FormSettings"
+
+#: tformsettings.labellanguage.caption
+msgid "Language"
+msgstr "Language"
+
+#: tlogin.buttoncancel.caption
+msgid "Cancel"
+msgstr "Cancel"
+
+#: tlogin.buttonlogin.caption
+msgctxt "tlogin.buttonlogin.caption"
+msgid "Login"
+msgstr "Login"
+
+#: tlogin.caption
+msgctxt "tlogin.caption"
+msgid "Login"
+msgstr "Login"
+
+#: tlogin.loginlabel.caption
+msgctxt "tlogin.loginlabel.caption"
+msgid "Login"
+msgstr "Login"
+
+#: tlogin.passswordlabel.caption
+msgctxt "tlogin.passswordlabel.caption"
+msgid "Password"
+msgstr "Password"
+
+#: tmainform.buttonadd.caption
+msgid "Add"
+msgstr "Add"
+
+#: tmainform.buttondelete.caption
+msgid "Delete"
+msgstr "Delete"
+
+#: tmainform.buttonedit.caption
+msgid "Edit"
+msgstr "Edit"
+
+#: tmainform.buttonpassword.caption
+msgctxt "tmainform.buttonpassword.caption"
+msgid "Password"
+msgstr "Password"
+
+#: tmainform.buttonrawdoublesqlexecute.caption
+msgctxt "tmainform.buttonrawdoublesqlexecute.caption"
+msgid "Execute SQL"
+msgstr "Execute SQL"
+
+#: tmainform.caption
+msgid "Main"
+msgstr "Main"
+
+#: tmainform.department.caption
+msgid "Department"
+msgstr "Department"
+
+#: tmainform.departmentedit.caption
+msgid "Department-Edit"
+msgstr "Department-Edit"
+
+#: tmainform.groupedit.caption
+msgid "Groups-Edit"
+msgstr "Groups-Edit"
+
+#: tmainform.menuitemexport.caption
+msgid "DB -> Excel"
+msgstr "DB -> Excel"
+
+#: tmainform.menuitemimport.caption
+msgid "Excel -> DB"
+msgstr "Excel -> DB"
+
+#: tmainform.menuitemmain.caption
+msgid "Menu"
+msgstr "Menu"
+
+#: tmainform.menuitemquit.caption
+msgid "Quit"
+msgstr "Quit"
+
+#: tmainform.menuitemrefresh.caption
+msgid "Refresh"
+msgstr "Refresh"
+
+#: tmainform.menuitemsettings.caption
+msgid "Settings"
+msgstr "Settings"
+
+#: tmainform.performance.caption
+msgid "Performance"
+msgstr "Performance"
+
+#: tmainform.performanceedit.caption
+msgid "Performance-Edit"
+msgstr "Performance-Edit"
+
+#: tmainform.radiogroupusersroles.caption
+msgid "Roles"
+msgstr "Roles"
+
+#: tmainform.rawdoublesql.caption
+msgid "Execute double SQL"
+msgstr "Execute double SQL"
+
+#: tmainform.rawsql.caption
+msgctxt "tmainform.rawsql.caption"
+msgid "Execute SQL"
+msgstr "Execute SQL"
+
+#: tmainform.rawsqlexecute.caption
+msgctxt "tmainform.rawsqlexecute.caption"
+msgid "Execute SQL"
+msgstr "Execute SQL"
+
+#: tmainform.rawsqlopen.caption
+msgid "Open SQL"
+msgstr "Open SQL"
+
+#: tmainform.rawsqlparams.caption
+msgid "Params"
+msgstr "Params"
+
+#: tmainform.rawsqlsave.caption
+msgid "Save SQL"
+msgstr "Save SQL"
+
+#: tmainform.reportdepartment.caption
+msgctxt "tmainform.reportdepartment.caption"
+msgid "Report"
+msgstr "Report"
+
+#: tmainform.reportperformance.caption
+msgctxt "tmainform.reportperformance.caption"
+msgid "Report"
+msgstr "Report"
+
+#: tmainform.reportteacher.caption
+msgctxt "tmainform.reportteacher.caption"
+msgid "Report"
+msgstr "Report"
+
+#: tmainform.student.caption
+msgid "Students"
+msgstr "Students"
+
+#: tmainform.studentsedit.caption
+msgid "Students-Edit"
+msgstr "Students-Edit"
+
+#: tmainform.subject.caption
+msgid "Subjects"
+msgstr "Subjects"
+
+#: tmainform.subjectedit.caption
+msgid "Subjects-Edit"
+msgstr "Subjects-Edit"
+
+#: tmainform.tabsheetusers.caption
+msgid "Users"
+msgstr "Users"
+
+#: tmainform.teacher.caption
+msgid "Teachers"
+msgstr "Teachers"
+
+#: tmainform.teacheredit.caption
+msgid "Teachers-Edit"
+msgstr "Teachers-Edit"
+
+#: tmainform.universitygroup.caption
+msgid "Groups"
+msgstr "Groups"
+

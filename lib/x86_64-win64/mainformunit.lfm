@@ -22,11 +22,11 @@ object MainForm: TMainForm
     Height = 552
     Top = 41
     Width = 872
-    ActivePage = Department
-    TabIndex = 0
+    ActivePage = TabSheetUsers
+    TabIndex = 14
     TabOrder = 0
     object Department: TTabSheet
-      Caption = 'Кафедра'
+      Caption = 'Department'
       ClientHeight = 524
       ClientWidth = 864
       object DBGridDepartment: TDBGrid
@@ -44,13 +44,13 @@ object MainForm: TMainForm
         Height = 25
         Top = 216
         Width = 96
-        Caption = 'Отчёт'
+        Caption = 'Report'
         OnClick = ReportDepartmentClick
         TabOrder = 1
       end
     end
     object Performance: TTabSheet
-      Caption = 'Успеваемость'
+      Caption = 'Performance'
       ClientHeight = 524
       ClientWidth = 864
       object DBGridPerfomance: TDBGrid
@@ -68,13 +68,13 @@ object MainForm: TMainForm
         Height = 25
         Top = 280
         Width = 96
-        Caption = 'Отчёт'
+        Caption = 'Report'
         OnClick = ReportPerformanceClick
         TabOrder = 1
       end
     end
     object Student: TTabSheet
-      Caption = 'Студенты'
+      Caption = 'Students'
       ClientHeight = 524
       ClientWidth = 864
       object DBGridStudent: TDBGrid
@@ -89,7 +89,7 @@ object MainForm: TMainForm
       end
     end
     object Subject: TTabSheet
-      Caption = 'Предметы'
+      Caption = 'Subjects'
       ClientHeight = 524
       ClientWidth = 864
       object DBGridSubject: TDBGrid
@@ -134,7 +134,7 @@ object MainForm: TMainForm
       end
     end
     object Teacher: TTabSheet
-      Caption = 'Преподаватели'
+      Caption = 'Teachers'
       ClientHeight = 524
       ClientWidth = 864
       object DBGridTeacher: TDBGrid
@@ -152,13 +152,13 @@ object MainForm: TMainForm
         Height = 25
         Top = 280
         Width = 96
-        Caption = 'Отчёт'
+        Caption = 'Report'
         OnClick = ReportTeacherClick
         TabOrder = 1
       end
     end
     object UniversityGroup: TTabSheet
-      Caption = 'Группы'
+      Caption = 'Groups'
       ClientHeight = 524
       ClientWidth = 864
       object DBGridUniversityGroup: TDBGrid
@@ -204,7 +204,7 @@ object MainForm: TMainForm
       end
     end
     object DepartmentEdit: TTabSheet
-      Caption = 'Кафедра-Изменить'
+      Caption = 'Department-Edit'
       ClientHeight = 524
       ClientWidth = 864
       object DBNavigatorDepartment: TDBNavigator
@@ -271,7 +271,7 @@ object MainForm: TMainForm
       end
     end
     object PerformanceEdit: TTabSheet
-      Caption = 'Успеваемость-Изменить'
+      Caption = 'Performance-Edit'
       ClientHeight = 524
       ClientWidth = 864
       object DBNavigatorPerformance: TDBNavigator
@@ -349,7 +349,7 @@ object MainForm: TMainForm
       end
     end
     object StudentsEdit: TTabSheet
-      Caption = 'Студенты-Изменить'
+      Caption = 'Students-Edit'
       ClientHeight = 524
       ClientWidth = 864
       object DBNavigatorStudents: TDBNavigator
@@ -474,7 +474,7 @@ object MainForm: TMainForm
       end
     end
     object SubjectEdit: TTabSheet
-      Caption = 'Предметы-Изменить'
+      Caption = 'Subjects-Edit'
       ClientHeight = 524
       ClientWidth = 864
       object DBNavigatorSubject: TDBNavigator
@@ -563,9 +563,9 @@ object MainForm: TMainForm
       end
     end
     object TeacherEdit: TTabSheet
-      Caption = 'Преподаватели-Изменить'
-      ClientHeight = 340
-      ClientWidth = 768
+      Caption = 'Teachers-Edit'
+      ClientHeight = 524
+      ClientWidth = 864
       object DBNavigatorTeacher: TDBNavigator
         Left = 0
         Height = 25
@@ -652,9 +652,9 @@ object MainForm: TMainForm
       end
     end
     object GroupEdit: TTabSheet
-      Caption = 'Группы-Изменить'
-      ClientHeight = 444
-      ClientWidth = 760
+      Caption = 'Groups-Edit'
+      ClientHeight = 524
+      ClientWidth = 864
       object DBNavigatorGroup: TDBNavigator
         Left = 0
         Height = 25
@@ -741,7 +741,7 @@ object MainForm: TMainForm
       end
     end
     object RawSql: TTabSheet
-      Caption = 'Выполнить SQL'
+      Caption = 'Execute SQL'
       ClientHeight = 524
       ClientWidth = 864
       inline RawSqlEdit: TSynEdit
@@ -1256,7 +1256,7 @@ object MainForm: TMainForm
         Height = 25
         Top = 40
         Width = 144
-        Caption = 'Открыть запрос'
+        Caption = 'Open SQL'
         OnClick = RawSqlOpenClick
         TabOrder = 2
       end
@@ -1265,7 +1265,7 @@ object MainForm: TMainForm
         Height = 25
         Top = 80
         Width = 144
-        Caption = 'Сохранить запрос'
+        Caption = 'Save SQL'
         OnClick = RawSqlSaveClick
         TabOrder = 3
       end
@@ -1274,7 +1274,7 @@ object MainForm: TMainForm
         Height = 25
         Top = 120
         Width = 144
-        Caption = 'Выполнить запрос'
+        Caption = 'Execute SQL'
         OnClick = RawSqlExecuteClick
         TabOrder = 4
       end
@@ -1283,15 +1283,15 @@ object MainForm: TMainForm
         Height = 25
         Top = 160
         Width = 144
-        Caption = 'Параметры...'
+        Caption = 'Params'
         OnClick = RawSqlParamsClick
         TabOrder = 5
       end
     end
     object RawDoubleSql: TTabSheet
-      Caption = 'Выполнить двойной SQL'
-      ClientHeight = 444
-      ClientWidth = 760
+      Caption = 'Execute double SQL'
+      ClientHeight = 524
+      ClientWidth = 864
       inline SynRawDoubleSqlMain: TSynEdit
         Left = -8
         Height = 174
@@ -2305,13 +2305,13 @@ object MainForm: TMainForm
         Height = 25
         Top = 408
         Width = 131
-        Caption = 'Выполнить запрос'
+        Caption = 'Execute SQL'
         OnClick = ButtonRawDoubleSqlExecuteClick
         TabOrder = 3
       end
     end
     object TabSheetUsers: TTabSheet
-      Caption = 'Пользователи'
+      Caption = 'Users'
       ClientHeight = 524
       ClientWidth = 864
       object PairSplitter1: TPairSplitter
@@ -2343,7 +2343,7 @@ object MainForm: TMainForm
             Height = 25
             Top = 8
             Width = 75
-            Caption = 'Добавить'
+            Caption = 'Add'
             OnClick = ButtonAddClick
             TabOrder = 1
           end
@@ -2352,7 +2352,7 @@ object MainForm: TMainForm
             Height = 25
             Top = 8
             Width = 88
-            Caption = 'Редактировать'
+            Caption = 'Edit'
             OnClick = ButtonEditClick
             TabOrder = 2
           end
@@ -2361,7 +2361,7 @@ object MainForm: TMainForm
             Height = 25
             Top = 8
             Width = 75
-            Caption = 'Пароль'
+            Caption = 'Password'
             OnClick = ButtonPasswordClick
             TabOrder = 3
           end
@@ -2370,7 +2370,7 @@ object MainForm: TMainForm
             Height = 25
             Top = 8
             Width = 75
-            Caption = 'Удалить'
+            Caption = 'Delete'
             OnClick = ButtonDeleteClick
             TabOrder = 4
           end
@@ -2936,7 +2936,7 @@ object MainForm: TMainForm
     left = 584
     top = 456
     object MenuItemMain: TMenuItem
-      Caption = 'Меню'
+      Caption = 'Menu'
       object MenuItemExport: TMenuItem
         Caption = 'DB -> Excel'
         OnClick = MenuItemExportClick
@@ -2946,7 +2946,7 @@ object MainForm: TMainForm
         OnClick = MenuItemImportClick
       end
       object MenuItemRefresh: TMenuItem
-        Caption = 'Обновить'
+        Caption = 'Refresh'
         OnClick = MenuItemRefreshClick
       end
       object MenuItemSettings: TMenuItem
@@ -2954,7 +2954,7 @@ object MainForm: TMainForm
         OnClick = MenuItemSettingsClick
       end
       object MenuItemQuit: TMenuItem
-        Caption = 'Выйти'
+        Caption = 'Quit'
         OnClick = MenuItemQuitClick
       end
     end
