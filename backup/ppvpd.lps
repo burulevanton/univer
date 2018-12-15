@@ -8,9 +8,11 @@
       <Unit0>
         <Filename Value="ppvpd.lpr"/>
         <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <CursorPos X="3" Y="21"/>
-        <UsageCount Value="77"/>
+        <TopLine Value="24"/>
+        <CursorPos X="14" Y="43"/>
+        <UsageCount Value="78"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -20,8 +22,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="MainFormUnit"/>
-        <CursorPos X="67" Y="12"/>
-        <UsageCount Value="77"/>
+        <TopLine Value="334"/>
+        <CursorPos X="39" Y="378"/>
+        <UsageCount Value="78"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
@@ -34,7 +37,7 @@
         <UnitName Value="FormRawSqlParamUnit"/>
         <EditorIndex Value="4"/>
         <CursorPos X="62" Y="8"/>
-        <UsageCount Value="71"/>
+        <UsageCount Value="72"/>
         <Loaded Value="True"/>
       </Unit2>
       <Unit3>
@@ -47,7 +50,7 @@
         <EditorIndex Value="3"/>
         <TopLine Value="12"/>
         <CursorPos X="43" Y="9"/>
-        <UsageCount Value="41"/>
+        <UsageCount Value="42"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit3>
@@ -58,11 +61,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FormSettingsUnit"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <TopLine Value="88"/>
         <CursorPos X="21" Y="107"/>
-        <UsageCount Value="29"/>
+        <UsageCount Value="30"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit4>

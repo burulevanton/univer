@@ -226,6 +226,10 @@ begin
     self.ImageBackground.Picture.LoadFromFile(FormSettings.OpenDialogBackground.FileName)
   else
     self.ImageBackground.Picture.Clear();
+  self.RadioGroupUsersRoles.Items.Clear();
+  self.RadioGroupUsersRoles.Items.Add(RadioGroupUsersRolesAdmin);
+  self.RadioGroupUsersRoles.Items.Add(RadioGroupUsersRolesOperator);
+  self.RadioGroupUsersRoles.Items.Add(RadioGroupUsersRolesUser);
 end;
 
 procedure TMainForm.RefreshSql();
@@ -374,10 +378,6 @@ end;
 procedure TMainForm.FormShow(Sender: TObject);
 begin
   self.RefreshSettings();
-  self.RadioGroupUsersRoles.Items.Clear();
-  self.RadioGroupUsersRoles.Items.Add(RadioGroupUsersRolesAdmin);
-  self.RadioGroupUsersRoles.Items.Add(RadioGroupUsersRolesOperator);
-  self.RadioGroupUsersRoles.Items.Add(RadioGroupUsersRolesUser);
   self.PQConnection1.Connected:=true;
   self.SQLQueryDepartment.Active:=true;
   self.SQLQueryGroupChart.Active:=true;
