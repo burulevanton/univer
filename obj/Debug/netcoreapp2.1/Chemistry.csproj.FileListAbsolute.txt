@@ -1,0 +1,11 @@
+F:\Chemistry\Chemistry\bin\Debug\netcoreapp2.1\Chemistry.deps.json
+F:\Chemistry\Chemistry\bin\Debug\netcoreapp2.1\Chemistry.runtimeconfig.json
+F:\Chemistry\Chemistry\bin\Debug\netcoreapp2.1\Chemistry.runtimeconfig.dev.json
+F:\Chemistry\Chemistry\bin\Debug\netcoreapp2.1\Chemistry.dll
+F:\Chemistry\Chemistry\bin\Debug\netcoreapp2.1\Chemistry.pdb
+F:\Chemistry\Chemistry\obj\Debug\netcoreapp2.1\Chemistry.csprojAssemblyReference.cache
+F:\Chemistry\Chemistry\obj\Debug\netcoreapp2.1\Chemistry.csproj.CoreCompileInputs.cache
+F:\Chemistry\Chemistry\obj\Debug\netcoreapp2.1\Chemistry.AssemblyInfoInputs.cache
+F:\Chemistry\Chemistry\obj\Debug\netcoreapp2.1\Chemistry.AssemblyInfo.cs
+F:\Chemistry\Chemistry\obj\Debug\netcoreapp2.1\Chemistry.dll
+F:\Chemistry\Chemistry\obj\Debug\netcoreapp2.1\Chemistry.pdb
