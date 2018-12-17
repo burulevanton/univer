@@ -6,37 +6,67 @@ using Chemistry.Interfaces;
 
 namespace Chemistry
 {
+    /// <summary>
+    /// Реализация класса Стэк Атомов
+    /// </summary>
     public class AtomStack
     {
+        
+        /// <summary>
+        /// Инициализация экземляра класса <see cref="AtomStack"/>
+        /// </summary>
+        /// <param name="element">Химический элемент</param>
+        /// <param name="size">Количество атомов элемента</param>
         public AtomStack(Element element, int size = 1) : this(new Atom(element), size)
         {
         }
-
+        
+        /// <summary>
+        /// Инициализицая экземпляра класса <see cref="AtomStack"/>
+        /// </summary>
+        /// <param name="atom">Атом</param>
+        /// <param name="size">Количество атомов</param>
         public AtomStack(IAtomic atom, int size = 1)
         {
             Atom = atom;
             Size = size;
         }
         
+        /// <summary>
+        /// Атом
+        /// </summary>
         public IAtomic Atom { get; private set; }
         
+        /// <summary>
+        /// Количество атомов в стэке
+        /// </summary>
         public int Size { get; set; }
 
-        public static implicit operator AtomStack(Element element)
-        {
-            return new AtomStack(new Atom(element));
-        }
+        /// <summary>
+        /// Конвертирует <see cref="Element"/> в <see cref="AtomStack"/>
+        /// </summary>
+        /// <param name="element">Элемент</param>
+        /// <returns></returns>
+        public static implicit operator AtomStack(Element element) => new AtomStack(new Atom(element));
 
-        public static implicit operator AtomStack(Compound compound)
-        {
-            return new AtomStack(compound);
-        }
+        /// <summary>
+        /// Конвертация <see cref="Compound"/> в <see cref="AtomStack"/>
+        /// </summary>
+        /// <param name="compound">Химическое соединение</param>
+        /// <returns></returns>
+        public static implicit operator AtomStack(Compound compound) => new AtomStack(compound);
 
-        public static implicit operator AtomStack(Atom atom)
-        {
-            return  new AtomStack(atom);
-        }
+        /// <summary>
+        /// Конвертация <see cref="Atom"/> в <see cref="AtomStack"/>
+        /// </summary>
+        /// <param name="atom"></param>
+        /// <returns></returns>
+        public static implicit operator AtomStack(Atom atom) => new AtomStack(atom);
         
+        /// <summary>
+        /// Текстовое представление класса <see cref="AtomStack"/>
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             var sb = new StringBuilder();
@@ -59,6 +89,9 @@ namespace Chemistry
             return sb.ToString();
         }
 
+        /// <summary>
+        /// Атомная масса
+        /// </summary>
         public double? AtomicWeight => Atom.AtomicWeight * Size;
     }
 }
