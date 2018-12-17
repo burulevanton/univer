@@ -1,9 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
+
 namespace Chemistry.Interfaces
 {
 
     public interface IAtomic
     {
-        float? AtomicWeight { get; }
+        double? AtomicWeight { get; }
         
         int Electrons { get; }
 
@@ -14,5 +17,13 @@ namespace Chemistry.Interfaces
         Chemistry.Ion ToIon();
 
         bool IsIon();
+
+        bool IsCompound();
+        
+
+        IEnumerable<Chemistry.Element> GetElements();
+
+        string ToString();
+
     }
 }
