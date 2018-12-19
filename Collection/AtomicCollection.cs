@@ -59,5 +59,7 @@ namespace Chemistry
         {
             _collection.Sort(comparer);
         }
+
+        public IAtomic this[int index] => _collection[index];
     }
 }

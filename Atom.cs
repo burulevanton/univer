@@ -7,7 +7,7 @@ namespace Chemistry
     /// <summary>
     /// Реализация класса Атома <see cref="Element"/>
     /// </summary>
-    public class Atom : IAtomic
+    public class Atom : IAtomic, IEquatable<Atom>
     {
         /// <summary>
         /// Инициализация экземпляра класса <see cref="Atom"/>
@@ -56,6 +56,7 @@ namespace Chemistry
         /// <summary>
         /// Количество нейтронов
         /// </summary>
+        //todo
         public int Neutrons { get;}
         
         /// <summary>
@@ -93,5 +94,25 @@ namespace Chemistry
         /// </summary>
         /// <returns></returns>
         public override string ToString() => Element.Symbol;
+
+        public bool Equals(Atom other)
+        {
+            if (ReferenceEquals(null, other)) return false;
+            if (ReferenceEquals(this, other)) return true;
+            return Equals(this.ToString(), other.ToString());
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj)) return false;
+            if (ReferenceEquals(this, obj)) return true;
+            if (obj.GetType() != this.GetType()) return false;
+            return Equals((Atom) obj);
+        }
+
+        public override int GetHashCode()
+        {
+            return (Element != null ? Element.GetHashCode() : 0);
+        }
     }
 }

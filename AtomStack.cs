@@ -92,6 +92,7 @@ namespace Chemistry
         /// <summary>
         /// Атомная масса
         /// </summary>
+        //todo
         public double? AtomicWeight => Atom.AtomicWeight * Size;
 
         public AtomicCollection<Atom> GetAtoms()

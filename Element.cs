@@ -23,7 +23,7 @@ namespace Chemistry
             AtomicNumber = atomicNumber;
             Group = group;
             Period = period;
-            AtomicWeight = AtomicWeight;
+            AtomicWeight = atomicWeight;
         }
         
         /// <summary>

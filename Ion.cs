@@ -111,6 +111,6 @@ namespace Chemistry
         /// Текстовое представление <see cref="Ion"/>
         /// </summary>
         /// <returns></returns>
-        public override string ToString() => string.Format("{0}{1}", Content, IsAnion ? "-" : "+");
+        public override string ToString() => string.Format("{0}({1}{2})", Content, Math.Abs(GetCharge()), IsAnion ? "-" : "+");
     }
 }

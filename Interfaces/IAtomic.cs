@@ -17,7 +17,7 @@ namespace Chemistry.Interfaces
         /// <summary>
         /// Количество электронов
         /// </summary>
-        int Electrons { get; }
+        int Electrons { get; set; }
 
         /// <summary>
         /// Количество протонов
