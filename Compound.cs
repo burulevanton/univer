@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using Chemistry.Interfaces;
 
@@ -75,22 +76,49 @@ namespace Chemistry
         /// <returns></returns>
         public IEnumerable<Element> GetElements() => this.SelectMany(x => x.Atom.GetElements().Distinct());
 
+        public AtomicCollection<Atom> GetAtoms()
+        {
+            var atomicCollection = new AtomicCollection<Atom>();
+            foreach (var atomstack in this)
+            {
+                for (int i = 0; i < atomstack.Size; i++)
+                {
+                    atomicCollection.AddRange(atomstack.GetAtoms());
+                }
+            }
+
+            return atomicCollection;
+        }
+
         /// <summary>
         /// Организация химическое соединения
         /// </summary>
         private void Organize()
         {
+            var atomStacks = new List<AtomStack>();
+            for (int i = 0; i < this.Count; i++)
+            {
+                if (this[i].Atom.GetType() == typeof(Compound))
+                {
+                    var list = this[i].Atom as Compound;
+                    var size = this[i].Size;
+                    Remove(this[i]);
+                    for (int j = 0; j < size; j++)
+                    {
+                        InsertRange(i, list);
+                    }
+                    Organize();
+                }
+            }
             foreach (var element in GetElements().ToArray())
             {
                 int count = this.Count(x => Equals(x.Atom.GetElements().ToArray()[0], element) && x.Atom.GetType() != typeof(Isotope));
-
                 if (count <= 1) continue;
 
                 int size = this.Where(x => Equals(x.Atom.GetElements().ToArray()[0], element)).Sum(x => x.Size);
                 var stack = new AtomStack(element, size);
 
                 int index = FindIndex(x => x.Atom.GetElements().ToArray()[0].Equals(element));
-
                 RemoveAll(x => x.Atom.GetElements().ToArray()[0].Equals(element));
                 Insert(index, stack);
             }

@@ -96,7 +96,7 @@ namespace Chemistry
         /// Добавление <see cref="Isotope"/>
         /// </summary>
         /// <param name="massNumber">Массовое число</param>
-        /// <param name="atomicWeight"Атомная масса></param>
+        /// <param name="atomicWeight">Атомная масса</param>
         /// <param name="abundance">Частота обнаружения</param>
         /// <exception cref="ArgumentException"></exception>
         public void AddIsotope(int massNumber, double atomicWeight, double abundance)

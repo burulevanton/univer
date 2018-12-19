@@ -93,5 +93,18 @@ namespace Chemistry
         /// Атомная масса
         /// </summary>
         public double? AtomicWeight => Atom.AtomicWeight * Size;
+
+        public AtomicCollection<Atom> GetAtoms()
+        {
+            AtomicCollection<Atom> atomicCollection = new AtomicCollection<Atom>();
+            Compound compound = Atom as Compound;
+            if (compound != null)
+            {
+                atomicCollection.AddRange(compound.GetAtoms());
+                return atomicCollection;
+            }
+            atomicCollection.Add(Atom as Atom);
+            return atomicCollection;
+        }
     }
 }
