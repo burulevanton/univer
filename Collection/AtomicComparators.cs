@@ -15,17 +15,17 @@ namespace Chemistry
         {
             if (x.GetType() == y.GetType())
                 return 0;
-            if (x.GetType() == typeof(Compound) && (y.GetType() == typeof(Atom) || y.GetType() == typeof(Isotope)))
+            if (x is Compound && (y is Atom || y is Isotope))
                 return 1;
-            if (x.GetType() == typeof(Isotope))
+            if (x is Isotope)
             {
-                if (y.GetType() == typeof(Atom))
+                if (y is Atom)
                     return 1;
-                if (y.GetType() == typeof(Compound))
+                if (y is Compound)
                     return -1;
             }
 
-            if (x.GetType() == typeof(Atom) && (y.GetType() == typeof(Isotope) || y.GetType() == typeof(Compound)))
+            if (x is Atom && (y is Isotope || y is Compound))
                 return -1;
             return 0;
         }

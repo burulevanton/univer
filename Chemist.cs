@@ -18,6 +18,8 @@ namespace Chemistry
 
         public void DoExperiment(IExperiment experiment)
         {
+            experiment.AtomicCollection.Sort(AtomicComparators.GetTypeDescendingComparer());
+            experiment.Chemist = this;
             switch (experiment.Type)
             {
                 case ExperimentType.Compound:
@@ -76,7 +78,7 @@ namespace Chemistry
                         experimentCollection.Remove(iatomic);
                     }
                     Compound newCompound = new Compound(atomStack);
-                    LogEvents.CompoundGot(newCompound);
+                    LogEvents.CompoundGot(compound);
                     CheckCompounds(experimentCollection);
                 }
             }
@@ -90,9 +92,9 @@ namespace Chemistry
             foreach (var iatomic in experimentCollection)
             {
                 if (compound.Count == 0) return neededIatomicCollection.Count == 0 ? null : neededIatomicCollection;
-                if (iatomic.GetType() == typeof(Isotope))
+                if (iatomic is Isotope)
                     return null;
-                if (iatomic.GetType() == typeof(Compound))
+                if (iatomic is Compound)
                 {
                     if (_fullCompoundNeeded(iatomic as Compound, compoundAtoms))
                     {
@@ -103,7 +105,7 @@ namespace Chemistry
                         }
                     }
                 }
-                if (iatomic.GetType() == typeof(Atom) && compoundAtoms.Contains(iatomic as Atom))
+                if (iatomic is Atom && compoundAtoms.Contains(iatomic as Atom))
                 {
                     compoundAtoms.Remove(iatomic as Atom);
                     neededIatomicCollection.Add(iatomic);
@@ -156,12 +158,12 @@ namespace Chemistry
             List<Isotope> isotopes = new List<Isotope>();
             foreach (var iAtomic in experimentCollection)
             {
-                if (iAtomic.GetType() == typeof(Isotope))
+                if (iAtomic is Isotope)
                 {
                     continue;
                 }
 
-                if (iAtomic.GetType() == typeof(Compound))
+                if (iAtomic is Compound)
                 {
                     Random random = new Random();
                     var atoms = (iAtomic as Compound).GetAtoms();
@@ -174,9 +176,9 @@ namespace Chemistry
                     }
                 }
 
-                if (iAtomic.GetType() == typeof(Atom))
+                if (iAtomic is Atom)
                 {
-                    var isotope = (iAtomic as Atom).GetElements().ToArray()[0].PrincipalIsotope;
+                    var isotope = iAtomic.GetElements().ToArray()[0].PrincipalIsotope;
                     if (isotope!=null)
                         isotopes.Add(isotope);
                         //LogEvents.IsotopeGot(isotope);

@@ -4,7 +4,7 @@ using Chemistry.Interfaces;
 
 namespace Chemistry.Log
 {
-    public class LogEvents
+    public static class LogEvents
     {
         public static event Action<IExperiment> OnExperimentStarted;
         public static event Action<IExperiment> OnExperimentEnded;

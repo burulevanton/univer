@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO.Enumeration;
+using System.Linq;
 using Chemistry.Config;
 using Chemistry.Interfaces;
 using Chemistry.Log;
@@ -12,34 +13,34 @@ namespace Chemistry
     {
         static void Main(string[] args)
         {
-             Configuration.Load();
+            Configuration.Load();
+            Chemist chemist = new Chemist("Антон");
+            var h = new Atom(PeriodicTable.GetElement("H"));
+            var o = new Atom(PeriodicTable.GetElement("O"));
+            var c = new Atom(PeriodicTable.GetElement("C"));
+            //Позволяет использовать тип с большей глубиной наследования, чем задано изначально.
+            //Экземпляр IEnumerable<Derived> (IEnumerable(Of Derived) в Visual Basic) можно присвоить переменной типа IEnumerable<Base>
+            AtomicCollection<IAtomic> iAtomics = new AtomicCollection<IAtomic>() {h, o, c};
+            AtomicCollection<Atom> atoms = new AtomicCollection<Atom>() {h, o, c};
 
-        
-//           Element C = new Element("C",6, 12.0106, 14, 2);
-//           Element O = new Element("O", 8, 15.99903, 16, 2);
-//            PeriodicTable.Add(C);
-//            
-//            
-//            C.AddIsotope(12, 12, 0.9893);
-//            C.AddIsotope(13, 13.00335, 0.0107);
-//            
-//            List<AtomStack> list = new List<AtomStack>();
-//            AtomStack c_atom_isotope = new AtomStack(C.PrincipalIsotope,1);
-//            AtomStack c_atom = new AtomStack(C);
-//            AtomStack o_atom = new AtomStack(O, 2);
-//            list.Add(c_atom);
-//            list.Add(o_atom);
-//            Compound co2 = new Compound(list);
-//            co2.Electrons -= 1;
-//            Ion test_ion = (Ion) co2;
-//            Console.WriteLine(test_ion);
-//            
-//            
-//            test_ion = co2.ToIon();
-//            Console.WriteLine(test_ion);
+            void DoSomething(IEnumerable<IAtomic> ienumerable)
+            {
+                foreach (var element in ienumerable)
+                {
+                    Console.WriteLine(element);
+                }
+            }
 
+            DoSomething(iAtomics.Concat(atoms));
             
-            Chemist chemist = new Chemist("anton");
+            //Позволяет использовать более универсальный тип (с меньшей глубиной наследования), чем заданный изначально.
+            //Экземпляр Action<Base> (Action(Of Base) в Visual Basic) можно присвоить переменной типа Action<Derived>.
+            Action<IAtomic> action = Console.WriteLine;
+            Action<Atom> atom_action = action;
+            action(h);
+            atom_action(h);
+            
+            
             CompoundExperiment compoundExperiment = new CompoundExperiment(1);
             Compound ho = new Compound(new AtomStack[]
             {
@@ -65,7 +66,16 @@ namespace Chemistry
             chemist.DoExperiment(compoundExperiment);
             chemist.DoExperiment(ionExperiment);
             chemist.DoExperiment(isotopeExperiment);
-            
+            var compoundExperiment2 = new CompoundExperiment(2);
+            Compound h3 = new Compound(new AtomStack[]
+            {
+                new AtomStack(PeriodicTable.GetElement("H"),3), 
+            });
+            compoundExperiment2.AtomicCollection.Add(h3);
+            compoundExperiment2.AtomicCollection.Add(new Atom(PeriodicTable.GetElement("N")));
+            compoundExperiment2.AtomicCollection.Add(new Atom(PeriodicTable.GetElement("O")));
+            compoundExperiment2.AtomicCollection.Add(new Atom(PeriodicTable.GetElement("Si")));
+            chemist.DoExperiment(compoundExperiment2);
         }
     }
 }

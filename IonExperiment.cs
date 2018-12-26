@@ -6,12 +6,13 @@ namespace Chemistry
     {
         public IonExperiment(int number)
         {
-            this.number = number;
+            this.Number = number;
         }
 
         public AtomicCollection<IAtomic> AtomicCollection { get; } = new AtomicCollection<IAtomic>();
         public ExperimentType Type { get; } = ExperimentType.Ion;
-        public string name { get; } = "Эксперимент по получению ионов";
-        public int number { get; }
+        public string Name { get; } = "Эксперимент по получению ионов";
+        public int Number { get; }
+        public Chemist Chemist { get; set; }
     }
 }

@@ -6,8 +6,10 @@ namespace Chemistry.Interfaces
         
         ExperimentType Type { get; }
         
-        string name { get; }
+        string Name { get; }
         
-        int number { get; }
+        int Number { get; }
+        
+        Chemist Chemist { get; set; }
     }
 }

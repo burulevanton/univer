@@ -15,22 +15,21 @@ namespace Chemistry.Log
             LogEvents.OnIsotopeGot += LogIsotopeGot;
         }
 
-        //todo
         public void LogExperimentStarted(IExperiment experiment)
         {
-            Log($"Начался {experiment.name} №{experiment.number} \n" +
+            Log($"Химик {experiment.Chemist.Name} начал {experiment.Name} №{experiment.Number} \n" +
                 $"Используемые элементы: {string.Join(",",experiment.AtomicCollection)}");
         }
 
         public void LogExperimentEnded(IExperiment experiment)
         {
-            Log($"Закончился {experiment.name} №{experiment.number} \n" +
+            Log($"Химик {experiment.Chemist.Name} закончил {experiment.Name} №{experiment.Number} \n" +
                 $"Оставшиеся элементы: {string.Join(",", experiment.AtomicCollection)}");
         }
 
         public void LogExperimentFailed(IExperiment experiment)
         {
-            Log($"Провалился {experiment.name} № {experiment.number}");
+            Log($"Химик {experiment.Chemist.Name} провалил {experiment.Name} № {experiment.Number}");
         }
 
         public void LogCompoundGot(Compound compound)

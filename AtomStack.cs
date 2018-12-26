@@ -98,8 +98,7 @@ namespace Chemistry
         public AtomicCollection<Atom> GetAtoms()
         {
             AtomicCollection<Atom> atomicCollection = new AtomicCollection<Atom>();
-            Compound compound = Atom as Compound;
-            if (compound != null)
+            if (Atom is Compound compound)
             {
                 atomicCollection.AddRange(compound.GetAtoms());
                 return atomicCollection;

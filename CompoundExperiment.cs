@@ -6,15 +6,16 @@ namespace Chemistry
     {
         public CompoundExperiment(int number)
         {
-            this.number = number;
+            this.Number = number;
         }
 
         public AtomicCollection<IAtomic> AtomicCollection { get; } = new AtomicCollection<IAtomic>();
 
         public ExperimentType Type { get; } = ExperimentType.Compound;
         
-        public string name { get; } = "Эксперимент по созданию химических соединений";
+        public string Name { get; } = "Эксперимент по созданию химических соединений";
         
-        public int number { get; }
+        public int Number { get; }
+        public Chemist Chemist { get; set; }
     }
 }
