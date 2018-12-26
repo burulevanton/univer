@@ -1,0 +1,39 @@
+create_table("player_classes") {
+	t.DisableTimestamps()
+	t.Column("name", "string", {primary:true})
+}
+
+create_table("location_types") {
+	t.DisableTimestamps()
+	t.Column("name", "string", {primary:true})
+}
+
+create_table("locations") {
+	t.Column("id", "string", {primary: true, "size" : 10})
+	t.DisableTimestamps()
+	t.Column("description", "string", {})
+	t.Column("location_type", "string", {})
+	t.ForeignKey("location_type", {"location_types" : ["name"]}, {"on_delete" : "cascade"})
+}
+
+create_table("players") {
+	t.Column("id", "integer", {primary: true})
+	t.DisableTimestamps()
+	t.Column("name", "string", {"size" : 30})
+	t.Column("email", "string", {})
+	t.Column("level", "integer", {})
+	t.Column("position", "string", {})
+	t.Column("player_class", "string", {})
+	t.ForeignKey("position", {"locations" : ["id"]}, {"on_delete" : "cascade"})
+	t.ForeignKey("player_class", {"player_classes" : ["name"]}, {"on_delete" : "cascade"})
+}
+
+create_table("messages") {
+	t.Column("id", "integer", {primary: true})
+	t.DisableTimestamps()
+	t.Column("player_from", "integer", {})
+	t.Column("player_to", "integer", {})
+	t.ForeignKey("player_from", {"players" : ["id"]}, {"on_delete" : "cascade"})
+	t.ForeignKey("player_to", {"players" : ["id"]}, {"on_delete" : "cascade"})
+	t.Column("message_text", "string", {"size":1000})
+}
