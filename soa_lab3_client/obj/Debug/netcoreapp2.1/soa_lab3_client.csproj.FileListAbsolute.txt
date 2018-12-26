@@ -1,0 +1,11 @@
+C:\Users\User\source\repos\soa_lab3_client\soa_lab3_client\bin\Debug\netcoreapp2.1\soa_lab3_client.deps.json
+C:\Users\User\source\repos\soa_lab3_client\soa_lab3_client\bin\Debug\netcoreapp2.1\soa_lab3_client.runtimeconfig.json
+C:\Users\User\source\repos\soa_lab3_client\soa_lab3_client\bin\Debug\netcoreapp2.1\soa_lab3_client.runtimeconfig.dev.json
+C:\Users\User\source\repos\soa_lab3_client\soa_lab3_client\bin\Debug\netcoreapp2.1\soa_lab3_client.dll
+C:\Users\User\source\repos\soa_lab3_client\soa_lab3_client\obj\Debug\netcoreapp2.1\soa_lab3_client.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\soa_lab3_client\soa_lab3_client\obj\Debug\netcoreapp2.1\soa_lab3_client.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\soa_lab3_client\soa_lab3_client\obj\Debug\netcoreapp2.1\soa_lab3_client.AssemblyInfo.cs
+C:\Users\User\source\repos\soa_lab3_client\soa_lab3_client\obj\Debug\netcoreapp2.1\soa_lab3_client.csprojAssemblyReference.cache
+C:\Users\User\source\repos\soa_lab3_client\soa_lab3_client\bin\Debug\netcoreapp2.1\soa_lab3_client.pdb
+C:\Users\User\source\repos\soa_lab3_client\soa_lab3_client\obj\Debug\netcoreapp2.1\soa_lab3_client.dll
+C:\Users\User\source\repos\soa_lab3_client\soa_lab3_client\obj\Debug\netcoreapp2.1\soa_lab3_client.pdb
