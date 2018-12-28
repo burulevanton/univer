@@ -12,12 +12,12 @@ import (
 func JwtAuthentication(next http.Handler) http.Handler{
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 
-		notAuth := []string{"/users/new", "/users/login"}
+		notAuth := []string{"/players", "/login"}
 		requestPath := r.URL.Path
 
 		for _, value := range notAuth {
 
-			if value == requestPath {
+			if value == requestPath && r.Method == "POST" {
 				next.ServeHTTP(w, r)
 				return
 			}
@@ -34,7 +34,7 @@ func JwtAuthentication(next http.Handler) http.Handler{
 			return
 		}
 
-		splitted := strings.Split(tokenHeader, " ") //The token normally comes in format `Bearer {token-body}`, we check if the retrieved token matched this requirement
+		splitted := strings.Split(tokenHeader, " ")
 		if len(splitted) != 2 {
 			response = u.Message(false, "Invalid/Malformed auth token")
 			w.WriteHeader(http.StatusForbidden)
@@ -43,7 +43,7 @@ func JwtAuthentication(next http.Handler) http.Handler{
 			return
 		}
 
-		tokenPart := splitted[1] //Grab the token part, what we are truly interested in
+		tokenPart := splitted[1]
 		tk := &models.Token{}
 
 		token, err := jwt.ParseWithClaims(tokenPart, tk, func(token *jwt.Token) (interface{}, error) {
@@ -65,7 +65,7 @@ func JwtAuthentication(next http.Handler) http.Handler{
 			u.Respond(w, response)
 			return
 		}
-		ctx := context.WithValue(r.Context(), "user", tk.UserId)
+		ctx := context.WithValue(r.Context(), "user", tk.PlayerId)
 		r = r.WithContext(ctx)
 		next.ServeHTTP(w, r)
 	})

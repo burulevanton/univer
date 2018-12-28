@@ -15,8 +15,13 @@ func Respond(w http.ResponseWriter, data map[string]interface{}) {
 }
 
 func BadRequest(w http.ResponseWriter) {
-	w.Header().Add("Content-Type", "application/json")
 	response := Message(false, "Bad request")
 	w.WriteHeader(http.StatusBadRequest)
+	Respond(w, response)
+}
+
+func PermissionDenied(w http.ResponseWriter){
+	response := Message(false, "Permission denied")
+	w.WriteHeader(http.StatusForbidden)
 	Respond(w, response)
 }

@@ -3,10 +3,21 @@ create_table("player_classes") {
 	t.Column("name", "string", {primary:true})
 }
 
+sql("insert into player_classes values ('Knight');")
+sql("insert into player_classes values ('Wizard');")
+sql("insert into player_classes values ('Thief');")
+sql("insert into player_classes values ('Paladin');")
+
 create_table("location_types") {
 	t.DisableTimestamps()
 	t.Column("name", "string", {primary:true})
 }
+
+sql("insert into location_types values ('Forest');")
+sql("insert into location_types values ('Desert');")
+sql("insert into location_types values ('Dungeon');")
+sql("insert into location_types values ('River');")
+sql("insert into location_types values ('Ocean');")
 
 create_table("locations") {
 	t.Column("id", "string", {primary: true, "size" : 10})
@@ -16,13 +27,7 @@ create_table("locations") {
 	t.ForeignKey("location_type", {"location_types" : ["name"]}, {"on_delete" : "cascade"})
 }
 
-create_table("users") {
-	t.Column("id", "integer", {primary: true})
-	t.DisableTimestamps()
-	t.Column("email", "string", {})
-	t.Column("password", "string", {})
-	t.Column("type", "string", {})
-}
+sql("insert into locations values ('dforest', 'This is a deadly forest!', 'Forest');")
 
 create_table("players") {
 	t.Column("id", "integer", {primary: true})
@@ -30,11 +35,9 @@ create_table("players") {
 	t.Column("name", "string", {"size" : 30})
 	t.Column("email", "string", {})
 	t.Column("password", "string", {})
-	t.Column("level", "integer", {})
+	t.Column("level", "integer", {"default" : 1})
 	t.Column("position", "string", {})
 	t.Column("player_class", "string", {})
-	t.Column("owner", "integer", {})
-	t.ForeignKey("owner", {"users" : ["id"]}, {"on_delete" : "cascade"})
 	t.ForeignKey("position", {"locations" : ["id"]}, {"on_delete" : "cascade"})
 	t.ForeignKey("player_class", {"player_classes" : ["name"]}, {"on_delete" : "cascade"})
 }

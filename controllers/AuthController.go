@@ -7,22 +7,13 @@ import (
 	"soa_lab4_rest/utils"
 )
 
-func CreateUser(w http.ResponseWriter, r *http.Request) {
-	user := &models.User{}
-	err := json.NewDecoder(r.Body).Decode(user)
-	if err != nil{
-		utils.BadRequest(w)
-	}
-	resp := user.Create()
-	utils.Respond(w, resp)
-}
-
 func Authenticate(w http.ResponseWriter, r *http.Request){
-	user := &models.User{}
-	err := json.NewDecoder(r.Body).Decode(user)
+	player := &models.Player{}
+	err := json.NewDecoder(r.Body).Decode(player)
 	if err != nil {
 		utils.Respond(w, utils.Message(false, "Invalid request"))
+		return
 	}
-	resp := models.Login(user.Email, user.Password)
+	resp := models.Login(player.Email, player.Password)
 	utils.Respond(w, resp)
 }

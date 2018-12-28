@@ -13,17 +13,27 @@ import (
 
 func GetPlayers(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
-	var players []models.Player
+	var allPlayers []interface{}
+	var currentPlayer models.Player
+	var otherPlayers []models.Player
 	tx, err := pop.Connect("development")
 	if err != nil {
 		log.Panic(err)
 	}
-	err = tx.All(&players)
+	id := r.Context().Value("user").(int)
+	err = tx.Find(&currentPlayer, id)
+	err = tx.Select("id, name, level, position, player_class").Where("id != " + strconv.Itoa(id)).All(&otherPlayers)
 	if err != nil {
-		utils.Respond(w, utils.Message(false, "Произошла ошибка"))
-	} else {
-		err = json.NewEncoder(w).Encode(players)
+		utils.Respond(w, utils.Message(false, "Failed"))
+		return
 	}
+	for _, value := range otherPlayers {
+		allPlayers = append(allPlayers, value.PlayerToAlienPlayer())
+	}
+	currentPlayer.Password = "***********"
+	currentPlayer.Token = "************"
+	allPlayers = append(allPlayers, currentPlayer)
+	err = json.NewEncoder(w).Encode(allPlayers)
 }
 
 func GetPlayer(w http.ResponseWriter, r *http.Request) {
@@ -34,36 +44,51 @@ func GetPlayer(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		log.Panic(err)
 	}
-	err = tx.Find(&player, params["id"])
-	if err != nil {
-		response := utils.Message(false, "Не найдено")
-		w.WriteHeader(http.StatusNotFound)
-		utils.Respond(w, response)
+	id := r.Context().Value("user").(int)
+	if requestId, _ := strconv.Atoi(params["id"]); requestId == id{
+		err = tx.Find(&player, params["id"])
+		if err != nil {
+			response := utils.Message(false, "Не найдено")
+			w.WriteHeader(http.StatusNotFound)
+			utils.Respond(w, response)
+			return
+		}
+		player.Password = "***********"
+		player.Token = "************"
+		_ = json.NewEncoder(w).Encode(player)
 	} else {
-		err = json.NewEncoder(w).Encode(player)
+		err = tx.Select("id, name, level, position, player_class").Find(&player, params["id"])
+		alienPlayer := player.PlayerToAlienPlayer()
+		_ = json.NewEncoder(w).Encode(alienPlayer)
 	}
 }
 
 func CreatePlayer(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	var player models.Player
-	_ = json.NewDecoder(r.Body).Decode(&player)
-	tx, _ := pop.Connect("development")
-	_, err := tx.ValidateAndCreate(&player)
-	if err != nil {
+	err := json.NewDecoder(r.Body).Decode(&player)
+	if err != nil{
 		utils.BadRequest(w)
+		return
 	}
-	_ = json.NewEncoder(w).Encode(player)
+	resp := player.Create()
+	utils.Respond(w, resp)
 }
 
 func UpdatePlayer(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
+	id := r.Context().Value("user").(int)
 	params := mux.Vars(r)
+	if requestId, _ := strconv.Atoi(params["id"]); requestId != id{
+		utils.PermissionDenied(w)
+		return
+	}
 	var player models.Player
 	tx, _ := pop.Connect("development")
-	err := tx.Find(player, params["id"])
+	err := tx.Find(&player, params["id"])
 	if err != nil {
 		utils.BadRequest(w)
+		return
 	}
 	_ = json.NewDecoder(r.Body).Decode(&player)
 	player.ID, _ = strconv.Atoi(params["id"])
@@ -71,12 +96,19 @@ func UpdatePlayer(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		utils.BadRequest(w)
 	}
+	player.Password = "***********"
+	player.Token = "************"
 	_ = json.NewEncoder(w).Encode(player)
 }
 
 func DeletePlayer(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
+	id := r.Context().Value("user").(int)
 	params := mux.Vars(r)
+	if requestId, _ := strconv.Atoi(params["id"]); requestId != id{
+		utils.PermissionDenied(w)
+		return
+	}
 	var player models.Player
 	tx, _ := pop.Connect("development")
 	err := tx.Find(&player, params["id"])
@@ -87,4 +119,6 @@ func DeletePlayer(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		utils.Respond(w, utils.Message(false, "Произошла ошибка"))
 	}
+	utils.Respond(w, utils.Message(true, "Success"))
 }
+

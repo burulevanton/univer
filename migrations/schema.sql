@@ -112,10 +112,10 @@ CREATE TABLE public.players (
     id integer NOT NULL,
     name character varying(30) NOT NULL,
     email character varying(255) NOT NULL,
-    level integer NOT NULL,
+    password character varying(255) NOT NULL,
+    level integer DEFAULT 1 NOT NULL,
     "position" character varying(255) NOT NULL,
-    player_class character varying(255) NOT NULL,
-    owner integer NOT NULL
+    player_class character varying(255) NOT NULL
 );
 
 
@@ -155,42 +155,6 @@ CREATE TABLE public.schema_migration (
 ALTER TABLE public.schema_migration OWNER TO postgres;
 
 --
--- Name: users; Type: TABLE; Schema: public; Owner: postgres
---
-
-CREATE TABLE public.users (
-    id integer NOT NULL,
-    email character varying(255) NOT NULL,
-    password character varying(255) NOT NULL,
-    type character varying(255) NOT NULL
-);
-
-
-ALTER TABLE public.users OWNER TO postgres;
-
---
--- Name: users_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
---
-
-CREATE SEQUENCE public.users_id_seq
-    AS integer
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE public.users_id_seq OWNER TO postgres;
-
---
--- Name: users_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
---
-
-ALTER SEQUENCE public.users_id_seq OWNED BY public.users.id;
-
-
---
 -- Name: messages id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -202,13 +166,6 @@ ALTER TABLE ONLY public.messages ALTER COLUMN id SET DEFAULT nextval('public.mes
 --
 
 ALTER TABLE ONLY public.players ALTER COLUMN id SET DEFAULT nextval('public.players_id_seq'::regclass);
-
-
---
--- Name: users id; Type: DEFAULT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY public.users ALTER COLUMN id SET DEFAULT nextval('public.users_id_seq'::regclass);
 
 
 --
@@ -252,14 +209,6 @@ ALTER TABLE ONLY public.players
 
 
 --
--- Name: users users_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY public.users
-    ADD CONSTRAINT users_pkey PRIMARY KEY (id);
-
-
---
 -- Name: schema_migration_version_idx; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -288,14 +237,6 @@ ALTER TABLE ONLY public.messages
 
 ALTER TABLE ONLY public.messages
     ADD CONSTRAINT messages_player_to_fkey FOREIGN KEY (player_to) REFERENCES public.players(id) ON DELETE CASCADE;
-
-
---
--- Name: players players_owner_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY public.players
-    ADD CONSTRAINT players_owner_fkey FOREIGN KEY (owner) REFERENCES public.users(id) ON DELETE CASCADE;
 
 
 --

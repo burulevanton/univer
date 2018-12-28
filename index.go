@@ -98,9 +98,12 @@ func main() {
 	r.HandleFunc("/messages/{id}", controllers.UpdateMessage).Methods("PUT")
 	r.HandleFunc("/messages/{id}", controllers.DeleteMessage).Methods("DELETE")
 
-	//users
-	r.HandleFunc("/users/new", controllers.CreateUser).Methods("POST")
-	r.HandleFunc("/users/login", controllers.Authenticate).Methods("POST")
+	//login
+	r.HandleFunc("/login", controllers.Authenticate).Methods("POST")
+
+	//dialogue
+	r.HandleFunc("/dialogues/{id}", controllers.GetMessagesInDialog).Methods("GET")
+	r.HandleFunc("/dialogues/{id}", controllers.CreateMessageInDialog).Methods("POST")
 
 	r.Use(middlewares.JwtAuthentication)
 
