@@ -1,11 +1,14 @@
 package main
 
 import (
+	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
-	"log"
 	"net/http"
+	"os"
 	"soa_lab4_rest/controllers"
+	"soa_lab4_rest/middlewares"
 )
+
 //
 //type LocationType int
 //
@@ -71,30 +74,36 @@ import (
 //var messages []Message
 //var locations []Location
 
-
 func main() {
 	r := mux.NewRouter()
 
 	//locations
 	r.HandleFunc("/locations", controllers.GetLocations).Methods("GET")
-	r.HandleFunc("/locations/{id}",controllers.GetLocation).Methods("GET")
+	r.HandleFunc("/locations/{id}", controllers.GetLocation).Methods("GET")
 	r.HandleFunc("/locations", controllers.CreateLocation).Methods("POST")
 	r.HandleFunc("/locations/{id}", controllers.UpdateLocation).Methods("PUT")
 	r.HandleFunc("/locations/{id}", controllers.DeleteLocation).Methods("DELETE")
 
 	//players
 	r.HandleFunc("/players", controllers.GetPlayers).Methods("GET")
-	r.HandleFunc("/players/{id}",controllers.GetPlayer).Methods("GET")
+	r.HandleFunc("/players/{id}", controllers.GetPlayer).Methods("GET")
 	r.HandleFunc("/players", controllers.CreatePlayer).Methods("POST")
 	r.HandleFunc("/players/{id}", controllers.UpdatePlayer).Methods("PUT")
 	r.HandleFunc("/players/{id}", controllers.DeletePlayer).Methods("DELETE")
 
 	//messages
 	r.HandleFunc("/messages", controllers.GetMessages).Methods("GET")
-	r.HandleFunc("/messages/{id}",controllers.GetMessage).Methods("GET")
+	r.HandleFunc("/messages/{id}", controllers.GetMessage).Methods("GET")
 	r.HandleFunc("/messages", controllers.CreateMessage).Methods("POST")
 	r.HandleFunc("/messages/{id}", controllers.UpdateMessage).Methods("PUT")
 	r.HandleFunc("/messages/{id}", controllers.DeleteMessage).Methods("DELETE")
 
-	log.Fatal(http.ListenAndServe(":8000", r))
+	//users
+	r.HandleFunc("/users/new", controllers.CreateUser).Methods("POST")
+	r.HandleFunc("/users/login", controllers.Authenticate).Methods("POST")
+
+	r.Use(middlewares.JwtAuthentication)
+
+	_ = http.ListenAndServe(":8000", handlers.LoggingHandler(os.Stdout, r))
+
 }

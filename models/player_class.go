@@ -5,7 +5,7 @@ import (
 )
 
 type PlayerClass struct {
-	Name      string    `json:"name" db:"name"`
+	Name string `json:"name" db:"name"`
 }
 
 // String is not required by pop and may be deleted

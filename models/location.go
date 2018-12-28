@@ -5,8 +5,8 @@ import (
 )
 
 type Location struct {
-	ID        string `json:"id" db:"id"`
-	Description string `json:"description" db:"description"`
+	ID           string `json:"id" db:"id"`
+	Description  string `json:"description" db:"description"`
 	LocationType string `json:"location_type" db:"location_type"`
 }
 
@@ -24,4 +24,3 @@ func (l Locations) String() string {
 	jl, _ := json.Marshal(l)
 	return string(jl)
 }
-
