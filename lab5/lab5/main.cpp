@@ -69,8 +69,8 @@ void display(void)
 	}
 	if (light_sample == 2)
 	{
-		GLfloat light1_diffuse[] = { 1.0, 1.0, 1.0 };
-		GLfloat light1_position[] = { 0.0, 0.0, 1.0, 1.0 };
+		GLfloat light1_diffuse[] = { 1.0, 0.5, 1.0 };
+		GLfloat light1_position[] = { 0, 0.0, 0.8, 1.0 };
 		glEnable(GL_LIGHT1);
 		glLightfv(GL_LIGHT1, GL_DIFFUSE, light1_diffuse);
 		glLightfv(GL_LIGHT1, GL_POSITION, light1_position);
