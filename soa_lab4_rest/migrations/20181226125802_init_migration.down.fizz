@@ -1,0 +1,5 @@
+drop_table("messages")
+drop_table("players")
+drop_table("locations")
+drop_table("location_types")
+drop_table("player_classes")
