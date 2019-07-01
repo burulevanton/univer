@@ -1,0 +1,11 @@
+{"version":1,"strings":[
+{"hash":141325939,"name":"tformsettings.caption","sourcebytes":[70,111,114,109,83,101,116,116,105,110,103,115],"value":"FormSettings"},
+{"hash":317012,"name":"tformsettings.buttonfont.caption","sourcebytes":[70,111,110,116],"value":"Font"},
+{"hash":258905570,"name":"tformsettings.buttonformcolor.caption","sourcebytes":[70,111,114,109,32,99,111,108,111,114],"value":"Form color"},
+{"hash":145055010,"name":"tformsettings.buttondefaultformcolor.caption","sourcebytes":[68,101,102,97,117,108,116,32,102,111,114,109,32,99,111,108,111,114],"value":"Default form color"},
+{"hash":199351685,"name":"tformsettings.buttonbackgroundset.caption","sourcebytes":[83,101,116,32,98,97,99,107,103,114,111,117,110,100,32,105,109,97,103,101],"value":"Set background image"},
+{"hash":139375349,"name":"tformsettings.labellanguage.caption","sourcebytes":[76,97,110,103,117,97,103,101],"value":"Language"},
+{"hash":52901513,"name":"tformsettings.buttonrussian.caption","sourcebytes":[208,160,209,131,209,129,209,129,208,186,208,184,208,185],"value":"\u0420\u0443\u0441\u0441\u043A\u0438\u0439"},
+{"hash":206450904,"name":"tformsettings.buttonenglish.caption","sourcebytes":[69,110,103,108,105,115,104],"value":"English"},
+{"hash":264599717,"name":"tformsettings.buttonbackgroundclear.caption","sourcebytes":[67,108,101,97,114,32,98,97,99,107,103,114,111,117,110,100,32,105,109,97,103,101],"value":"Clear background image"}
+]}

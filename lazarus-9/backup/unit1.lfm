@@ -1,0 +1,2878 @@
+object MainForm: TMainForm
+  Left = 883
+  Height = 613
+  Top = 364
+  Width = 928
+  Caption = 'Main'
+  ClientHeight = 593
+  ClientWidth = 928
+  Menu = MainMenu1
+  LCLVersion = '1.8.4.0'
+  object PageControl1: TPageControl
+    Left = 32
+    Height = 552
+    Top = 40
+    Width = 872
+    ActivePage = Department
+    TabIndex = 0
+    TabOrder = 0
+    object Department: TTabSheet
+      Caption = 'Кафедра'
+      ClientHeight = 524
+      ClientWidth = 864
+      object DBGridDepartment: TDBGrid
+        Left = 8
+        Height = 184
+        Top = 16
+        Width = 488
+        Color = clWindow
+        Columns = <>
+        DataSource = DataSourceDepartment
+        TabOrder = 0
+      end
+      object ReportDepartment: TButton
+        Left = 8
+        Height = 25
+        Top = 216
+        Width = 96
+        Caption = 'Отчёт'
+        OnClick = ReportDepartmentClick
+        TabOrder = 1
+      end
+    end
+    object Performance: TTabSheet
+      Caption = 'Успеваемость'
+      ClientHeight = 524
+      ClientWidth = 864
+      object DBGridPerfomance: TDBGrid
+        Left = 8
+        Height = 240
+        Top = 24
+        Width = 568
+        Color = clWindow
+        Columns = <>
+        DataSource = DataSourcePerformance
+        TabOrder = 0
+      end
+      object ReportPerformance: TButton
+        Left = 8
+        Height = 25
+        Top = 280
+        Width = 96
+        Caption = 'Отчёт'
+        OnClick = ReportPerformanceClick
+        TabOrder = 1
+      end
+    end
+    object Student: TTabSheet
+      Caption = 'Студенты'
+      ClientHeight = 524
+      ClientWidth = 864
+      object DBGridStudent: TDBGrid
+        Left = 8
+        Height = 248
+        Top = 16
+        Width = 416
+        Color = clWindow
+        Columns = <>
+        DataSource = DataSourceStudent
+        TabOrder = 0
+      end
+    end
+    object Subject: TTabSheet
+      Caption = 'Предметы'
+      ClientHeight = 524
+      ClientWidth = 864
+      object DBGridSubject: TDBGrid
+        Left = 8
+        Height = 336
+        Top = 24
+        Width = 448
+        Color = clWindow
+        Columns = <>
+        DataSource = DataSourceSubject
+        TabOrder = 0
+      end
+      object Chart2: TChart
+        Left = 464
+        Height = 336
+        Top = 24
+        Width = 392
+        AxisList = <        
+          item
+            Marks.LabelBrush.Style = bsClear
+            Minors = <>
+            Title.LabelFont.Orientation = 900
+            Title.LabelBrush.Style = bsClear
+          end        
+          item
+            Alignment = calBottom
+            Marks.LabelBrush.Style = bsClear
+            Minors = <>
+            Title.LabelBrush.Style = bsClear
+          end>
+        Foot.Brush.Color = clBtnFace
+        Foot.Font.Color = clBlue
+        Title.Brush.Color = clBtnFace
+        Title.Font.Color = clBlue
+        Title.Text.Strings = (
+          'TAChart'
+        )
+        object Chart2BarSeries1: TBarSeries
+          BarBrush.Color = clRed
+          Source = DbChartSourceSubject
+        end
+      end
+    end
+    object Teacher: TTabSheet
+      Caption = 'Преподаватели'
+      ClientHeight = 524
+      ClientWidth = 864
+      object DBGridTeacher: TDBGrid
+        Left = 8
+        Height = 240
+        Top = 24
+        Width = 568
+        Color = clWindow
+        Columns = <>
+        DataSource = DataSourceTeacher
+        TabOrder = 0
+      end
+      object ReportTeacher: TButton
+        Left = 8
+        Height = 25
+        Top = 280
+        Width = 96
+        Caption = 'Отчёт'
+        OnClick = ReportTeacherClick
+        TabOrder = 1
+      end
+    end
+    object UniversityGroup: TTabSheet
+      Caption = 'Группы'
+      ClientHeight = 524
+      ClientWidth = 864
+      object DBGridUniversityGroup: TDBGrid
+        Left = 8
+        Height = 328
+        Top = 24
+        Width = 440
+        Color = clWindow
+        Columns = <>
+        DataSource = DataSourceUniversityGroup
+        TabOrder = 0
+      end
+      object Chart1: TChart
+        Left = 456
+        Height = 328
+        Top = 24
+        Width = 392
+        AxisList = <        
+          item
+            Marks.LabelBrush.Style = bsClear
+            Minors = <>
+            Title.LabelFont.Orientation = 900
+            Title.LabelBrush.Style = bsClear
+          end        
+          item
+            Alignment = calBottom
+            Marks.LabelBrush.Style = bsClear
+            Minors = <>
+            Title.LabelBrush.Style = bsClear
+          end>
+        Foot.Brush.Color = clBtnFace
+        Foot.Font.Color = clBlue
+        Title.Brush.Color = clBtnFace
+        Title.Font.Color = clBlue
+        Title.Text.Strings = (
+          'TAChart'
+        )
+        object Chart1BarSeries1: TBarSeries
+          BarBrush.Color = clRed
+          Source = DbChartGroup
+        end
+      end
+    end
+    object DepartmentEdit: TTabSheet
+      Caption = 'Кафедра-Изменить'
+      ClientHeight = 340
+      ClientWidth = 768
+      object DBNavigatorDepartment: TDBNavigator
+        Left = 0
+        Height = 25
+        Top = 0
+        Width = 769
+        BevelOuter = bvNone
+        ChildSizing.EnlargeHorizontal = crsScaleChilds
+        ChildSizing.EnlargeVertical = crsScaleChilds
+        ChildSizing.ShrinkHorizontal = crsScaleChilds
+        ChildSizing.ShrinkVertical = crsScaleChilds
+        ChildSizing.Layout = cclLeftToRightThenTopToBottom
+        ChildSizing.ControlsPerLine = 100
+        ClientHeight = 25
+        ClientWidth = 769
+        DataSource = DataSourceDepartment
+        Options = []
+        TabOrder = 0
+      end
+      object DBEditId: TDBEdit
+        Left = 0
+        Height = 23
+        Top = 32
+        Width = 760
+        DataField = 'id'
+        DataSource = DataSourceDepartment
+        CharCase = ecNormal
+        MaxLength = 0
+        TabOrder = 1
+      end
+      object DBEditDepartmentName: TDBEdit
+        Left = 0
+        Height = 23
+        Top = 64
+        Width = 760
+        DataField = 'name'
+        DataSource = DataSourceDepartment
+        CharCase = ecNormal
+        MaxLength = 120
+        TabOrder = 2
+      end
+      object DBEditDepartmentPhone: TDBEdit
+        Left = 0
+        Height = 23
+        Top = 92
+        Width = 760
+        DataField = 'phone_number'
+        DataSource = DataSourceDepartment
+        CharCase = ecNormal
+        MaxLength = 30
+        TabOrder = 3
+      end
+      object DBEditDepartmentHead: TDBEdit
+        Left = 0
+        Height = 23
+        Top = 120
+        Width = 760
+        DataField = 'head_of_department'
+        DataSource = DataSourceDepartment
+        CharCase = ecNormal
+        MaxLength = 50
+        TabOrder = 4
+      end
+    end
+    object PerformanceEdit: TTabSheet
+      Caption = 'Успеваемость-Изменить'
+      ClientHeight = 340
+      ClientWidth = 768
+      object DBNavigatorPerformance: TDBNavigator
+        Left = 4
+        Height = 25
+        Top = 8
+        Width = 756
+        BevelOuter = bvNone
+        ChildSizing.EnlargeHorizontal = crsScaleChilds
+        ChildSizing.EnlargeVertical = crsScaleChilds
+        ChildSizing.ShrinkHorizontal = crsScaleChilds
+        ChildSizing.ShrinkVertical = crsScaleChilds
+        ChildSizing.Layout = cclLeftToRightThenTopToBottom
+        ChildSizing.ControlsPerLine = 100
+        ClientHeight = 25
+        ClientWidth = 756
+        DataSource = DataSourcePerformance
+        Options = []
+        TabOrder = 0
+      end
+      object DBEditPerformanceIdStudent: TDBEdit
+        Left = 8
+        Height = 23
+        Top = 48
+        Width = 752
+        DataField = 'id_student'
+        DataSource = DataSourcePerformance
+        CharCase = ecNormal
+        MaxLength = 0
+        TabOrder = 1
+      end
+      object DBEditPerformanceIdGroup: TDBEdit
+        Left = 8
+        Height = 23
+        Top = 76
+        Width = 752
+        DataField = 'id_group'
+        DataSource = DataSourcePerformance
+        CharCase = ecNormal
+        MaxLength = 0
+        TabOrder = 2
+      end
+      object DBEditPerformanceIdSubject: TDBEdit
+        Left = 8
+        Height = 23
+        Top = 104
+        Width = 752
+        DataField = 'id_subject'
+        DataSource = DataSourcePerformance
+        CharCase = ecNormal
+        MaxLength = 0
+        TabOrder = 3
+      end
+      object DBEditPerformanceIdTeacher: TDBEdit
+        Left = 8
+        Height = 23
+        Top = 136
+        Width = 752
+        DataField = 'id_teacher'
+        DataSource = DataSourcePerformance
+        CharCase = ecNormal
+        MaxLength = 0
+        TabOrder = 4
+      end
+      object DBEditPerformanceScore: TDBEdit
+        Left = 8
+        Height = 23
+        Top = 168
+        Width = 752
+        DataField = 'score'
+        DataSource = DataSourcePerformance
+        CharCase = ecNormal
+        MaxLength = 0
+        TabOrder = 5
+      end
+    end
+    object StudentsEdit: TTabSheet
+      Caption = 'Студенты-Изменить'
+      ClientHeight = 340
+      ClientWidth = 768
+      object DBNavigatorStudents: TDBNavigator
+        Left = 0
+        Height = 25
+        Top = 8
+        Width = 760
+        BevelOuter = bvNone
+        ChildSizing.EnlargeHorizontal = crsScaleChilds
+        ChildSizing.EnlargeVertical = crsScaleChilds
+        ChildSizing.ShrinkHorizontal = crsScaleChilds
+        ChildSizing.ShrinkVertical = crsScaleChilds
+        ChildSizing.Layout = cclLeftToRightThenTopToBottom
+        ChildSizing.ControlsPerLine = 100
+        ClientHeight = 25
+        ClientWidth = 760
+        DataSource = DataSourceStudent
+        Options = []
+        TabOrder = 0
+      end
+      object DBEditStudentsId: TDBEdit
+        Left = 0
+        Height = 23
+        Top = 40
+        Width = 760
+        DataField = 'id'
+        DataSource = DataSourceStudent
+        CharCase = ecNormal
+        MaxLength = 0
+        TabOrder = 1
+      end
+      object DBEditStudentIdGroup: TDBEdit
+        Left = 0
+        Height = 23
+        Top = 68
+        Width = 760
+        DataField = 'id_group'
+        DataSource = DataSourceStudent
+        CharCase = ecNormal
+        MaxLength = 0
+        TabOrder = 2
+      end
+      object DBEditStudentNumberInGroup: TDBEdit
+        Left = 0
+        Height = 23
+        Top = 96
+        Width = 760
+        DataField = 'number_in_group'
+        DataSource = DataSourceStudent
+        CharCase = ecNormal
+        MaxLength = 0
+        TabOrder = 3
+      end
+      object DBEditStudentName: TDBEdit
+        Left = 0
+        Height = 23
+        Top = 128
+        Width = 760
+        DataField = 'name'
+        DataSource = DataSourceStudent
+        CharCase = ecNormal
+        MaxLength = 20
+        TabOrder = 4
+      end
+      object DBEditStudentSurname: TDBEdit
+        Left = 0
+        Height = 23
+        Top = 160
+        Width = 760
+        DataField = 'surname'
+        DataSource = DataSourceStudent
+        CharCase = ecNormal
+        MaxLength = 20
+        TabOrder = 5
+      end
+      object DBEditStudentPatronymic: TDBEdit
+        Left = 0
+        Height = 23
+        Top = 192
+        Width = 760
+        DataField = 'patronymic'
+        DataSource = DataSourceStudent
+        CharCase = ecNormal
+        MaxLength = 30
+        TabOrder = 6
+      end
+      object DBEditStudentAddress: TDBEdit
+        Left = 0
+        Height = 23
+        Top = 256
+        Width = 760
+        DataField = 'address'
+        DataSource = DataSourceStudent
+        CharCase = ecNormal
+        MaxLength = 100
+        TabOrder = 7
+      end
+      object DBEditStudentAverageScore: TDBEdit
+        Left = 0
+        Height = 23
+        Top = 288
+        Width = 760
+        DataField = 'average_score'
+        DataSource = DataSourceStudent
+        CharCase = ecNormal
+        MaxLength = 0
+        TabOrder = 8
+      end
+      object DBStudentBirthDate: TDBDateEdit
+        Left = 0
+        Height = 23
+        Top = 224
+        Width = 759
+        CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+        DateOrder = doNone
+        ButtonWidth = 23
+        NumGlyphs = 1
+        MaxLength = 0
+        TabOrder = 9
+        DataField = 'birth_date'
+        DataSource = DataSourceStudent
+      end
+    end
+    object SubjectEdit: TTabSheet
+      Caption = 'Предметы-Изменить'
+      ClientHeight = 444
+      ClientWidth = 760
+      object DBNavigatorSubject: TDBNavigator
+        Left = 0
+        Height = 25
+        Top = 8
+        Width = 761
+        BevelOuter = bvNone
+        ChildSizing.EnlargeHorizontal = crsScaleChilds
+        ChildSizing.EnlargeVertical = crsScaleChilds
+        ChildSizing.ShrinkHorizontal = crsScaleChilds
+        ChildSizing.ShrinkVertical = crsScaleChilds
+        ChildSizing.Layout = cclLeftToRightThenTopToBottom
+        ChildSizing.ControlsPerLine = 100
+        ClientHeight = 25
+        ClientWidth = 761
+        DataSource = DataSourceSubject
+        Options = []
+        TabOrder = 0
+      end
+      object DBEditSubjectId: TDBEdit
+        Left = 0
+        Height = 23
+        Top = 40
+        Width = 761
+        DataField = 'id'
+        DataSource = DataSourceSubject
+        CharCase = ecNormal
+        MaxLength = 0
+        TabOrder = 1
+      end
+      object DBEditSubjectName: TDBEdit
+        Left = 0
+        Height = 23
+        Top = 68
+        Width = 761
+        DataField = 'name'
+        DataSource = DataSourceSubject
+        CharCase = ecNormal
+        MaxLength = 50
+        TabOrder = 2
+      end
+      object DBEditSubjectHoursAmount: TDBEdit
+        Left = 0
+        Height = 23
+        Top = 96
+        Width = 761
+        DataField = 'hours_amount'
+        DataSource = DataSourceSubject
+        CharCase = ecNormal
+        MaxLength = 0
+        TabOrder = 3
+      end
+      object DBEditSubjectHoursOfLectures: TDBEdit
+        Left = 0
+        Height = 23
+        Top = 128
+        Width = 761
+        DataField = 'hours_of_lectures'
+        DataSource = DataSourceSubject
+        CharCase = ecNormal
+        MaxLength = 0
+        TabOrder = 4
+      end
+      object DBEditSubjectHoursOfPractice: TDBEdit
+        Left = 0
+        Height = 23
+        Top = 160
+        Width = 761
+        DataField = 'hours_of_practice'
+        DataSource = DataSourceSubject
+        CharCase = ecNormal
+        MaxLength = 0
+        TabOrder = 5
+      end
+      object DBEditSubjectNumberOfSemesters: TDBEdit
+        Left = 0
+        Height = 23
+        Top = 192
+        Width = 761
+        DataField = 'number_of_semesters'
+        DataSource = DataSourceSubject
+        CharCase = ecNormal
+        MaxLength = 0
+        TabOrder = 6
+      end
+    end
+    object TeacherEdit: TTabSheet
+      Caption = 'Преподаватели-Изменить'
+      ClientHeight = 340
+      ClientWidth = 768
+      object DBNavigatorTeacher: TDBNavigator
+        Left = 0
+        Height = 25
+        Top = 8
+        Width = 761
+        BevelOuter = bvNone
+        ChildSizing.EnlargeHorizontal = crsScaleChilds
+        ChildSizing.EnlargeVertical = crsScaleChilds
+        ChildSizing.ShrinkHorizontal = crsScaleChilds
+        ChildSizing.ShrinkVertical = crsScaleChilds
+        ChildSizing.Layout = cclLeftToRightThenTopToBottom
+        ChildSizing.ControlsPerLine = 100
+        ClientHeight = 25
+        ClientWidth = 761
+        DataSource = DataSourceTeacher
+        Options = []
+        TabOrder = 0
+      end
+      object DBEditTeacherId: TDBEdit
+        Left = 0
+        Height = 23
+        Top = 40
+        Width = 760
+        DataField = 'id'
+        DataSource = DataSourceTeacher
+        CharCase = ecNormal
+        MaxLength = 0
+        TabOrder = 1
+      end
+      object DBEditTeacherName: TDBEdit
+        Left = 0
+        Height = 23
+        Top = 68
+        Width = 760
+        DataField = 'name'
+        DataSource = DataSourceTeacher
+        CharCase = ecNormal
+        MaxLength = 20
+        TabOrder = 2
+      end
+      object DBEditTeacherSurname: TDBEdit
+        Left = 1
+        Height = 23
+        Top = 96
+        Width = 760
+        DataField = 'surname'
+        DataSource = DataSourceTeacher
+        CharCase = ecNormal
+        MaxLength = 20
+        TabOrder = 3
+      end
+      object DBEditTeacherPatronymic: TDBEdit
+        Left = 1
+        Height = 23
+        Top = 128
+        Width = 760
+        DataField = 'patronymic'
+        DataSource = DataSourceTeacher
+        CharCase = ecNormal
+        MaxLength = 30
+        TabOrder = 4
+      end
+      object DBEditTeacherAcademicTitle: TDBEdit
+        Left = 0
+        Height = 23
+        Top = 160
+        Width = 760
+        DataField = 'academic_title'
+        DataSource = DataSourceTeacher
+        CharCase = ecNormal
+        MaxLength = 50
+        TabOrder = 5
+      end
+      object DBEditTeacherIdDepartment: TDBEdit
+        Left = 1
+        Height = 23
+        Top = 192
+        Width = 760
+        DataField = 'id_department'
+        DataSource = DataSourceTeacher
+        CharCase = ecNormal
+        MaxLength = 0
+        TabOrder = 6
+      end
+    end
+    object GroupEdit: TTabSheet
+      Caption = 'Группы-Изменить'
+      ClientHeight = 444
+      ClientWidth = 760
+      object DBNavigatorGroup: TDBNavigator
+        Left = 0
+        Height = 25
+        Top = 8
+        Width = 760
+        BevelOuter = bvNone
+        ChildSizing.EnlargeHorizontal = crsScaleChilds
+        ChildSizing.EnlargeVertical = crsScaleChilds
+        ChildSizing.ShrinkHorizontal = crsScaleChilds
+        ChildSizing.ShrinkVertical = crsScaleChilds
+        ChildSizing.Layout = cclLeftToRightThenTopToBottom
+        ChildSizing.ControlsPerLine = 100
+        ClientHeight = 25
+        ClientWidth = 760
+        DataSource = DataSourceUniversityGroup
+        Options = []
+        TabOrder = 0
+      end
+      object DBEditGroupId: TDBEdit
+        Left = 0
+        Height = 23
+        Top = 40
+        Width = 760
+        DataField = 'id'
+        DataSource = DataSourceUniversityGroup
+        CharCase = ecNormal
+        MaxLength = 0
+        TabOrder = 1
+      end
+      object DBEditGroupNumber: TDBEdit
+        Left = 0
+        Height = 23
+        Top = 68
+        Width = 760
+        DataField = 'number'
+        DataSource = DataSourceUniversityGroup
+        CharCase = ecNormal
+        MaxLength = 0
+        TabOrder = 2
+      end
+      object DBEditGroupDepartmentId: TDBEdit
+        Left = 0
+        Height = 23
+        Top = 96
+        Width = 760
+        DataField = 'department_id'
+        DataSource = DataSourceUniversityGroup
+        CharCase = ecNormal
+        MaxLength = 0
+        TabOrder = 3
+      end
+      object DBEditGroupdStudentsAmount: TDBEdit
+        Left = 0
+        Height = 23
+        Top = 128
+        Width = 760
+        DataField = 'students_amount'
+        DataSource = DataSourceUniversityGroup
+        CharCase = ecNormal
+        MaxLength = 0
+        TabOrder = 4
+      end
+      object DBEditGroupAverageScore: TDBEdit
+        Left = 0
+        Height = 23
+        Top = 160
+        Width = 760
+        DataField = 'average_score'
+        DataSource = DataSourceUniversityGroup
+        CharCase = ecNormal
+        MaxLength = 0
+        TabOrder = 5
+      end
+      object DBEditGroupLeader: TDBEdit
+        Left = 0
+        Height = 23
+        Top = 192
+        Width = 760
+        DataField = 'group_leader'
+        DataSource = DataSourceUniversityGroup
+        CharCase = ecNormal
+        MaxLength = 50
+        TabOrder = 6
+      end
+    end
+    object RawSql: TTabSheet
+      Caption = 'Выполнить SQL'
+      ClientHeight = 444
+      ClientWidth = 760
+      inline RawSqlEdit: TSynEdit
+        Left = 0
+        Height = 200
+        Top = 8
+        Width = 584
+        Font.Height = -13
+        Font.Name = 'Courier New'
+        Font.Pitch = fpFixed
+        Font.Quality = fqNonAntialiased
+        ParentColor = False
+        ParentFont = False
+        TabOrder = 0
+        Gutter.Width = 57
+        Gutter.MouseActions = <>
+        RightGutter.Width = 0
+        RightGutter.MouseActions = <>
+        Highlighter = SynSQLSyn1
+        Keystrokes = <        
+          item
+            Command = ecUp
+            ShortCut = 38
+          end        
+          item
+            Command = ecSelUp
+            ShortCut = 8230
+          end        
+          item
+            Command = ecScrollUp
+            ShortCut = 16422
+          end        
+          item
+            Command = ecDown
+            ShortCut = 40
+          end        
+          item
+            Command = ecSelDown
+            ShortCut = 8232
+          end        
+          item
+            Command = ecScrollDown
+            ShortCut = 16424
+          end        
+          item
+            Command = ecLeft
+            ShortCut = 37
+          end        
+          item
+            Command = ecSelLeft
+            ShortCut = 8229
+          end        
+          item
+            Command = ecWordLeft
+            ShortCut = 16421
+          end        
+          item
+            Command = ecSelWordLeft
+            ShortCut = 24613
+          end        
+          item
+            Command = ecRight
+            ShortCut = 39
+          end        
+          item
+            Command = ecSelRight
+            ShortCut = 8231
+          end        
+          item
+            Command = ecWordRight
+            ShortCut = 16423
+          end        
+          item
+            Command = ecSelWordRight
+            ShortCut = 24615
+          end        
+          item
+            Command = ecPageDown
+            ShortCut = 34
+          end        
+          item
+            Command = ecSelPageDown
+            ShortCut = 8226
+          end        
+          item
+            Command = ecPageBottom
+            ShortCut = 16418
+          end        
+          item
+            Command = ecSelPageBottom
+            ShortCut = 24610
+          end        
+          item
+            Command = ecPageUp
+            ShortCut = 33
+          end        
+          item
+            Command = ecSelPageUp
+            ShortCut = 8225
+          end        
+          item
+            Command = ecPageTop
+            ShortCut = 16417
+          end        
+          item
+            Command = ecSelPageTop
+            ShortCut = 24609
+          end        
+          item
+            Command = ecLineStart
+            ShortCut = 36
+          end        
+          item
+            Command = ecSelLineStart
+            ShortCut = 8228
+          end        
+          item
+            Command = ecEditorTop
+            ShortCut = 16420
+          end        
+          item
+            Command = ecSelEditorTop
+            ShortCut = 24612
+          end        
+          item
+            Command = ecLineEnd
+            ShortCut = 35
+          end        
+          item
+            Command = ecSelLineEnd
+            ShortCut = 8227
+          end        
+          item
+            Command = ecEditorBottom
+            ShortCut = 16419
+          end        
+          item
+            Command = ecSelEditorBottom
+            ShortCut = 24611
+          end        
+          item
+            Command = ecToggleMode
+            ShortCut = 45
+          end        
+          item
+            Command = ecCopy
+            ShortCut = 16429
+          end        
+          item
+            Command = ecPaste
+            ShortCut = 8237
+          end        
+          item
+            Command = ecDeleteChar
+            ShortCut = 46
+          end        
+          item
+            Command = ecCut
+            ShortCut = 8238
+          end        
+          item
+            Command = ecDeleteLastChar
+            ShortCut = 8
+          end        
+          item
+            Command = ecDeleteLastChar
+            ShortCut = 8200
+          end        
+          item
+            Command = ecDeleteLastWord
+            ShortCut = 16392
+          end        
+          item
+            Command = ecUndo
+            ShortCut = 32776
+          end        
+          item
+            Command = ecRedo
+            ShortCut = 40968
+          end        
+          item
+            Command = ecLineBreak
+            ShortCut = 13
+          end        
+          item
+            Command = ecSelectAll
+            ShortCut = 16449
+          end        
+          item
+            Command = ecCopy
+            ShortCut = 16451
+          end        
+          item
+            Command = ecBlockIndent
+            ShortCut = 24649
+          end        
+          item
+            Command = ecLineBreak
+            ShortCut = 16461
+          end        
+          item
+            Command = ecInsertLine
+            ShortCut = 16462
+          end        
+          item
+            Command = ecDeleteWord
+            ShortCut = 16468
+          end        
+          item
+            Command = ecBlockUnindent
+            ShortCut = 24661
+          end        
+          item
+            Command = ecPaste
+            ShortCut = 16470
+          end        
+          item
+            Command = ecCut
+            ShortCut = 16472
+          end        
+          item
+            Command = ecDeleteLine
+            ShortCut = 16473
+          end        
+          item
+            Command = ecDeleteEOL
+            ShortCut = 24665
+          end        
+          item
+            Command = ecUndo
+            ShortCut = 16474
+          end        
+          item
+            Command = ecRedo
+            ShortCut = 24666
+          end        
+          item
+            Command = ecGotoMarker0
+            ShortCut = 16432
+          end        
+          item
+            Command = ecGotoMarker1
+            ShortCut = 16433
+          end        
+          item
+            Command = ecGotoMarker2
+            ShortCut = 16434
+          end        
+          item
+            Command = ecGotoMarker3
+            ShortCut = 16435
+          end        
+          item
+            Command = ecGotoMarker4
+            ShortCut = 16436
+          end        
+          item
+            Command = ecGotoMarker5
+            ShortCut = 16437
+          end        
+          item
+            Command = ecGotoMarker6
+            ShortCut = 16438
+          end        
+          item
+            Command = ecGotoMarker7
+            ShortCut = 16439
+          end        
+          item
+            Command = ecGotoMarker8
+            ShortCut = 16440
+          end        
+          item
+            Command = ecGotoMarker9
+            ShortCut = 16441
+          end        
+          item
+            Command = ecSetMarker0
+            ShortCut = 24624
+          end        
+          item
+            Command = ecSetMarker1
+            ShortCut = 24625
+          end        
+          item
+            Command = ecSetMarker2
+            ShortCut = 24626
+          end        
+          item
+            Command = ecSetMarker3
+            ShortCut = 24627
+          end        
+          item
+            Command = ecSetMarker4
+            ShortCut = 24628
+          end        
+          item
+            Command = ecSetMarker5
+            ShortCut = 24629
+          end        
+          item
+            Command = ecSetMarker6
+            ShortCut = 24630
+          end        
+          item
+            Command = ecSetMarker7
+            ShortCut = 24631
+          end        
+          item
+            Command = ecSetMarker8
+            ShortCut = 24632
+          end        
+          item
+            Command = ecSetMarker9
+            ShortCut = 24633
+          end        
+          item
+            Command = EcFoldLevel1
+            ShortCut = 41009
+          end        
+          item
+            Command = EcFoldLevel2
+            ShortCut = 41010
+          end        
+          item
+            Command = EcFoldLevel3
+            ShortCut = 41011
+          end        
+          item
+            Command = EcFoldLevel4
+            ShortCut = 41012
+          end        
+          item
+            Command = EcFoldLevel5
+            ShortCut = 41013
+          end        
+          item
+            Command = EcFoldLevel6
+            ShortCut = 41014
+          end        
+          item
+            Command = EcFoldLevel7
+            ShortCut = 41015
+          end        
+          item
+            Command = EcFoldLevel8
+            ShortCut = 41016
+          end        
+          item
+            Command = EcFoldLevel9
+            ShortCut = 41017
+          end        
+          item
+            Command = EcFoldLevel0
+            ShortCut = 41008
+          end        
+          item
+            Command = EcFoldCurrent
+            ShortCut = 41005
+          end        
+          item
+            Command = EcUnFoldCurrent
+            ShortCut = 41003
+          end        
+          item
+            Command = EcToggleMarkupWord
+            ShortCut = 32845
+          end        
+          item
+            Command = ecNormalSelect
+            ShortCut = 24654
+          end        
+          item
+            Command = ecColumnSelect
+            ShortCut = 24643
+          end        
+          item
+            Command = ecLineSelect
+            ShortCut = 24652
+          end        
+          item
+            Command = ecTab
+            ShortCut = 9
+          end        
+          item
+            Command = ecShiftTab
+            ShortCut = 8201
+          end        
+          item
+            Command = ecMatchBracket
+            ShortCut = 24642
+          end        
+          item
+            Command = ecColSelUp
+            ShortCut = 40998
+          end        
+          item
+            Command = ecColSelDown
+            ShortCut = 41000
+          end        
+          item
+            Command = ecColSelLeft
+            ShortCut = 40997
+          end        
+          item
+            Command = ecColSelRight
+            ShortCut = 40999
+          end        
+          item
+            Command = ecColSelPageDown
+            ShortCut = 40994
+          end        
+          item
+            Command = ecColSelPageBottom
+            ShortCut = 57378
+          end        
+          item
+            Command = ecColSelPageUp
+            ShortCut = 40993
+          end        
+          item
+            Command = ecColSelPageTop
+            ShortCut = 57377
+          end        
+          item
+            Command = ecColSelLineStart
+            ShortCut = 40996
+          end        
+          item
+            Command = ecColSelLineEnd
+            ShortCut = 40995
+          end        
+          item
+            Command = ecColSelEditorTop
+            ShortCut = 57380
+          end        
+          item
+            Command = ecColSelEditorBottom
+            ShortCut = 57379
+          end>
+        MouseActions = <>
+        MouseTextActions = <>
+        MouseSelActions = <>
+        VisibleSpecialChars = [vscSpace, vscTabAtLast]
+        SelectedColor.BackPriority = 50
+        SelectedColor.ForePriority = 50
+        SelectedColor.FramePriority = 50
+        SelectedColor.BoldPriority = 50
+        SelectedColor.ItalicPriority = 50
+        SelectedColor.UnderlinePriority = 50
+        SelectedColor.StrikeOutPriority = 50
+        BracketHighlightStyle = sbhsBoth
+        BracketMatchColor.Background = clNone
+        BracketMatchColor.Foreground = clNone
+        BracketMatchColor.Style = [fsBold]
+        FoldedCodeColor.Background = clNone
+        FoldedCodeColor.Foreground = clGray
+        FoldedCodeColor.FrameColor = clGray
+        MouseLinkColor.Background = clNone
+        MouseLinkColor.Foreground = clBlue
+        LineHighlightColor.Background = clNone
+        LineHighlightColor.Foreground = clNone
+        inline SynLeftGutterPartList1: TSynGutterPartList
+          object SynGutterMarks1: TSynGutterMarks
+            Width = 24
+            MouseActions = <>
+          end
+          object SynGutterLineNumber1: TSynGutterLineNumber
+            Width = 17
+            MouseActions = <>
+            MarkupInfo.Background = clBtnFace
+            MarkupInfo.Foreground = clNone
+            DigitCount = 2
+            ShowOnlyLineNumbersMultiplesOf = 1
+            ZeroStart = False
+            LeadingZeros = False
+          end
+          object SynGutterChanges1: TSynGutterChanges
+            Width = 4
+            MouseActions = <>
+            ModifiedColor = 59900
+            SavedColor = clGreen
+          end
+          object SynGutterSeparator1: TSynGutterSeparator
+            Width = 2
+            MouseActions = <>
+            MarkupInfo.Background = clWhite
+            MarkupInfo.Foreground = clGray
+          end
+          object SynGutterCodeFolding1: TSynGutterCodeFolding
+            AutoSize = False
+            MouseActions = <>
+            MarkupInfo.Background = clNone
+            MarkupInfo.Foreground = clGray
+            MouseActionsExpanded = <>
+            MouseActionsCollapsed = <>
+          end
+        end
+      end
+      object DBGrid1: TDBGrid
+        Left = 0
+        Height = 176
+        Top = 248
+        Width = 760
+        Color = clWindow
+        Columns = <>
+        DataSource = DataSourceRawSql
+        TabOrder = 1
+      end
+      object RawSqlOpen: TButton
+        Left = 600
+        Height = 25
+        Top = 40
+        Width = 144
+        Caption = 'Открыть запрос'
+        OnClick = RawSqlOpenClick
+        TabOrder = 2
+      end
+      object RawSqlSave: TButton
+        Left = 600
+        Height = 25
+        Top = 80
+        Width = 144
+        Caption = 'Сохранить запрос'
+        OnClick = RawSqlSaveClick
+        TabOrder = 3
+      end
+      object RawSqlExecute: TButton
+        Left = 600
+        Height = 25
+        Top = 120
+        Width = 144
+        Caption = 'Выполнить запрос'
+        OnClick = RawSqlExecuteClick
+        TabOrder = 4
+      end
+      object RawSqlParams: TButton
+        Left = 600
+        Height = 25
+        Top = 160
+        Width = 144
+        Caption = 'Параметры...'
+        OnClick = RawSqlParamsClick
+        TabOrder = 5
+      end
+    end
+    object RawDoubleSql: TTabSheet
+      Caption = 'Выполнить двойной SQL'
+      ClientHeight = 444
+      ClientWidth = 760
+      inline SynRawDoubleSqlMain: TSynEdit
+        Left = -8
+        Height = 174
+        Top = 40
+        Width = 392
+        Font.Height = -13
+        Font.Name = 'Courier New'
+        Font.Pitch = fpFixed
+        Font.Quality = fqNonAntialiased
+        ParentColor = False
+        ParentFont = False
+        ParentShowHint = False
+        TabOrder = 0
+        Gutter.Width = 57
+        Gutter.MouseActions = <>
+        RightGutter.Width = 0
+        RightGutter.MouseActions = <>
+        Highlighter = SynSQLSyn1
+        Keystrokes = <        
+          item
+            Command = ecUp
+            ShortCut = 38
+          end        
+          item
+            Command = ecSelUp
+            ShortCut = 8230
+          end        
+          item
+            Command = ecScrollUp
+            ShortCut = 16422
+          end        
+          item
+            Command = ecDown
+            ShortCut = 40
+          end        
+          item
+            Command = ecSelDown
+            ShortCut = 8232
+          end        
+          item
+            Command = ecScrollDown
+            ShortCut = 16424
+          end        
+          item
+            Command = ecLeft
+            ShortCut = 37
+          end        
+          item
+            Command = ecSelLeft
+            ShortCut = 8229
+          end        
+          item
+            Command = ecWordLeft
+            ShortCut = 16421
+          end        
+          item
+            Command = ecSelWordLeft
+            ShortCut = 24613
+          end        
+          item
+            Command = ecRight
+            ShortCut = 39
+          end        
+          item
+            Command = ecSelRight
+            ShortCut = 8231
+          end        
+          item
+            Command = ecWordRight
+            ShortCut = 16423
+          end        
+          item
+            Command = ecSelWordRight
+            ShortCut = 24615
+          end        
+          item
+            Command = ecPageDown
+            ShortCut = 34
+          end        
+          item
+            Command = ecSelPageDown
+            ShortCut = 8226
+          end        
+          item
+            Command = ecPageBottom
+            ShortCut = 16418
+          end        
+          item
+            Command = ecSelPageBottom
+            ShortCut = 24610
+          end        
+          item
+            Command = ecPageUp
+            ShortCut = 33
+          end        
+          item
+            Command = ecSelPageUp
+            ShortCut = 8225
+          end        
+          item
+            Command = ecPageTop
+            ShortCut = 16417
+          end        
+          item
+            Command = ecSelPageTop
+            ShortCut = 24609
+          end        
+          item
+            Command = ecLineStart
+            ShortCut = 36
+          end        
+          item
+            Command = ecSelLineStart
+            ShortCut = 8228
+          end        
+          item
+            Command = ecEditorTop
+            ShortCut = 16420
+          end        
+          item
+            Command = ecSelEditorTop
+            ShortCut = 24612
+          end        
+          item
+            Command = ecLineEnd
+            ShortCut = 35
+          end        
+          item
+            Command = ecSelLineEnd
+            ShortCut = 8227
+          end        
+          item
+            Command = ecEditorBottom
+            ShortCut = 16419
+          end        
+          item
+            Command = ecSelEditorBottom
+            ShortCut = 24611
+          end        
+          item
+            Command = ecToggleMode
+            ShortCut = 45
+          end        
+          item
+            Command = ecCopy
+            ShortCut = 16429
+          end        
+          item
+            Command = ecPaste
+            ShortCut = 8237
+          end        
+          item
+            Command = ecDeleteChar
+            ShortCut = 46
+          end        
+          item
+            Command = ecCut
+            ShortCut = 8238
+          end        
+          item
+            Command = ecDeleteLastChar
+            ShortCut = 8
+          end        
+          item
+            Command = ecDeleteLastChar
+            ShortCut = 8200
+          end        
+          item
+            Command = ecDeleteLastWord
+            ShortCut = 16392
+          end        
+          item
+            Command = ecUndo
+            ShortCut = 32776
+          end        
+          item
+            Command = ecRedo
+            ShortCut = 40968
+          end        
+          item
+            Command = ecLineBreak
+            ShortCut = 13
+          end        
+          item
+            Command = ecSelectAll
+            ShortCut = 16449
+          end        
+          item
+            Command = ecCopy
+            ShortCut = 16451
+          end        
+          item
+            Command = ecBlockIndent
+            ShortCut = 24649
+          end        
+          item
+            Command = ecLineBreak
+            ShortCut = 16461
+          end        
+          item
+            Command = ecInsertLine
+            ShortCut = 16462
+          end        
+          item
+            Command = ecDeleteWord
+            ShortCut = 16468
+          end        
+          item
+            Command = ecBlockUnindent
+            ShortCut = 24661
+          end        
+          item
+            Command = ecPaste
+            ShortCut = 16470
+          end        
+          item
+            Command = ecCut
+            ShortCut = 16472
+          end        
+          item
+            Command = ecDeleteLine
+            ShortCut = 16473
+          end        
+          item
+            Command = ecDeleteEOL
+            ShortCut = 24665
+          end        
+          item
+            Command = ecUndo
+            ShortCut = 16474
+          end        
+          item
+            Command = ecRedo
+            ShortCut = 24666
+          end        
+          item
+            Command = ecGotoMarker0
+            ShortCut = 16432
+          end        
+          item
+            Command = ecGotoMarker1
+            ShortCut = 16433
+          end        
+          item
+            Command = ecGotoMarker2
+            ShortCut = 16434
+          end        
+          item
+            Command = ecGotoMarker3
+            ShortCut = 16435
+          end        
+          item
+            Command = ecGotoMarker4
+            ShortCut = 16436
+          end        
+          item
+            Command = ecGotoMarker5
+            ShortCut = 16437
+          end        
+          item
+            Command = ecGotoMarker6
+            ShortCut = 16438
+          end        
+          item
+            Command = ecGotoMarker7
+            ShortCut = 16439
+          end        
+          item
+            Command = ecGotoMarker8
+            ShortCut = 16440
+          end        
+          item
+            Command = ecGotoMarker9
+            ShortCut = 16441
+          end        
+          item
+            Command = ecSetMarker0
+            ShortCut = 24624
+          end        
+          item
+            Command = ecSetMarker1
+            ShortCut = 24625
+          end        
+          item
+            Command = ecSetMarker2
+            ShortCut = 24626
+          end        
+          item
+            Command = ecSetMarker3
+            ShortCut = 24627
+          end        
+          item
+            Command = ecSetMarker4
+            ShortCut = 24628
+          end        
+          item
+            Command = ecSetMarker5
+            ShortCut = 24629
+          end        
+          item
+            Command = ecSetMarker6
+            ShortCut = 24630
+          end        
+          item
+            Command = ecSetMarker7
+            ShortCut = 24631
+          end        
+          item
+            Command = ecSetMarker8
+            ShortCut = 24632
+          end        
+          item
+            Command = ecSetMarker9
+            ShortCut = 24633
+          end        
+          item
+            Command = EcFoldLevel1
+            ShortCut = 41009
+          end        
+          item
+            Command = EcFoldLevel2
+            ShortCut = 41010
+          end        
+          item
+            Command = EcFoldLevel3
+            ShortCut = 41011
+          end        
+          item
+            Command = EcFoldLevel4
+            ShortCut = 41012
+          end        
+          item
+            Command = EcFoldLevel5
+            ShortCut = 41013
+          end        
+          item
+            Command = EcFoldLevel6
+            ShortCut = 41014
+          end        
+          item
+            Command = EcFoldLevel7
+            ShortCut = 41015
+          end        
+          item
+            Command = EcFoldLevel8
+            ShortCut = 41016
+          end        
+          item
+            Command = EcFoldLevel9
+            ShortCut = 41017
+          end        
+          item
+            Command = EcFoldLevel0
+            ShortCut = 41008
+          end        
+          item
+            Command = EcFoldCurrent
+            ShortCut = 41005
+          end        
+          item
+            Command = EcUnFoldCurrent
+            ShortCut = 41003
+          end        
+          item
+            Command = EcToggleMarkupWord
+            ShortCut = 32845
+          end        
+          item
+            Command = ecNormalSelect
+            ShortCut = 24654
+          end        
+          item
+            Command = ecColumnSelect
+            ShortCut = 24643
+          end        
+          item
+            Command = ecLineSelect
+            ShortCut = 24652
+          end        
+          item
+            Command = ecTab
+            ShortCut = 9
+          end        
+          item
+            Command = ecShiftTab
+            ShortCut = 8201
+          end        
+          item
+            Command = ecMatchBracket
+            ShortCut = 24642
+          end        
+          item
+            Command = ecColSelUp
+            ShortCut = 40998
+          end        
+          item
+            Command = ecColSelDown
+            ShortCut = 41000
+          end        
+          item
+            Command = ecColSelLeft
+            ShortCut = 40997
+          end        
+          item
+            Command = ecColSelRight
+            ShortCut = 40999
+          end        
+          item
+            Command = ecColSelPageDown
+            ShortCut = 40994
+          end        
+          item
+            Command = ecColSelPageBottom
+            ShortCut = 57378
+          end        
+          item
+            Command = ecColSelPageUp
+            ShortCut = 40993
+          end        
+          item
+            Command = ecColSelPageTop
+            ShortCut = 57377
+          end        
+          item
+            Command = ecColSelLineStart
+            ShortCut = 40996
+          end        
+          item
+            Command = ecColSelLineEnd
+            ShortCut = 40995
+          end        
+          item
+            Command = ecColSelEditorTop
+            ShortCut = 57380
+          end        
+          item
+            Command = ecColSelEditorBottom
+            ShortCut = 57379
+          end>
+        MouseActions = <>
+        MouseTextActions = <>
+        MouseSelActions = <>
+        VisibleSpecialChars = [vscSpace, vscTabAtLast]
+        SelectedColor.BackPriority = 50
+        SelectedColor.ForePriority = 50
+        SelectedColor.FramePriority = 50
+        SelectedColor.BoldPriority = 50
+        SelectedColor.ItalicPriority = 50
+        SelectedColor.UnderlinePriority = 50
+        SelectedColor.StrikeOutPriority = 50
+        BracketHighlightStyle = sbhsBoth
+        BracketMatchColor.Background = clNone
+        BracketMatchColor.Foreground = clNone
+        BracketMatchColor.Style = [fsBold]
+        FoldedCodeColor.Background = clNone
+        FoldedCodeColor.Foreground = clGray
+        FoldedCodeColor.FrameColor = clGray
+        MouseLinkColor.Background = clNone
+        MouseLinkColor.Foreground = clBlue
+        LineHighlightColor.Background = clNone
+        LineHighlightColor.Foreground = clNone
+        inline SynLeftGutterPartList1: TSynGutterPartList
+          object SynGutterMarks1: TSynGutterMarks
+            Width = 24
+            MouseActions = <>
+          end
+          object SynGutterLineNumber1: TSynGutterLineNumber
+            Width = 17
+            MouseActions = <>
+            MarkupInfo.Background = clBtnFace
+            MarkupInfo.Foreground = clNone
+            DigitCount = 2
+            ShowOnlyLineNumbersMultiplesOf = 1
+            ZeroStart = False
+            LeadingZeros = False
+          end
+          object SynGutterChanges1: TSynGutterChanges
+            Width = 4
+            MouseActions = <>
+            ModifiedColor = 59900
+            SavedColor = clGreen
+          end
+          object SynGutterSeparator1: TSynGutterSeparator
+            Width = 2
+            MouseActions = <>
+            MarkupInfo.Background = clWhite
+            MarkupInfo.Foreground = clGray
+          end
+          object SynGutterCodeFolding1: TSynGutterCodeFolding
+            AutoSize = False
+            MouseActions = <>
+            MarkupInfo.Background = clNone
+            MarkupInfo.Foreground = clGray
+            MouseActionsExpanded = <>
+            MouseActionsCollapsed = <>
+          end
+        end
+      end
+      inline SyncRawDoubleSqlSecond: TSynEdit
+        Left = -8
+        Height = 174
+        Top = 232
+        Width = 392
+        Font.Height = -13
+        Font.Name = 'Courier New'
+        Font.Pitch = fpFixed
+        Font.Quality = fqNonAntialiased
+        ParentColor = False
+        ParentFont = False
+        TabOrder = 1
+        Gutter.Width = 57
+        Gutter.MouseActions = <>
+        RightGutter.Width = 0
+        RightGutter.MouseActions = <>
+        Highlighter = SynSQLSyn1
+        Keystrokes = <        
+          item
+            Command = ecUp
+            ShortCut = 38
+          end        
+          item
+            Command = ecSelUp
+            ShortCut = 8230
+          end        
+          item
+            Command = ecScrollUp
+            ShortCut = 16422
+          end        
+          item
+            Command = ecDown
+            ShortCut = 40
+          end        
+          item
+            Command = ecSelDown
+            ShortCut = 8232
+          end        
+          item
+            Command = ecScrollDown
+            ShortCut = 16424
+          end        
+          item
+            Command = ecLeft
+            ShortCut = 37
+          end        
+          item
+            Command = ecSelLeft
+            ShortCut = 8229
+          end        
+          item
+            Command = ecWordLeft
+            ShortCut = 16421
+          end        
+          item
+            Command = ecSelWordLeft
+            ShortCut = 24613
+          end        
+          item
+            Command = ecRight
+            ShortCut = 39
+          end        
+          item
+            Command = ecSelRight
+            ShortCut = 8231
+          end        
+          item
+            Command = ecWordRight
+            ShortCut = 16423
+          end        
+          item
+            Command = ecSelWordRight
+            ShortCut = 24615
+          end        
+          item
+            Command = ecPageDown
+            ShortCut = 34
+          end        
+          item
+            Command = ecSelPageDown
+            ShortCut = 8226
+          end        
+          item
+            Command = ecPageBottom
+            ShortCut = 16418
+          end        
+          item
+            Command = ecSelPageBottom
+            ShortCut = 24610
+          end        
+          item
+            Command = ecPageUp
+            ShortCut = 33
+          end        
+          item
+            Command = ecSelPageUp
+            ShortCut = 8225
+          end        
+          item
+            Command = ecPageTop
+            ShortCut = 16417
+          end        
+          item
+            Command = ecSelPageTop
+            ShortCut = 24609
+          end        
+          item
+            Command = ecLineStart
+            ShortCut = 36
+          end        
+          item
+            Command = ecSelLineStart
+            ShortCut = 8228
+          end        
+          item
+            Command = ecEditorTop
+            ShortCut = 16420
+          end        
+          item
+            Command = ecSelEditorTop
+            ShortCut = 24612
+          end        
+          item
+            Command = ecLineEnd
+            ShortCut = 35
+          end        
+          item
+            Command = ecSelLineEnd
+            ShortCut = 8227
+          end        
+          item
+            Command = ecEditorBottom
+            ShortCut = 16419
+          end        
+          item
+            Command = ecSelEditorBottom
+            ShortCut = 24611
+          end        
+          item
+            Command = ecToggleMode
+            ShortCut = 45
+          end        
+          item
+            Command = ecCopy
+            ShortCut = 16429
+          end        
+          item
+            Command = ecPaste
+            ShortCut = 8237
+          end        
+          item
+            Command = ecDeleteChar
+            ShortCut = 46
+          end        
+          item
+            Command = ecCut
+            ShortCut = 8238
+          end        
+          item
+            Command = ecDeleteLastChar
+            ShortCut = 8
+          end        
+          item
+            Command = ecDeleteLastChar
+            ShortCut = 8200
+          end        
+          item
+            Command = ecDeleteLastWord
+            ShortCut = 16392
+          end        
+          item
+            Command = ecUndo
+            ShortCut = 32776
+          end        
+          item
+            Command = ecRedo
+            ShortCut = 40968
+          end        
+          item
+            Command = ecLineBreak
+            ShortCut = 13
+          end        
+          item
+            Command = ecSelectAll
+            ShortCut = 16449
+          end        
+          item
+            Command = ecCopy
+            ShortCut = 16451
+          end        
+          item
+            Command = ecBlockIndent
+            ShortCut = 24649
+          end        
+          item
+            Command = ecLineBreak
+            ShortCut = 16461
+          end        
+          item
+            Command = ecInsertLine
+            ShortCut = 16462
+          end        
+          item
+            Command = ecDeleteWord
+            ShortCut = 16468
+          end        
+          item
+            Command = ecBlockUnindent
+            ShortCut = 24661
+          end        
+          item
+            Command = ecPaste
+            ShortCut = 16470
+          end        
+          item
+            Command = ecCut
+            ShortCut = 16472
+          end        
+          item
+            Command = ecDeleteLine
+            ShortCut = 16473
+          end        
+          item
+            Command = ecDeleteEOL
+            ShortCut = 24665
+          end        
+          item
+            Command = ecUndo
+            ShortCut = 16474
+          end        
+          item
+            Command = ecRedo
+            ShortCut = 24666
+          end        
+          item
+            Command = ecGotoMarker0
+            ShortCut = 16432
+          end        
+          item
+            Command = ecGotoMarker1
+            ShortCut = 16433
+          end        
+          item
+            Command = ecGotoMarker2
+            ShortCut = 16434
+          end        
+          item
+            Command = ecGotoMarker3
+            ShortCut = 16435
+          end        
+          item
+            Command = ecGotoMarker4
+            ShortCut = 16436
+          end        
+          item
+            Command = ecGotoMarker5
+            ShortCut = 16437
+          end        
+          item
+            Command = ecGotoMarker6
+            ShortCut = 16438
+          end        
+          item
+            Command = ecGotoMarker7
+            ShortCut = 16439
+          end        
+          item
+            Command = ecGotoMarker8
+            ShortCut = 16440
+          end        
+          item
+            Command = ecGotoMarker9
+            ShortCut = 16441
+          end        
+          item
+            Command = ecSetMarker0
+            ShortCut = 24624
+          end        
+          item
+            Command = ecSetMarker1
+            ShortCut = 24625
+          end        
+          item
+            Command = ecSetMarker2
+            ShortCut = 24626
+          end        
+          item
+            Command = ecSetMarker3
+            ShortCut = 24627
+          end        
+          item
+            Command = ecSetMarker4
+            ShortCut = 24628
+          end        
+          item
+            Command = ecSetMarker5
+            ShortCut = 24629
+          end        
+          item
+            Command = ecSetMarker6
+            ShortCut = 24630
+          end        
+          item
+            Command = ecSetMarker7
+            ShortCut = 24631
+          end        
+          item
+            Command = ecSetMarker8
+            ShortCut = 24632
+          end        
+          item
+            Command = ecSetMarker9
+            ShortCut = 24633
+          end        
+          item
+            Command = EcFoldLevel1
+            ShortCut = 41009
+          end        
+          item
+            Command = EcFoldLevel2
+            ShortCut = 41010
+          end        
+          item
+            Command = EcFoldLevel3
+            ShortCut = 41011
+          end        
+          item
+            Command = EcFoldLevel4
+            ShortCut = 41012
+          end        
+          item
+            Command = EcFoldLevel5
+            ShortCut = 41013
+          end        
+          item
+            Command = EcFoldLevel6
+            ShortCut = 41014
+          end        
+          item
+            Command = EcFoldLevel7
+            ShortCut = 41015
+          end        
+          item
+            Command = EcFoldLevel8
+            ShortCut = 41016
+          end        
+          item
+            Command = EcFoldLevel9
+            ShortCut = 41017
+          end        
+          item
+            Command = EcFoldLevel0
+            ShortCut = 41008
+          end        
+          item
+            Command = EcFoldCurrent
+            ShortCut = 41005
+          end        
+          item
+            Command = EcUnFoldCurrent
+            ShortCut = 41003
+          end        
+          item
+            Command = EcToggleMarkupWord
+            ShortCut = 32845
+          end        
+          item
+            Command = ecNormalSelect
+            ShortCut = 24654
+          end        
+          item
+            Command = ecColumnSelect
+            ShortCut = 24643
+          end        
+          item
+            Command = ecLineSelect
+            ShortCut = 24652
+          end        
+          item
+            Command = ecTab
+            ShortCut = 9
+          end        
+          item
+            Command = ecShiftTab
+            ShortCut = 8201
+          end        
+          item
+            Command = ecMatchBracket
+            ShortCut = 24642
+          end        
+          item
+            Command = ecColSelUp
+            ShortCut = 40998
+          end        
+          item
+            Command = ecColSelDown
+            ShortCut = 41000
+          end        
+          item
+            Command = ecColSelLeft
+            ShortCut = 40997
+          end        
+          item
+            Command = ecColSelRight
+            ShortCut = 40999
+          end        
+          item
+            Command = ecColSelPageDown
+            ShortCut = 40994
+          end        
+          item
+            Command = ecColSelPageBottom
+            ShortCut = 57378
+          end        
+          item
+            Command = ecColSelPageUp
+            ShortCut = 40993
+          end        
+          item
+            Command = ecColSelPageTop
+            ShortCut = 57377
+          end        
+          item
+            Command = ecColSelLineStart
+            ShortCut = 40996
+          end        
+          item
+            Command = ecColSelLineEnd
+            ShortCut = 40995
+          end        
+          item
+            Command = ecColSelEditorTop
+            ShortCut = 57380
+          end        
+          item
+            Command = ecColSelEditorBottom
+            ShortCut = 57379
+          end>
+        MouseActions = <>
+        MouseTextActions = <>
+        MouseSelActions = <>
+        Lines.Strings = (
+          ''
+        )
+        VisibleSpecialChars = [vscSpace, vscTabAtLast]
+        SelectedColor.BackPriority = 50
+        SelectedColor.ForePriority = 50
+        SelectedColor.FramePriority = 50
+        SelectedColor.BoldPriority = 50
+        SelectedColor.ItalicPriority = 50
+        SelectedColor.UnderlinePriority = 50
+        SelectedColor.StrikeOutPriority = 50
+        BracketHighlightStyle = sbhsBoth
+        BracketMatchColor.Background = clNone
+        BracketMatchColor.Foreground = clNone
+        BracketMatchColor.Style = [fsBold]
+        FoldedCodeColor.Background = clNone
+        FoldedCodeColor.Foreground = clGray
+        FoldedCodeColor.FrameColor = clGray
+        MouseLinkColor.Background = clNone
+        MouseLinkColor.Foreground = clBlue
+        LineHighlightColor.Background = clNone
+        LineHighlightColor.Foreground = clNone
+        inline SynLeftGutterPartList1: TSynGutterPartList
+          object SynGutterMarks1: TSynGutterMarks
+            Width = 24
+            MouseActions = <>
+          end
+          object SynGutterLineNumber1: TSynGutterLineNumber
+            Width = 17
+            MouseActions = <>
+            MarkupInfo.Background = clBtnFace
+            MarkupInfo.Foreground = clNone
+            DigitCount = 2
+            ShowOnlyLineNumbersMultiplesOf = 1
+            ZeroStart = False
+            LeadingZeros = False
+          end
+          object SynGutterChanges1: TSynGutterChanges
+            Width = 4
+            MouseActions = <>
+            ModifiedColor = 59900
+            SavedColor = clGreen
+          end
+          object SynGutterSeparator1: TSynGutterSeparator
+            Width = 2
+            MouseActions = <>
+            MarkupInfo.Background = clWhite
+            MarkupInfo.Foreground = clGray
+          end
+          object SynGutterCodeFolding1: TSynGutterCodeFolding
+            AutoSize = False
+            MouseActions = <>
+            MarkupInfo.Background = clNone
+            MarkupInfo.Foreground = clGray
+            MouseActionsExpanded = <>
+            MouseActionsCollapsed = <>
+          end
+        end
+      end
+      object DBGridRawDoubleSql: TDBGrid
+        Left = 392
+        Height = 368
+        Top = 40
+        Width = 360
+        Color = clWindow
+        Columns = <>
+        DataSource = DataSourceRawDoubleSqlMain
+        TabOrder = 2
+      end
+      object ButtonRawDoubleSqlExecute: TButton
+        Left = 136
+        Height = 25
+        Top = 408
+        Width = 131
+        Caption = 'Выполнить запрос'
+        OnClick = ButtonRawDoubleSqlExecuteClick
+        TabOrder = 3
+      end
+    end
+  end
+  object PQConnection1: TPQConnection
+    Connected = True
+    LoginPrompt = False
+    DatabaseName = 'postgres'
+    KeepConnection = False
+    Password = '123'
+    Transaction = SQLTransaction1
+    UserName = 'postgres'
+    HostName = 'localhost'
+    left = 880
+    top = 8
+  end
+  object SQLQueryDepartment: TSQLQuery
+    IndexName = 'DEFAULT_ORDER'
+    FieldDefs = <    
+      item
+        Name = 'id'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'name'
+        DataType = ftString
+        Precision = -1
+        Size = 120
+      end    
+      item
+        Name = 'phone_number'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'head_of_department'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end>
+    Active = True
+    AfterPost = SQLQueryDepartmentAfterPost
+    Database = PQConnection1
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'SELECT * FROM department;'
+    )
+    Params = <>
+    left = 24
+    top = 528
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = True
+    Database = PQConnection1
+    left = 880
+    top = 56
+  end
+  object DataSourceDepartment: TDataSource
+    DataSet = SQLQueryDepartment
+    left = 24
+    top = 568
+  end
+  object SQLQueryPerformance: TSQLQuery
+    IndexName = 'DEFAULT_ORDER'
+    FieldDefs = <    
+      item
+        Name = 'id_student'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'id_group'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'id_subject'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'id_teacher'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'score'
+        DataType = ftInteger
+        Precision = -1
+      end>
+    Active = True
+    AfterPost = SQLQueryPerformanceAfterPost
+    Database = PQConnection1
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'SELECT *  FROM performance;'
+    )
+    Params = <>
+    left = 96
+    top = 528
+  end
+  object DataSourcePerformance: TDataSource
+    DataSet = SQLQueryPerformance
+    left = 96
+    top = 568
+  end
+  object SQLQueryStudent: TSQLQuery
+    IndexName = 'DEFAULT_ORDER'
+    FieldDefs = <    
+      item
+        Name = 'id'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'id_group'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'number_in_group'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'name'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'surname'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'patronymic'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'birth_date'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'address'
+        DataType = ftString
+        Precision = -1
+        Size = 100
+      end    
+      item
+        Name = 'average_score'
+        DataType = ftFloat
+        Precision = -1
+      end>
+    Active = True
+    AfterPost = SQLQueryStudentAfterPost
+    Database = PQConnection1
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'SELECT * FROM student;'
+    )
+    Params = <>
+    left = 168
+    top = 528
+  end
+  object DataSourceStudent: TDataSource
+    DataSet = SQLQueryStudent
+    left = 168
+    top = 568
+  end
+  object SQLQuerySubject: TSQLQuery
+    IndexName = 'DEFAULT_ORDER'
+    FieldDefs = <    
+      item
+        Name = 'id'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'name'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'hours_amount'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'hours_of_lectures'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'hours_of_practice'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'number_of_semesters'
+        DataType = ftInteger
+        Precision = -1
+      end>
+    Active = True
+    AfterPost = SQLQuerySubjectAfterPost
+    Database = PQConnection1
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'SELECT * FROM subject;'
+    )
+    Params = <>
+    left = 240
+    top = 528
+  end
+  object DataSourceSubject: TDataSource
+    DataSet = SQLQuerySubject
+    left = 240
+    top = 568
+  end
+  object SQLQueryTeacher: TSQLQuery
+    IndexName = 'DEFAULT_ORDER'
+    FieldDefs = <    
+      item
+        Name = 'id'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'name'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'surname'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'patronymic'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'academic_title'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'id_department'
+        DataType = ftInteger
+        Precision = -1
+      end>
+    Active = True
+    AfterPost = SQLQueryTeacherAfterPost
+    Database = PQConnection1
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'SELECT * FROM teacher;'
+    )
+    Params = <>
+    left = 304
+    top = 528
+  end
+  object DataSourceTeacher: TDataSource
+    DataSet = SQLQueryTeacher
+    left = 304
+    top = 576
+  end
+  object SQLQueryUniversityGroup: TSQLQuery
+    IndexName = 'DEFAULT_ORDER'
+    FieldDefs = <    
+      item
+        Name = 'id'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'number'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'department_id'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'students_amount'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'average_score'
+        DataType = ftFloat
+        Precision = -1
+      end    
+      item
+        Name = 'group_leader'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end>
+    Active = True
+    AfterPost = SQLQueryUniversityGroupAfterPost
+    Database = PQConnection1
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'SELECT * FROM universitygroup;'
+    )
+    Params = <>
+    left = 352
+    top = 528
+  end
+  object DataSourceUniversityGroup: TDataSource
+    DataSet = SQLQueryUniversityGroup
+    left = 352
+    top = 576
+  end
+  object OpenDialogRawSql: TOpenDialog
+    Filter = 'Raw SQL|*.sql'
+    left = 876
+    top = 136
+  end
+  object SaveDialogRawSql: TSaveDialog
+    Filter = 'RawSql|*.sql'
+    left = 876
+    top = 200
+  end
+  object SQLQueryRawSql: TSQLQuery
+    FieldDefs = <>
+    Database = PQConnection1
+    Transaction = SQLTransaction1
+    Params = <>
+    left = 424
+    top = 528
+  end
+  object DataSourceRawSql: TDataSource
+    DataSet = SQLQueryRawSql
+    left = 424
+    top = 576
+  end
+  object SynSQLSyn1: TSynSQLSyn
+    DefaultFilter = 'Файлы SQL (*.sql)|*.sql'
+    Enabled = False
+    SQLDialect = sqlSybase
+    left = 876
+    top = 272
+  end
+  object SQLQueryRawDoubleSqlMain: TSQLQuery
+    FieldDefs = <>
+    Database = PQConnection1
+    Transaction = SQLTransaction1
+    Params = <>
+    DataSource = DataSourceRawDoubleSqlSecond
+    left = 488
+    top = 528
+  end
+  object SQLQueryRawDoubleSqlSecond: TSQLQuery
+    FieldDefs = <>
+    Database = PQConnection1
+    Transaction = SQLTransaction1
+    Params = <>
+    left = 544
+    top = 528
+  end
+  object DataSourceRawDoubleSqlMain: TDataSource
+    DataSet = SQLQueryRawDoubleSqlMain
+    left = 488
+    top = 576
+  end
+  object DataSourceRawDoubleSqlSecond: TDataSource
+    DataSet = SQLQueryRawDoubleSqlSecond
+    left = 544
+    top = 576
+  end
+  object frReportDepartment: TfrReport
+    Dataset = frDBDataSetDepartment
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    DataType = dtDataSet
+    left = 56
+    top = 456
+  end
+  object frDBDataSetDepartment: TfrDBDataSet
+    DataSet = SQLQueryDepartment
+    left = 112
+    top = 456
+  end
+  object frBarCodeObject1: TfrBarCodeObject
+    left = 168
+    top = 456
+  end
+  object SQLQueryPerformanceView: TSQLQuery
+    IndexName = 'DEFAULT_ORDER'
+    FieldDefs = <    
+      item
+        Name = 'surname'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'number'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'name'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'surname_1'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'score'
+        DataType = ftInteger
+        Precision = -1
+      end>
+    Active = True
+    Database = PQConnection1
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'Select student.surname, universitygroup.number, subject.name, teacher.surname, performance.score from performance INNER JOIN student on performance.id_student = student.id INNER JOIN subject on performance.id_subject = subject.id INNER JOIN universitygroup on performance.id_group = universitygroup.id INNER JOIN teacher on performance.id_teacher = teacher.id;'
+    )
+    Params = <>
+    left = 624
+    top = 528
+  end
+  object frReportPerformance: TfrReport
+    Dataset = frDBDataSetPerformance
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    DataType = dtDataSet
+    left = 256
+    top = 456
+  end
+  object frDBDataSetPerformance: TfrDBDataSet
+    DataSet = SQLQueryPerformanceView
+    left = 328
+    top = 456
+  end
+  object frReportTeacher: TfrReport
+    Dataset = frDBDataSetTeacher
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    DataType = dtDataSet
+    left = 424
+    top = 456
+  end
+  object frDBDataSetTeacher: TfrDBDataSet
+    DataSet = SQLQueryTeacher
+    left = 480
+    top = 456
+  end
+  object DbChartGroup: TDbChartSource
+    DataSource = DataSourceGRoupChart
+    FieldX = 'number'
+    FieldY = 'avg'
+    left = 728
+    top = 464
+  end
+  object SQLQueryGroupChart: TSQLQuery
+    IndexName = 'DEFAULT_ORDER'
+    FieldDefs = <    
+      item
+        Name = 'number'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'avg'
+        DataType = ftBCD
+        Precision = -1
+        Size = 4
+      end>
+    Active = True
+    Database = PQConnection1
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select universitygroup.number, avg(score) from performance inner join universitygroup on performance.id_group = universitygroup.id group by universitygroup.id order by universitygroup.id;'
+    )
+    Params = <>
+    left = 784
+    top = 464
+  end
+  object DataSourceGRoupChart: TDataSource
+    DataSet = SQLQueryGroupChart
+    left = 840
+    top = 464
+  end
+  object DataSourceSubjectChart: TDataSource
+    DataSet = SQLQuerySubjectChart
+    left = 840
+    top = 520
+  end
+  object SQLQuerySubjectChart: TSQLQuery
+    IndexName = 'DEFAULT_ORDER'
+    FieldDefs = <    
+      item
+        Name = 'id'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'avg'
+        DataType = ftBCD
+        Precision = -1
+        Size = 4
+      end>
+    Active = True
+    Database = PQConnection1
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select subject.id, avg(score) from performance inner join subject on performance.id_subject = subject.id group by subject.id order by subject.id;'
+    )
+    Params = <>
+    left = 784
+    top = 520
+  end
+  object DbChartSourceSubject: TDbChartSource
+    DataSource = DataSourceSubjectChart
+    FieldX = 'id'
+    FieldY = 'avg'
+    left = 728
+    top = 520
+  end
+  object MainMenu1: TMainMenu
+    left = 584
+    top = 456
+    object MenuItemMain: TMenuItem
+      Caption = 'Меню'
+      object MenuItemExport: TMenuItem
+        Caption = 'DB -> Excel'
+        OnClick = MenuItemExportClick
+      end
+      object MenuItemImport: TMenuItem
+        Caption = 'Excel -> DB'
+        OnClick = MenuItemImportClick
+      end
+      object MenuItemRefresh: TMenuItem
+        Caption = 'Обновить'
+        OnClick = MenuItemRefreshClick
+      end
+      object MenuItemQuit: TMenuItem
+        Caption = 'Выйти'
+        OnClick = MenuItemQuitClick
+      end
+    end
+  end
+  object OpenDialogExcel: TOpenDialog
+    Filter = 'Excel|*.xls'
+    left = 876
+    top = 335
+  end
+  object SaveDialogExcel: TSaveDialog
+    Filter = 'Excel|*.xls'
+    left = 880
+    top = 392
+  end
+end

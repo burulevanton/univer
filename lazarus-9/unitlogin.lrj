@@ -1,0 +1,7 @@
+{"version":1,"strings":[
+{"hash":5463550,"name":"tlogin.caption","sourcebytes":[76,111,103,105,110],"value":"Login"},
+{"hash":5463550,"name":"tlogin.loginlabel.caption","sourcebytes":[76,111,103,105,110],"value":"Login"},
+{"hash":145417188,"name":"tlogin.passswordlabel.caption","sourcebytes":[80,97,115,115,119,111,114,100],"value":"Password"},
+{"hash":5463550,"name":"tlogin.buttonlogin.caption","sourcebytes":[76,111,103,105,110],"value":"Login"},
+{"hash":77089212,"name":"tlogin.buttoncancel.caption","sourcebytes":[67,97,110,99,101,108],"value":"Cancel"}
+]}

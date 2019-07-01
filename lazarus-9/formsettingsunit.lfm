@@ -1,0 +1,167 @@
+object FormSettings: TFormSettings
+  Left = 1193
+  Height = 327
+  Top = 297
+  Width = 292
+  Caption = 'FormSettings'
+  ClientHeight = 327
+  ClientWidth = 292
+  OnCreate = FormCreate
+  LCLVersion = '1.8.4.0'
+  object ImageBackground: TImage
+    Left = 0
+    Height = 281
+    Top = 0
+    Width = 292
+    Align = alClient
+  end
+  object ButtonFont: TButton
+    Left = 16
+    Height = 25
+    Top = 8
+    Width = 264
+    Caption = 'Font'
+    OnClick = ButtonFontClick
+    TabOrder = 0
+  end
+  object ButtonFormColor: TButton
+    Left = 16
+    Height = 25
+    Top = 48
+    Width = 264
+    Caption = 'Form color'
+    OnClick = ButtonFormColorClick
+    TabOrder = 1
+  end
+  object ButtonDefaultFormColor: TButton
+    Left = 16
+    Height = 25
+    Top = 88
+    Width = 264
+    Caption = 'Default form color'
+    OnClick = ButtonDefaultFormColorClick
+    TabOrder = 2
+  end
+  object ButtonBackgroundSet: TButton
+    Left = 16
+    Height = 25
+    Top = 128
+    Width = 264
+    Caption = 'Set background image'
+    OnClick = ButtonBackgroundSetClick
+    TabOrder = 3
+  end
+  object LabelLanguage: TLabel
+    Left = 120
+    Height = 15
+    Top = 200
+    Width = 52
+    Caption = 'Language'
+    ParentColor = False
+  end
+  object ButtonRussian: TButton
+    Left = 16
+    Height = 25
+    Top = 224
+    Width = 88
+    Caption = 'Русский'
+    OnClick = ButtonRussianClick
+    TabOrder = 4
+  end
+  object ButtonEnglish: TButton
+    Left = 192
+    Height = 25
+    Top = 224
+    Width = 88
+    Caption = 'English'
+    OnClick = ButtonEnglishClick
+    TabOrder = 5
+  end
+  object ButtonBackgroundClear: TButton
+    Left = 16
+    Height = 25
+    Top = 168
+    Width = 264
+    Caption = 'Clear background image'
+    OnClick = ButtonBackgroundClearClick
+    TabOrder = 6
+  end
+  object ButtonPanelMain: TButtonPanel
+    Left = 6
+    Height = 34
+    Top = 287
+    Width = 280
+    OKButton.Name = 'OKButton'
+    OKButton.DefaultCaption = True
+    HelpButton.Name = 'HelpButton'
+    HelpButton.DefaultCaption = True
+    CloseButton.Name = 'CloseButton'
+    CloseButton.DefaultCaption = True
+    CancelButton.Name = 'CancelButton'
+    CancelButton.DefaultCaption = True
+    TabOrder = 7
+    ShowButtons = [pbOK]
+  end
+  object FontDialogFont: TFontDialog
+    MinFontSize = 0
+    MaxFontSize = 0
+    left = 24
+  end
+  object ColorDialogFont: TColorDialog
+    Color = clBlack
+    CustomColors.Strings = (
+      'ColorA=000000'
+      'ColorB=000080'
+      'ColorC=008000'
+      'ColorD=008080'
+      'ColorE=800000'
+      'ColorF=800080'
+      'ColorG=808000'
+      'ColorH=808080'
+      'ColorI=C0C0C0'
+      'ColorJ=0000FF'
+      'ColorK=00FF00'
+      'ColorL=00FFFF'
+      'ColorM=FF0000'
+      'ColorN=FF00FF'
+      'ColorO=FFFF00'
+      'ColorP=FFFFFF'
+      'ColorQ=C0DCC0'
+      'ColorR=F0CAA6'
+      'ColorS=F0FBFF'
+      'ColorT=A4A0A0'
+    )
+    left = 248
+  end
+  object ColorDialogForm: TColorDialog
+    Color = clBlack
+    CustomColors.Strings = (
+      'ColorA=000000'
+      'ColorB=000080'
+      'ColorC=008000'
+      'ColorD=008080'
+      'ColorE=800000'
+      'ColorF=800080'
+      'ColorG=808000'
+      'ColorH=808080'
+      'ColorI=C0C0C0'
+      'ColorJ=0000FF'
+      'ColorK=00FF00'
+      'ColorL=00FFFF'
+      'ColorM=FF0000'
+      'ColorN=FF00FF'
+      'ColorO=FFFF00'
+      'ColorP=FFFFFF'
+      'ColorQ=C0DCC0'
+      'ColorR=F0CAA6'
+      'ColorS=F0FBFF'
+      'ColorT=A4A0A0'
+    )
+    left = 24
+    top = 40
+  end
+  object OpenDialogBackground: TOpenDialog
+    left = 24
+    top = 128
+  end
+end
