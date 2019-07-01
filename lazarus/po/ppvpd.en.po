@@ -1,0 +1,258 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+#: mainformunit.messageaddusercaption
+#, fuzzy
+#| msgid "Добавить пользователя"
+msgid "Add user"
+msgstr "Add user"
+
+#: mainformunit.messageaddusertext
+#, fuzzy
+#| msgid "Введите имя пользователя"
+msgid "Enter user name"
+msgstr "Enter user name"
+
+#: mainformunit.messagechangepasswordcaption
+#, fuzzy
+#| msgid "Поменять пароль"
+msgid "Change password"
+msgstr "Change password"
+
+#: mainformunit.messagechangepasswordtext
+#, fuzzy
+#| msgid "Введите новый пароль"
+msgid "Enter new password"
+msgstr "Enter new password"
+
+#: mainformunit.messagedeleteusercaption
+#, fuzzy
+#| msgid "Удалить пользователя"
+msgid "Delete user"
+msgstr "Delete user"
+
+#: mainformunit.messagedeleteusertext
+#, fuzzy
+#| msgid "Вы уверены?"
+msgid "Are you sure?"
+msgstr "Are you sure?"
+
+#: mainformunit.messagerenameusercaption
+#, fuzzy
+#| msgid "Переименовать пользователя"
+msgid "Rename user"
+msgstr "Rename user"
+
+#: mainformunit.messagerenameusertext
+#, fuzzy
+#| msgid "Введите новоё имя пользователя"
+msgid "Enter new user name"
+msgstr "Enter new user name"
+
+#: mainformunit.radiogroupusersrolesadmin
+#, fuzzy
+#| msgid "Админ"
+msgid "Admin"
+msgstr "Admin"
+
+#: mainformunit.radiogroupusersrolesoperator
+#, fuzzy
+#| msgid "Оператор"
+msgid "Operator"
+msgstr "Operator"
+
+#: mainformunit.radiogroupusersrolesuser
+#, fuzzy
+#| msgid "Пользователь"
+msgid "User"
+msgstr "User"
+
+#: tformsettings.button1.caption
+msgid "Button1"
+msgstr ""
+
+#: tformsettings.buttonbackgroundclear.caption
+msgid "Удалить фоновое изображение"
+msgstr ""
+
+#: tformsettings.buttonbackgroundset.caption
+msgid "Установить фоновое изображение"
+msgstr ""
+
+#: tformsettings.buttondefaultformcolor.caption
+msgid "Стандартный цвет формы"
+msgstr ""
+
+#: tformsettings.buttonenglish.caption
+msgid "English"
+msgstr ""
+
+#: tformsettings.buttonfont.caption
+msgid "Шрифт"
+msgstr ""
+
+#: tformsettings.buttonformcolor.caption
+msgid "Цвет формы"
+msgstr ""
+
+#: tformsettings.buttonrussian.caption
+msgid "Русский"
+msgstr ""
+
+#: tformsettings.caption
+msgid "Settings"
+msgstr ""
+
+#: tformsettings.label1.caption
+msgid "Язык"
+msgstr ""
+
+#: tmainform.buttonadd.caption
+msgid "Добавить"
+msgstr "Add"
+
+#: tmainform.buttondelete.caption
+msgid "Удалить"
+msgstr "Delete"
+
+#: tmainform.buttonedit.caption
+msgid "Редактировать"
+msgstr "Edit"
+
+#: tmainform.buttonpassword.caption
+msgid "Пароль"
+msgstr "Password"
+
+#: tmainform.buttonrawdoublesqlexecute.caption
+msgctxt "tmainform.buttonrawdoublesqlexecute.caption"
+msgid "Выполнить запрос"
+msgstr "Execute SQL"
+
+#: tmainform.caption
+#, fuzzy
+#| msgid "Главная"
+msgid "Main"
+msgstr "Main"
+
+#: tmainform.department.caption
+msgid "Кафедра"
+msgstr "Department"
+
+#: tmainform.departmentedit.caption
+msgid "Кафедра-Изменить"
+msgstr "Department-edit"
+
+#: tmainform.groupedit.caption
+msgid "Группы-Изменить"
+msgstr "Groups-edit"
+
+#: tmainform.menuitemexport.caption
+msgid "DB -> Excel"
+msgstr "DB -> Excel"
+
+#: tmainform.menuitemimport.caption
+msgid "Excel -> DB"
+msgstr "Excel -> DB"
+
+#: tmainform.menuitemmain.caption
+msgid "Меню"
+msgstr "Menu"
+
+#: tmainform.menuitemquit.caption
+msgid "Выйти"
+msgstr "Quit"
+
+#: tmainform.menuitemrefresh.caption
+msgid "Обновить"
+msgstr "Refresh"
+
+#: tmainform.menuitemsettings.caption
+msgid "Настройки"
+msgstr "Settings"
+
+#: tmainform.performance.caption
+msgid "Успеваемость"
+msgstr "Performance"
+
+#: tmainform.performanceedit.caption
+msgid "Успеваемость-Изменить"
+msgstr "Performance-edit"
+
+#: tmainform.radiogroupusersroles.caption
+#, fuzzy
+#| msgid "Роли"
+msgid "Roles"
+msgstr "Roles"
+
+#: tmainform.rawdoublesql.caption
+msgid "Выполнить двойной SQL"
+msgstr "Execute double SQL"
+
+#: tmainform.rawsql.caption
+msgid "Выполнить SQL"
+msgstr "Execute SQL"
+
+#: tmainform.rawsqlexecute.caption
+msgctxt "tmainform.rawsqlexecute.caption"
+msgid "Выполнить запрос"
+msgstr "Execute SQL"
+
+#: tmainform.rawsqlopen.caption
+msgid "Открыть запрос"
+msgstr "Open SQL"
+
+#: tmainform.rawsqlparams.caption
+msgid "Параметры..."
+msgstr "Params..."
+
+#: tmainform.rawsqlsave.caption
+msgid "Сохранить запрос"
+msgstr "Save SQL"
+
+#: tmainform.reportdepartment.caption
+msgctxt "tmainform.reportdepartment.caption"
+msgid "Отчёт"
+msgstr "Report"
+
+#: tmainform.reportperformance.caption
+msgctxt "tmainform.reportperformance.caption"
+msgid "Отчёт"
+msgstr "Report"
+
+#: tmainform.reportteacher.caption
+msgctxt "tmainform.reportteacher.caption"
+msgid "Отчёт"
+msgstr "Report"
+
+#: tmainform.student.caption
+msgid "Студенты"
+msgstr "Students"
+
+#: tmainform.studentsedit.caption
+msgid "Студенты-Изменить"
+msgstr "Students-edit"
+
+#: tmainform.subject.caption
+msgid "Предметы"
+msgstr "Subjects"
+
+#: tmainform.subjectedit.caption
+msgid "Предметы-Изменить"
+msgstr "Subjects-edit"
+
+#: tmainform.tabsheetusers.caption
+msgid "Пользователи"
+msgstr "Users"
+
+#: tmainform.teacher.caption
+msgid "Преподаватели"
+msgstr "Teachers"
+
+#: tmainform.teacheredit.caption
+msgid "Преподаватели-Изменить"
+msgstr "Teachers-eit"
+
+#: tmainform.universitygroup.caption
+msgid "Группы"
+msgstr "Groups"
+

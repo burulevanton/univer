@@ -1,0 +1,3 @@
+INSERT INTO public.universitygroup (id, number, department_id, students_amount, average_score, group_leader) VALUES (1, 401, 1, 15, 3.8, 'Демидов');
+INSERT INTO public.universitygroup (id, number, department_id, students_amount, average_score, group_leader) VALUES (2, 402, 1, 18, 4, 'Дубровина');
+INSERT INTO public.universitygroup (id, number, department_id, students_amount, average_score, group_leader) VALUES (3, 405, 1, 17, 3.9, 'Склезнев');
