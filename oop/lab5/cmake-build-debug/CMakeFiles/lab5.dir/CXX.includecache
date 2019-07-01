@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/oop/lab5/main.cpp
+iostream
+-
+locale
+-
+word_counter.h
+D:/oop/lab5/word_counter.h
+
+D:/oop/lab5/word_counter.cpp
+locale
+-
+vector
+-
+iostream
+-
+word_counter.h
+D:/oop/lab5/word_counter.h
+fstream
+-
+
+D:/oop/lab5/word_counter.h
+map
+-
+string
+-
+vector
+-
+
