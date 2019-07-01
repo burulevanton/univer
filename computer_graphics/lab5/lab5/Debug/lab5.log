@@ -1,0 +1,6 @@
+﻿  main.cpp
+F:\computer_graphics\lab5\lab5\main.cpp(27): warning C4305: аргумент: усечение из "double" в "GLclampf"
+F:\computer_graphics\lab5\lab5\main.cpp(56): warning C4305: инициализация: усечение из "double" в "GLfloat"
+F:\computer_graphics\lab5\lab5\main.cpp(73): warning C4305: инициализация: усечение из "double" в "GLfloat"
+F:\computer_graphics\lab5\lab5\main.cpp(166): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+  lab5.vcxproj -> F:\computer_graphics\lab5\Debug\lab5.exe
