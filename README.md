@@ -1,0 +1,23 @@
+# Все лабораторные, которые остались после учебы в университете
+
+* [Основы .NET](https://github.com/burulevanton/univer/tree/master/chemistry)
+* [Компьютерная графика. Основы OpenGL](https://github.com/burulevanton/univer/tree/master/computer_graphics)
+* [Графы](https://github.com/burulevanton/univer/tree/master/graph)
+* [Вычислительные методы](https://github.com/burulevanton/univer/tree/master/labs)
+* [Latex. Оформление курсовой](https://github.com/burulevanton/univer/tree/master/latex)
+* [Lazarus](https://github.com/burulevanton/univer/tree/master/lazarus)  
+  * [Lazarus после 9 лабораторной](https://github.com/burulevanton/univer/tree/master/lazarus-9)
+* [Lisp](https://github.com/burulevanton/univer/tree/master/lisp)
+* [ООП](https://github.com/burulevanton/univer/tree/master/oop)
+* [Параллельное программирование](https://github.com/burulevanton/univer/tree/master/pp)
+* [Prolog](https://github.com/burulevanton/univer/tree/master/prolog)
+* Ввведение в сервис-ориентированные архитектуры  
+  * [Клиент-серверное приложение на сокетах](https://github.com/burulevanton/univer/tree/master/soa-lab1) 
+  * [Клиент-серверное приложение с использованием gRPC](https://github.com/burulevanton/univer/tree/master/soa_lab2)
+  * [Клиент XML веб-сервиса на Python](https://github.com/burulevanton/univer/tree/master/soa_lab3_client)
+  * [Клиент XML-веб-сервиса на C#](https://github.com/burulevanton/univer/tree/master/soa_lab3_client_c)
+  * [Сервер XML веб-сервиса на Java](https://github.com/burulevanton/univer/tree/master/soa_lab3_server)
+  * [Сервер XML веб-сервиса на Python](https://github.com/burulevanton/univer/tree/master/soa_lab3_server2)
+  * [REST сервис](https://github.com/burulevanton/univer/tree/master/soa_lab4_rest)
+* [Базы данных](https://github.com/burulevanton/univer/tree/master/sql_base)
+* [Основы Web программирования](https://github.com/burulevanton/univer/tree/master/web)
